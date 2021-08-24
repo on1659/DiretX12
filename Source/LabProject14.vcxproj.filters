@@ -1,0 +1,1786 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="헤더 파일">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="리소스 파일">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="A_Read &amp; Define">
+      <UniqueIdentifier>{b9b11528-eba3-463b-ae3f-a019eefa288f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="B_3D_Client">
+      <UniqueIdentifier>{11aaeea3-565e-42a9-bee9-b0e686b20376}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="B_3D_Client\03.Player">
+      <UniqueIdentifier>{c8bef9c6-6d04-4655-bc87-d4ccc5601b08}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="B_3D_Client\03.Player\03_01 Player">
+      <UniqueIdentifier>{406c078a-273a-4fd0-bd01-46efb9beaec5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="B_3D_Client\03.Player\03_02 TerrainPlayer">
+      <UniqueIdentifier>{c4125c90-9ba1-40eb-859a-c1390a0bd579}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="B_3D_Client\09.Shader">
+      <UniqueIdentifier>{60927c76-fc7c-44c6-ae0b-0cb08d15bb43}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="B_3D_Client\09.Shader\09_02. UIShader">
+      <UniqueIdentifier>{c0dc396d-bee8-4139-b8a4-be25faec6cf0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="B_3D_Client\09.Shader\09_03.GeoMetry">
+      <UniqueIdentifier>{c6bda37a-a208-4945-9d26-9da732898659}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="B_3D_Client\09.Shader\09_03.GeoMetry\GS_Cube">
+      <UniqueIdentifier>{ddb33a50-4a5a-464c-96d8-88a8f53f30f5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="B_3D_Client\09.Shader\09_03.GeoMetry\GS_Sphere">
+      <UniqueIdentifier>{0598bb13-52f2-49eb-aee2-5b413aa3068d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="B_3D_Client\09.Shader\09_03.GeoMetry\GS_AABB">
+      <UniqueIdentifier>{c5d98eb3-56ba-4129-a036-762fe77e8fc2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="B_3D_Client\09.Shader\09_04.PlayerShader">
+      <UniqueIdentifier>{08818414-5a20-4f17-a90e-f8f5c16c6559}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="B_3D_Client\09.Shader\09_01. EnvironmentShader">
+      <UniqueIdentifier>{ee8b2afd-a93b-4367-81d6-0722f5707815}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="B_3D_Client\09.Shader\09_01. EnvironmentShader\01.SkyBoxShader">
+      <UniqueIdentifier>{3ff861a8-3791-4037-9805-89469b665dc6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="B_3D_Client\09.Shader\09_01. EnvironmentShader\03.TerrainCubeShader">
+      <UniqueIdentifier>{72c0c392-1ca4-497d-aec1-9e55e87dc76d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="B_3D_Client\09.Shader\09_00. InstanceShader">
+      <UniqueIdentifier>{8bdfa6ae-d45e-4d38-a85c-cd391bb67224}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="B_3D_Client\09.Shader\09_05.ScreenShader">
+      <UniqueIdentifier>{b765caee-9826-47f4-b48e-04d787f3917a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="B_3D_Client\09.Shader\09_07 BillboardShader">
+      <UniqueIdentifier>{69a3c1d2-77f0-4ffc-badb-bc3a5fb70b29}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="B_3D_Client\09.Shader\09_06 MatrixShader">
+      <UniqueIdentifier>{424265bb-a6e6-450c-abf7-8db1901b0c38}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="B_3D_Client\09.Shader\09_08. TSCubeShader">
+      <UniqueIdentifier>{e5d53652-e3e8-45f9-ac69-54ddca3debed}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="B_3D_Client\09.Shader\09_09. ParticleShader">
+      <UniqueIdentifier>{cf375bb5-11eb-49e0-b3b7-cf9a09c344bb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="B_3D_Client\09.Shader\09_09. ParticleShader\FireParticle">
+      <UniqueIdentifier>{15e0aa09-9288-42d9-a7fe-5ec9a50520f0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="B_3D_Client\10.Scene">
+      <UniqueIdentifier>{85637e96-370c-4b47-9524-a231df2f7c67}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="B_3D_Client\04.Mesh">
+      <UniqueIdentifier>{a291064c-f73c-48d5-9c4e-9e0ddedf8d0b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="B_3D_Client\04.Mesh\04_01. ModelMesh">
+      <UniqueIdentifier>{37625a23-3cbf-4e0f-bab1-89fe85d40978}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="B_3D_Client\04.Mesh\04_03. GeoMetryMesh">
+      <UniqueIdentifier>{b7889f19-9174-4ae0-8c25-165c4b5f9e54}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="B_3D_Client\04.Mesh\04_03. GeoMetryMesh\GS_Cube">
+      <UniqueIdentifier>{5b2f3d79-964e-4e1f-9253-0ad1ec2d2a2b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="B_3D_Client\04.Mesh\04_03. GeoMetryMesh\GS_Sphere">
+      <UniqueIdentifier>{97a1077b-a6d5-4835-aa11-cce0f3dc41fe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="B_3D_Client\04.Mesh\04_03. GeoMetryMesh\GS_AABB">
+      <UniqueIdentifier>{7f540fb9-93ca-4eaf-9105-2f5d7cbd98c8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="B_3D_Client\04.Mesh\04_04. TerrainCubeMesh">
+      <UniqueIdentifier>{6a0688b3-d646-400b-bf5b-58af1b483d63}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="B_3D_Client\04.Mesh\04_06. QuadrangleMesh">
+      <UniqueIdentifier>{74dc846a-2ed0-4634-9973-6f5621795bcd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="B_3D_Client\04.Mesh\04_07 TSCubeMesh">
+      <UniqueIdentifier>{739ab833-fa0d-488d-b5d2-972f7954ef81}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="B_3D_Client\04.Mesh\04_02. UIMesh">
+      <UniqueIdentifier>{1cc99740-d95a-4c4b-9315-5baabb373fcb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="B_3D_Client\05.Material">
+      <UniqueIdentifier>{506e4bd2-65c0-4b57-a6c4-8d98b28d19e9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="B_3D_Client\05.Material\MaterialColors">
+      <UniqueIdentifier>{819491de-0293-4249-a371-6cf72777f47f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="B_3D_Client\05.Material\Texture">
+      <UniqueIdentifier>{fc82b52b-8269-465e-b047-4f5acb94418d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="B_3D_Client\06.Object">
+      <UniqueIdentifier>{578d7f9f-00fb-4c43-a545-2c37a6e2f2a0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="B_3D_Client\06.Object\06_00.GameObject">
+      <UniqueIdentifier>{6cbae5bb-de14-4bdd-9fd7-a4d4f8a095ac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="B_3D_Client\06.Object\06_01. Environment">
+      <UniqueIdentifier>{c5241001-80c6-46a4-81a9-f394026e63ad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="B_3D_Client\06.Object\06_01. Environment\01.SkyBoxObject">
+      <UniqueIdentifier>{1d37409a-308e-44bb-a563-b588863531ec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="B_3D_Client\06.Object\06_01. Environment\02.Terrain">
+      <UniqueIdentifier>{8de521ae-7bbb-4725-a28a-61dae38bf427}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="B_3D_Client\06.Object\06_01. Environment\02.Terrain\HeightMap">
+      <UniqueIdentifier>{eb19e459-96b4-4080-996d-7f1765b3ed93}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="B_3D_Client\06.Object\06_01. Environment\02.Terrain\HeightMapTerrain">
+      <UniqueIdentifier>{28c49898-b0b4-4404-8b8f-0b613d1ba5d7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="B_3D_Client\06.Object\06_01. Environment\04.TerrainWater">
+      <UniqueIdentifier>{f397f9f4-436b-48d5-903a-dd68e50c0352}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="B_3D_Client\06.Object\06_02. PositionObject">
+      <UniqueIdentifier>{c3572666-8342-4a61-8b64-35c125b3b37f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="E_NetWork">
+      <UniqueIdentifier>{17b2aa94-6f9e-4a24-a698-1cfb3e184897}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="F. Garbage">
+      <UniqueIdentifier>{8074f9ae-3290-4176-97cd-d31acadcd850}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="F. Garbage\ObjectShader">
+      <UniqueIdentifier>{ef48e474-bfe4-42db-a52e-bde1274479de}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="F. Garbage\09_00.BaseShader">
+      <UniqueIdentifier>{9e500b0a-0eb7-45cd-9f20-6dcdc2fdb11f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="F. Garbage\09_00.BaseShader\DiffusedShader">
+      <UniqueIdentifier>{c4562817-0562-4de4-b81e-6a64c174e40e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="F. Garbage\11_00 Struct">
+      <UniqueIdentifier>{603c8eed-771f-4901-b005-b8f5dd491dee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="F. Garbage\ParticleStream">
+      <UniqueIdentifier>{730c0025-3400-42a1-a246-431c8fe1ec81}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="F. Garbage\GSStreamOut">
+      <UniqueIdentifier>{e415aad1-ec3b-401e-9adc-65fcee64e0d5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="F. Garbage\11_08 Font">
+      <UniqueIdentifier>{06384a79-ae21-48cd-8117-a7bf7247fc18}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="D.HLSL">
+      <UniqueIdentifier>{a26aca54-6fa1-494f-816b-086503837e70}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="D.HLSL\00. Define">
+      <UniqueIdentifier>{2103e53f-c33a-4bc6-a49c-46fe6e30648f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="D.HLSL\01. Instance">
+      <UniqueIdentifier>{2374ca02-6514-4fdd-bd21-b7b87306db19}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="D.HLSL\02. UI">
+      <UniqueIdentifier>{b839f634-55ce-4829-a321-48b5e40b89f4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="D.HLSL\03. GSShader">
+      <UniqueIdentifier>{1fafc83c-d3d6-4642-be8f-77395054ae60}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="D.HLSL\03. GSShader\02.Instance">
+      <UniqueIdentifier>{046095b9-66e4-4b09-a5c9-025c4d855afa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="D.HLSL\04. BillBoard">
+      <UniqueIdentifier>{f4b6401f-51f6-4a53-9009-3d58000ccc26}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="D.HLSL\06. TSShader">
+      <UniqueIdentifier>{373bc77f-4587-4799-a432-bbc97912b951}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="D.HLSL\06. TSShader\02. NormalnBump">
+      <UniqueIdentifier>{f4405644-d026-43cf-ba1b-31898fefe2b2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="C_2D_Client">
+      <UniqueIdentifier>{9dd5087c-c75d-4900-b25f-0882855d13a7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="C_2D_Client\06. Utill">
+      <UniqueIdentifier>{6f55589f-0a2d-4cd1-919c-ded959fbcec4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="C_2D_Client\01. FrameWork">
+      <UniqueIdentifier>{38d8840e-08e6-455b-94d4-495b1b02e847}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="C_2D_Client\03. Image">
+      <UniqueIdentifier>{adbbf452-5931-4f17-8f05-2259eef75443}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="C_2D_Client\03. Image\GraphicObject">
+      <UniqueIdentifier>{3c16ea61-313d-41b3-b186-47831b846799}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="C_2D_Client\03. Image\SprichObject">
+      <UniqueIdentifier>{e56e522d-aeaf-48d6-b0fa-76ec84769a42}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="C_2D_Client\04. RenderManager">
+      <UniqueIdentifier>{70597fa6-7bfe-48a7-90bf-01f780eeda60}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="C_2D_Client\05. Scene">
+      <UniqueIdentifier>{62efc84b-6a7f-4a57-a6e6-5b3ff5e2dc39}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="C_2D_Client\05. Scene\Lodaing">
+      <UniqueIdentifier>{2e787869-eb6e-4da0-93c4-ee8d7138f16d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="D.HLSL\07.ParticleShader">
+      <UniqueIdentifier>{e1cee162-cf7c-4958-b42a-fa719926a2a0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="D.HLSL\07.ParticleShader\Fire">
+      <UniqueIdentifier>{2ff42e00-3eaf-40f4-bd16-0806dfff88d5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="D.HLSL\08.ComputeShader">
+      <UniqueIdentifier>{f74f85ce-4325-4136-9e34-5849ec7d7ce8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="B_3D_Client\09.Shader\09_03.GeoMetry\GS_TerrainCube">
+      <UniqueIdentifier>{91cb76d1-f75b-4f88-a5bf-3b376915110e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="B_3D_Client\09.Shader\09_10. FBXSkinningShader">
+      <UniqueIdentifier>{e093db71-bb6b-4d85-8869-30ea6d0a362f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="B_3D_Client\04.Mesh\04_05. FBXSingleMesh">
+      <UniqueIdentifier>{220cf0be-f7e3-4974-8419-c46ade2ce25f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="B_3D_Client\07.Component">
+      <UniqueIdentifier>{d877929e-cfa8-4d79-aba1-5e75d7339b5c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="C_2D_Client\05. Scene\GameRoom">
+      <UniqueIdentifier>{67438f30-8a22-4d5f-9314-d16be50c3b82}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="C_2D_Client\05. Scene\Lobby">
+      <UniqueIdentifier>{5ed77a54-6c98-4689-8f1d-e278284544f1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="C_2D_Client\05. Scene\Login">
+      <UniqueIdentifier>{4e971975-79a3-4c6a-9550-c6c1fcd4c8cf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="C_2D_Client\05. Scene\MatchStandby">
+      <UniqueIdentifier>{31705256-6007-4c7c-9c3c-cd647149517d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="C_2D_Client\05. Scene\RoomCreate">
+      <UniqueIdentifier>{174fed31-5ac2-4ec3-b444-950d8879d97d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="E_NetWork\CommModule">
+      <UniqueIdentifier>{1cd2ad2e-5064-439b-adc6-055d2773ac35}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="E_NetWork\PacketManager">
+      <UniqueIdentifier>{7d23430f-9e6d-47c2-a7ef-b1266f938301}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="E_NetWork\Sync">
+      <UniqueIdentifier>{818af5bc-451f-4df1-a148-56cb1f5b911a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="C_2D_Client\05. Scene\Result">
+      <UniqueIdentifier>{5d78d9d8-a619-4cfa-9327-c67d4d5e67ca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="C_2D_Client\05. Scene\Temp_Menu">
+      <UniqueIdentifier>{519fc513-20bb-453e-b480-f2a05ed6af54}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="D.HLSL\10. PlayerShader">
+      <UniqueIdentifier>{111e0f12-4dfb-4d4c-99ee-1d42529a97ea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="D.HLSL\09. FBXSkinningInstanced">
+      <UniqueIdentifier>{fca3bcd1-3d24-4076-80dc-23a7e7f87149}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="F. Garbage\02_05 OrthoCamera">
+      <UniqueIdentifier>{109eb7de-172b-4197-b356-b5fca36fb62d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="B_3D_Client\09.Shader\09_12. ShadowShader">
+      <UniqueIdentifier>{06409f0e-95cc-4017-8b53-dddaa2b76e0c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="D.HLSL\11.ShadowMap">
+      <UniqueIdentifier>{30f9418f-d137-472c-bcdc-0e9ac3196f35}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="C_2D_Client\07.EditBox">
+      <UniqueIdentifier>{b7520caf-1e38-42dc-8c54-3d1bc684b5ad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="B_3D_Client\09.Shader\09_15. BlendShader">
+      <UniqueIdentifier>{0c7cea8d-642e-4a1a-a113-5a9e83cc0fab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="B_3D_Client\09.Shader\09_15. BlendShader\BushShader">
+      <UniqueIdentifier>{89d56dc9-0e95-462e-896e-c558baec6a59}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="D.HLSL\12.BlendShader">
+      <UniqueIdentifier>{9b60ccde-fe5d-413d-9646-f63e24aca435}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="D.HLSL\12.BlendShader\BushShader">
+      <UniqueIdentifier>{a7aed008-064f-43a3-96b7-c17f65c642e8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="B_3D_Client\00.Manager">
+      <UniqueIdentifier>{88203543-1f05-4c64-aadb-4d87365a9563}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="B_3D_Client\00.Manager\01.Timer">
+      <UniqueIdentifier>{06166391-d245-400b-ab03-f7216c14f91c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="B_3D_Client\00.Manager\02.Player">
+      <UniqueIdentifier>{a4b4bf31-5782-4cc6-8715-ec14100c6728}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="B_3D_Client\00.Manager\03.Content">
+      <UniqueIdentifier>{b51d39de-69d4-40a5-b147-dc30aada17dd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="B_3D_Client\00.Manager\04.Camera">
+      <UniqueIdentifier>{d481ba6b-c626-4d0b-829c-6ec077f9438a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="B_3D_Client\00.Manager\06.Lighting">
+      <UniqueIdentifier>{b415aeff-de2d-4663-877c-3ab90d6a0367}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="B_3D_Client\00.Manager\07.SpacePartition">
+      <UniqueIdentifier>{32348626-22e8-4e72-b97e-ae29360cd5dd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="B_3D_Client\00.Manager\07.SpacePartition\01. Arrary">
+      <UniqueIdentifier>{3ca143f2-b71f-48d1-9537-ec7483b8358f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="B_3D_Client\00.Manager\07.SpacePartition\01. Arrary\SpaceNodeQuad">
+      <UniqueIdentifier>{9d376c43-e212-485d-9cfb-d766ec940a4a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="B_3D_Client\00.Manager\07.SpacePartition\02. Quad Tree">
+      <UniqueIdentifier>{87f55012-83b4-4263-a534-3d653281aa89}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="B_3D_Client\00.Manager\07.SpacePartition\02. Quad Tree\SpaceNode">
+      <UniqueIdentifier>{62a0184b-2aa6-4739-8502-e41a571be00d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="B_3D_Client\00.Manager\08.Input">
+      <UniqueIdentifier>{62b88d5f-f184-4742-ac03-0c5c0e14c9d7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="B_3D_Client\00.Manager\09.Font">
+      <UniqueIdentifier>{137fcf76-ae62-45ed-823a-8e4ac43550e3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="B_3D_Client\00.Manager\11.UIManager">
+      <UniqueIdentifier>{573c6d6a-8b58-4227-ba65-df6174d473bb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="B_3D_Client\09.Shader\09_14. BulletShader">
+      <UniqueIdentifier>{06f4b98f-82cf-478f-a3cd-d2644f49905b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="B_3D_Client\11.System">
+      <UniqueIdentifier>{9e20ffe9-e953-49dc-8863-53ac7f6bb0f3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="B_3D_Client\12.Utill">
+      <UniqueIdentifier>{acd7d9f3-aeb2-42c7-a5b0-997a92faf8f9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="B_3D_Client\12.Utill\12_01 Abstract Class">
+      <UniqueIdentifier>{5bedf5ab-3eff-4efc-bc50-2f799a388234}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="B_3D_Client\12.Utill\12_02. ItemHashName">
+      <UniqueIdentifier>{46b9e21d-f632-4ff3-b759-866d1631243e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="B_3D_Client\12.Utill\12_06. Helper">
+      <UniqueIdentifier>{8cc754b8-8d53-4554-9731-131691acd4ad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="B_3D_Client\12.Utill\12_07. FBX Loader">
+      <UniqueIdentifier>{69d23273-4bba-41c2-b7b3-91a4575d2fd8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="B_3D_Client\12.Utill\12_08. Font">
+      <UniqueIdentifier>{5a8d23c3-2fa3-4691-8e70-c2532c7cac2d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="B_3D_Client\11.System\11_01 BasicSystem">
+      <UniqueIdentifier>{93aa928f-7414-4923-9def-b92195d3724c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="B_3D_Client\09.Shader\09_16. Warp3DSkinningShader">
+      <UniqueIdentifier>{3da16df0-d9a4-425f-8b23-b2eb9a93c357}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="B_3D_Client\03.Player\03_03 OtherPlayer">
+      <UniqueIdentifier>{374b8d7f-7ab5-4379-a107-40fceb270253}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="B_3D_Client\09.Shader\09_04.PlayerShader\01.Warp3DPlayerShader">
+      <UniqueIdentifier>{714dea73-7984-4417-9c0d-9335e2486f2e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="B_3D_Client\09.Shader\09_04.PlayerShader\02.Warp3DOtherPlayerShader">
+      <UniqueIdentifier>{b430aa8f-4179-4d32-a4d1-edd286671eec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="F. Garbage\09_02 JeniShader">
+      <UniqueIdentifier>{4620e590-0bf0-4559-aadd-40059677d4ec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="F. Garbage\09_03 JunoShader">
+      <UniqueIdentifier>{e1106bbf-cb58-4ae9-9041-7ea30745bdec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="F. Garbage\09_11. OtherPlayerShader">
+      <UniqueIdentifier>{75099791-3610-4fc1-a713-981565ff8cba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="F. Garbage\09_11. OtherPlayerShader\OtherJunoShader">
+      <UniqueIdentifier>{e94ebef7-1552-44af-90b5-1b11718cf7e4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="F. Garbage\09_11. OtherPlayerShader\OtherJeniShader">
+      <UniqueIdentifier>{25869493-1306-4497-aa19-cb7a61bf9741}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="B_3D_Client\09.Shader\09_17 HeadBangBangShader">
+      <UniqueIdentifier>{f135be8d-2846-41ee-96af-d94a704f073c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="B_3D_Client\09.Shader\09_18 BulletinShader">
+      <UniqueIdentifier>{dc2ab460-96c5-4354-9abe-cd4d353cacd3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="D.HLSL\13. MonsterSkinnedInstancing">
+      <UniqueIdentifier>{d8e8e63b-b9da-4e61-8eb2-aea0eeca069f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="B_3D_Client\09.Shader\09_16. Warp3DSkinningShader\01. Warp3DSkinningShaderforBunny">
+      <UniqueIdentifier>{129a1aa9-04e4-48a4-9b50-d7ba5178067d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="C_2D_Client\05. Scene\SceneGameResultLoading_2D">
+      <UniqueIdentifier>{16015130-0d7c-4997-a879-47f12249cc46}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="B_3D_Client\00.Manager\12.SoundManager">
+      <UniqueIdentifier>{b7b38a22-fe75-446c-b63c-8ab92455ca1d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="F. Garbage\02.TerrainShader">
+      <UniqueIdentifier>{e3cef00f-cf5f-4c99-8052-ffea4c7dfd6a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="F. Garbage\04.WaterShader">
+      <UniqueIdentifier>{0e8fb859-cda2-436c-b3b1-18705846196e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="B_3D_Client\09.Shader\09_19 MonsterHeadShader">
+      <UniqueIdentifier>{9ef3426d-86be-4677-be07-c006c2803689}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="B_3D_Client\01.Framework">
+      <UniqueIdentifier>{75b01e61-04f2-4a25-8577-f5262a897c4f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="B_3D_Client\01.Framework\GameFramework">
+      <UniqueIdentifier>{26588e1e-63d9-49dd-8327-76dac0d15307}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="B_3D_Client\01.Framework\RenderingThreadInfo">
+      <UniqueIdentifier>{7f9d7a07-acab-4f29-9145-c9396a52fdb7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="B_3D_Client\01.Framework\ThreadLoading">
+      <UniqueIdentifier>{682b9dda-d058-438d-a52b-cf7f218a54ac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="B_3D_Client\02.Camera">
+      <UniqueIdentifier>{a65b92b8-67d3-42fa-997d-c9121e34b561}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="B_3D_Client\02.Camera\02_04. FreeCamera">
+      <UniqueIdentifier>{c43a16bb-10e1-4c79-ba3b-2be8facfd640}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="B_3D_Client\02.Camera\02_03. ThridPersonCamera">
+      <UniqueIdentifier>{bb6fb706-1f19-4852-81e2-0416529d4503}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="B_3D_Client\02.Camera\02_02. SpaceShipCamera">
+      <UniqueIdentifier>{77069d82-536a-40ec-a0a3-03b5cf9f84e0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="B_3D_Client\02.Camera\02_01. FirstPerson">
+      <UniqueIdentifier>{9fd38c0e-fa07-4fd9-8cd4-9d63400f6a4c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="B_3D_Client\02.Camera\DeferredThreadProc">
+      <UniqueIdentifier>{2855328c-60c7-495e-8ae3-3650bfc584c6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="B_3D_Client\00.Manager\10.ParticleManager">
+      <UniqueIdentifier>{7bf85068-825a-4b90-aed5-fb1a73b0cf97}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="B_3D_Client\09.Shader\09_20 TrapShader">
+      <UniqueIdentifier>{6a37bf9d-6ca4-4f4f-b977-ffb7a285905d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="B_3D_Client\09.Shader\09_09. ParticleShader\CubeParticle">
+      <UniqueIdentifier>{99d351cf-2603-4654-84e6-a9ff32c3f953}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="B_3D_Client\09.Shader\09_09. ParticleShader\QuadParticle">
+      <UniqueIdentifier>{8affa7e0-2ff8-4dac-9962-77eaffe63337}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="B_3D_Client\09.Shader\09_09. ParticleShader\WaterFallParticle">
+      <UniqueIdentifier>{77a9d161-2426-48ac-ac64-70b2815afd38}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="D.HLSL\05. Deffere Render">
+      <UniqueIdentifier>{6453cd23-4e2c-42c3-9cbd-4f5240c316ce}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="B_3D_Client\09.Shader\09_01. EnvironmentShader\04.ChocoShader">
+      <UniqueIdentifier>{47a327a0-0c1b-4cb0-95ec-d63068e0e15e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="B_3D_Client\09.Shader\09_01. EnvironmentShader\02. WaterShader">
+      <UniqueIdentifier>{ec648eea-5149-41b8-a995-f35d91e1b9f3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="B_3D_Client\04.Mesh\04_07 UISpriteMesh">
+      <UniqueIdentifier>{fb8aa881-58d1-4f33-a731-b0a779383a90}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="B_3D_Client\09.Shader\09_07 BillboardShader\BillBoardSpriteShader">
+      <UniqueIdentifier>{1ef6548a-7169-4654-94b9-c0da1aabdde7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="B_3D_Client\04.Mesh\04_06. QuadrangleMesh\QuadrangleSpriteMesh">
+      <UniqueIdentifier>{ec19bde3-31a1-4b70-b956-56efde1c8f31}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="B_3D_Client\09.Shader\09_21 WaterFallMeshShader">
+      <UniqueIdentifier>{1279b0cd-cd84-40ac-baef-24c621487556}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="B_3D_Client\06.Object\UIGauge">
+      <UniqueIdentifier>{57e66fbc-dbf8-4fbb-8ea0-9aa10b37c45c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="B_3D_Client\09.Shader\09_33 InstancedSpriteShader">
+      <UniqueIdentifier>{ab4e2fbb-e07f-455a-ad07-8e2260b813fe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="B_3D_Client\08.Script">
+      <UniqueIdentifier>{c416b7f2-d2ee-4ba5-8a3b-3b98de979bae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="B_3D_Client\08.Script\Test">
+      <UniqueIdentifier>{14f6c063-337c-43b3-85f5-9902f576492c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="B_3D_Client\08.Script\08_01. AnmationComponent">
+      <UniqueIdentifier>{89939d59-ce43-46d6-81c8-78c881d07ec7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="B_3D_Client\08.Script\08_02.Player">
+      <UniqueIdentifier>{fdde5581-d6e0-479a-bc37-d3470681772c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="B_3D_Client\08.Script\08_02.Player\OtherPlayer">
+      <UniqueIdentifier>{b170d4d2-c2e7-4f0f-bc5d-55c002ed2c83}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="B_3D_Client\08.Script\08_02.Player\MyPlayer">
+      <UniqueIdentifier>{d18d99b5-0e91-40ab-bead-8eeae3e86978}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="B_3D_Client\08.Script\08_04.Item">
+      <UniqueIdentifier>{39074ba4-d9fd-4972-a91c-9d42c413afb5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="B_3D_Client\08.Script\08_04.Item\Trap">
+      <UniqueIdentifier>{489dcc51-dc86-43f6-b666-e0bd8aad2fe7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="B_3D_Client\08.Script\08_05.Monster">
+      <UniqueIdentifier>{9fe22d0c-e402-495d-8387-b72807af2f0a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="B_3D_Client\08.Script\08_06.UI">
+      <UniqueIdentifier>{2764fd5a-9b9c-4fec-9595-f5829987e7bb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="B_3D_Client\08.Script\08_07.Camera">
+      <UniqueIdentifier>{36f36f9e-7bfa-45d5-8f21-cb996adc8e47}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="B_3D_Client\08.Script\08_99.Etc">
+      <UniqueIdentifier>{c89d3958-c2a8-430c-8af2-e39455a06c9d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="B_3D_Client\08.Script\08_08. Skill">
+      <UniqueIdentifier>{322e3577-fcc5-4cf7-b4ae-bafcace19df6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="B_3D_Client\08.Script\08_08. Skill\ActiviceSkill">
+      <UniqueIdentifier>{05970e59-628e-4f9f-a407-0454228405c2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="B_3D_Client\08.Script\08_08. Skill\ActiviceSkill\TelerPort">
+      <UniqueIdentifier>{83d330ac-1fa7-4917-bd11-1858e2574847}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="B_3D_Client\08.Script\08_08. Skill\ActiviceSkill\ThrowSkill">
+      <UniqueIdentifier>{abfd3bdf-0ff9-43c3-aa43-2083cb42c9a3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="B_3D_Client\08.Script\08_08. Skill\ActiviceSkill\Hide">
+      <UniqueIdentifier>{fb567ac9-b725-483f-aae5-d7267fabb2ea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="B_3D_Client\08.Script\08_08. Skill\PassiveSkill">
+      <UniqueIdentifier>{f9948d12-d05e-4b4f-bb92-962d0f4c4dd7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="B_3D_Client\08.Script\08_08. Skill\PassiveSkill\Speedup">
+      <UniqueIdentifier>{65494291-4993-431c-9e95-612784bfac67}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="B_3D_Client\08.Script\08_08. Skill\PassiveSkill\Evasion">
+      <UniqueIdentifier>{1b1d4bfc-30a0-4b01-94fe-406f532d8477}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="B_3D_Client\08.Script\08_09. Collider">
+      <UniqueIdentifier>{ad7a4677-5b6e-4fa7-9732-b408fe64f94e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="B_3D_Client\09.Shader\09_07 BillboardShader\BillBoardAlphaShader">
+      <UniqueIdentifier>{06e6291b-d702-48ed-9d4c-92dd12ef4a41}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="B_3D_Client\00.Manager\05.CubeTerrain">
+      <UniqueIdentifier>{438f8661-ae1f-4217-b1f4-58996703c31a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="B_3D_Client\09.Shader\09_09. ParticleShader\FlowerParticle">
+      <UniqueIdentifier>{b3b8fc74-ccbb-4a51-8beb-b7bc3a3a77db}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="B_3D_Client\00.Manager\13. PostProcessingManager">
+      <UniqueIdentifier>{928ed497-ff37-460b-8684-fce2bd808449}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="B_3D_Client\13.PostProcessing">
+      <UniqueIdentifier>{a96d6d08-ae03-42bf-8e3d-88516027d4b3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="B_3D_Client\13.PostProcessing\ComputeShader">
+      <UniqueIdentifier>{a458d6c7-f502-4794-a368-560534afc68b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="B_3D_Client\13.PostProcessing\ComputeShader\Bloom">
+      <UniqueIdentifier>{b74bb158-4eeb-4ff2-bd42-ad19b7bbda02}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="B_3D_Client\13.PostProcessing\ComputeShader\DownScale">
+      <UniqueIdentifier>{85520c74-96c0-4ab5-b3d7-fb560c0b17de}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="B_3D_Client\13.PostProcessing\ComputeShader\DownScale\First">
+      <UniqueIdentifier>{b752190b-edc1-4c2c-95dc-7d8dc9359d20}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="B_3D_Client\13.PostProcessing\ComputeShader\DownScale\Second">
+      <UniqueIdentifier>{08a5f1d9-10dd-4735-8fcb-882fa6352df3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="B_3D_Client\00.Manager\14. TwBarManager">
+      <UniqueIdentifier>{0a68ccae-e869-4f5e-bd46-338f4040e712}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="B_3D_Client\13.PostProcessing\PostFX">
+      <UniqueIdentifier>{b5a4432c-d4da-4be9-93c8-f1a2f4d463c6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="B_3D_Client\13.PostProcessing\HLSL">
+      <UniqueIdentifier>{92959e18-407a-421b-9d8d-19ce12b67670}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="B_3D_Client\13.PostProcessing\HLSL\CSO">
+      <UniqueIdentifier>{11d834e8-0d22-4895-bc95-be59fc2cae93}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="B_3D_Client\13.PostProcessing\HLSL\NOT">
+      <UniqueIdentifier>{6f94a7f2-a75e-4966-97ef-f145db9d5a28}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="B_3D_Client\13.PostProcessing\HLSL\CSO\Bloom">
+      <UniqueIdentifier>{6f346040-1fc4-47d5-b64e-cbac1b01ed46}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="B_3D_Client\13.PostProcessing\HLSL\CSO\DownScale">
+      <UniqueIdentifier>{92c1ca79-dce1-4920-bbb7-a5e30517bad8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="B_3D_Client\13.PostProcessing\HLSL\CSO\PostPrcessingScreen">
+      <UniqueIdentifier>{b7433033-27cd-446d-9c0c-4b707c822db1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="B_3D_Client\13.PostProcessing\HLSL\CSO\Define">
+      <UniqueIdentifier>{2d27e6a6-a89a-4546-8115-93757f0b2615}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="B_3D_Client\06.Object\06_03 WorldAxis">
+      <UniqueIdentifier>{fd7ed0fd-34a3-42aa-a8f8-56c9a7e03127}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="D.HLSL\01. Instance\Instancedsprite">
+      <UniqueIdentifier>{f656760c-7324-4423-bee1-1e46aaa39eec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="B_3D_Client\09.Shader\09_34 RenderTargeShader">
+      <UniqueIdentifier>{8e228335-2954-47f7-9c81-7783c1e81f54}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="D.HLSL\14. RenderTargetShader">
+      <UniqueIdentifier>{e8bda4e9-4b3e-4302-bbe8-bb8f9a43f99d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="D.HLSL\01. Instance\NoFog">
+      <UniqueIdentifier>{3a383bee-1ca2-471a-9ab7-0afb14815618}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="D.HLSL\10. PlayerShader\OtherPlayerShader">
+      <UniqueIdentifier>{a5ec796b-9bb5-457a-bb08-4008e89cfa21}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="D.HLSL\10. PlayerShader\Player">
+      <UniqueIdentifier>{8282b78c-dfc2-4cca-8b4e-43fabdfbbea0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Warp3D">
+      <UniqueIdentifier>{fc2e9306-8047-4a29-bb71-3e4f322d8123}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="B_3D_Client\14.DX12">
+      <UniqueIdentifier>{941476c4-7396-4fdf-a40a-c0b9a02d2feb}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+    <None Include="small.ico">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="LabProject14.ico">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="UI.fx">
+      <Filter>D.HLSL\02. UI</Filter>
+    </None>
+    <None Include="GS_Instance_Spere.fx">
+      <Filter>D.HLSL\03. GSShader\02.Instance</Filter>
+    </None>
+    <None Include="GBuffer.fx">
+      <Filter>D.HLSL\00. Define</Filter>
+    </None>
+    <None Include="Effect.fx">
+      <Filter>D.HLSL</Filter>
+    </None>
+    <None Include="FBXSkinningInstanced.fx">
+      <Filter>D.HLSL\09. FBXSkinningInstanced</Filter>
+    </None>
+    <None Include="PlayerShader.fx">
+      <Filter>D.HLSL\10. PlayerShader</Filter>
+    </None>
+    <None Include="MonsterSkinnedInstancing.fx">
+      <Filter>D.HLSL\13. MonsterSkinnedInstancing</Filter>
+    </None>
+    <None Include="SmashParticle.fx">
+      <Filter>D.HLSL\07.ParticleShader</Filter>
+    </None>
+    <None Include="SweetCrush_RelativePath.props" />
+    <None Include="FW1FontWrapper.dll" />
+    <None Include="fmodex64.dll" />
+    <None Include="LimLight.hlsli">
+      <Filter>D.HLSL</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="targetver.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="LabProject14.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="SingleTon.h">
+      <Filter>B_3D_Client\12.Utill\12_01 Abstract Class</Filter>
+    </ClInclude>
+    <ClInclude Include="Camera.h">
+      <Filter>B_3D_Client\02.Camera</Filter>
+    </ClInclude>
+    <ClInclude Include="Mesh.h">
+      <Filter>B_3D_Client\04.Mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="Shader.h">
+      <Filter>B_3D_Client\09.Shader</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneState.h">
+      <Filter>B_3D_Client\12.Utill\12_01 Abstract Class</Filter>
+    </ClInclude>
+    <ClInclude Include="Timer.h">
+      <Filter>B_3D_Client\00.Manager\01.Timer</Filter>
+    </ClInclude>
+    <ClInclude Include="ModelParsingMesh.h">
+      <Filter>B_3D_Client\04.Mesh\04_01. ModelMesh</Filter>
+    </ClInclude>
+    <ClInclude Include="SkyBoxShader.h">
+      <Filter>B_3D_Client\09.Shader\09_01. EnvironmentShader\01.SkyBoxShader</Filter>
+    </ClInclude>
+    <ClInclude Include="Texture.h">
+      <Filter>B_3D_Client\05.Material\Texture</Filter>
+    </ClInclude>
+    <ClInclude Include="MaterialColors.h">
+      <Filter>B_3D_Client\05.Material\MaterialColors</Filter>
+    </ClInclude>
+    <ClInclude Include="Material.h">
+      <Filter>B_3D_Client\05.Material</Filter>
+    </ClInclude>
+    <ClInclude Include="HeightMap.h">
+      <Filter>B_3D_Client\06.Object\06_01. Environment\02.Terrain\HeightMap</Filter>
+    </ClInclude>
+    <ClInclude Include="HeightMapTerrain.h">
+      <Filter>B_3D_Client\06.Object\06_01. Environment\02.Terrain\HeightMapTerrain</Filter>
+    </ClInclude>
+    <ClInclude Include="SkyBox.h">
+      <Filter>B_3D_Client\06.Object\06_01. Environment\01.SkyBoxObject</Filter>
+    </ClInclude>
+    <ClInclude Include="TerrainWater.h">
+      <Filter>B_3D_Client\06.Object\06_01. Environment\04.TerrainWater</Filter>
+    </ClInclude>
+    <ClInclude Include="InstancedObjectsShader.h">
+      <Filter>B_3D_Client\09.Shader\09_00. InstanceShader</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObject.h">
+      <Filter>B_3D_Client\06.Object\06_00.GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="Object.h">
+      <Filter>B_3D_Client\06.Object</Filter>
+    </ClInclude>
+    <ClInclude Include="Component.h">
+      <Filter>B_3D_Client\07.Component</Filter>
+    </ClInclude>
+    <ClInclude Include="ShaderFactory.h">
+      <Filter>B_3D_Client\12.Utill\12_01 Abstract Class</Filter>
+    </ClInclude>
+    <ClInclude Include="TerrainPlayer.h">
+      <Filter>B_3D_Client\03.Player\03_02 TerrainPlayer</Filter>
+    </ClInclude>
+    <ClInclude Include="GeoMetryInstanceShader.h">
+      <Filter>B_3D_Client\09.Shader\09_03.GeoMetry</Filter>
+    </ClInclude>
+    <ClInclude Include="GeoMetryMesh.h">
+      <Filter>B_3D_Client\04.Mesh\04_03. GeoMetryMesh</Filter>
+    </ClInclude>
+    <ClInclude Include="GeoCubeMesh.h">
+      <Filter>B_3D_Client\04.Mesh\04_03. GeoMetryMesh\GS_Cube</Filter>
+    </ClInclude>
+    <ClInclude Include="ThirdPersonCamera.h">
+      <Filter>B_3D_Client\02.Camera\02_03. ThridPersonCamera</Filter>
+    </ClInclude>
+    <ClInclude Include="FirstPersonCamera.h">
+      <Filter>B_3D_Client\02.Camera\02_01. FirstPerson</Filter>
+    </ClInclude>
+    <ClInclude Include="SpaceShipCamera.h">
+      <Filter>B_3D_Client\02.Camera\02_02. SpaceShipCamera</Filter>
+    </ClInclude>
+    <ClInclude Include="UIShader.h">
+      <Filter>B_3D_Client\09.Shader\09_02. UIShader</Filter>
+    </ClInclude>
+    <ClInclude Include="UIMesh.h">
+      <Filter>B_3D_Client\04.Mesh\04_02. UIMesh</Filter>
+    </ClInclude>
+    <ClInclude Include="GeoSphereMesh.h">
+      <Filter>B_3D_Client\04.Mesh\04_03. GeoMetryMesh\GS_Sphere</Filter>
+    </ClInclude>
+    <ClInclude Include="GeoInstanceSpereShader.h">
+      <Filter>B_3D_Client\09.Shader\09_03.GeoMetry\GS_Sphere</Filter>
+    </ClInclude>
+    <ClInclude Include="SpaceNode.h">
+      <Filter>B_3D_Client\00.Manager\07.SpacePartition\02. Quad Tree\SpaceNode</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>B_3D_Client\03.Player\03_01 Player</Filter>
+    </ClInclude>
+    <ClInclude Include="ContentManager.h">
+      <Filter>B_3D_Client\00.Manager\03.Content</Filter>
+    </ClInclude>
+    <ClInclude Include="GameFramework.h">
+      <Filter>B_3D_Client\01.Framework\GameFramework</Filter>
+    </ClInclude>
+    <ClInclude Include="RenderingThreadInfo.h">
+      <Filter>B_3D_Client\01.Framework\RenderingThreadInfo</Filter>
+    </ClInclude>
+    <ClInclude Include="DefferedThreadProc.h">
+      <Filter>B_3D_Client\02.Camera\DeferredThreadProc</Filter>
+    </ClInclude>
+    <ClInclude Include="SpaceNodeQuad.h">
+      <Filter>B_3D_Client\00.Manager\07.SpacePartition\01. Arrary\SpaceNodeQuad</Filter>
+    </ClInclude>
+    <ClInclude Include="SpacePartitionQuad.h">
+      <Filter>B_3D_Client\00.Manager\07.SpacePartition\01. Arrary</Filter>
+    </ClInclude>
+    <ClInclude Include="SpacePartition.h">
+      <Filter>B_3D_Client\00.Manager\07.SpacePartition\02. Quad Tree</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerManager.h">
+      <Filter>B_3D_Client\00.Manager\02.Player</Filter>
+    </ClInclude>
+    <ClInclude Include="CameraManager.h">
+      <Filter>B_3D_Client\00.Manager\04.Camera</Filter>
+    </ClInclude>
+    <ClInclude Include="FreeCamera.h">
+      <Filter>B_3D_Client\02.Camera\02_04. FreeCamera</Filter>
+    </ClInclude>
+    <ClInclude Include="TerrainCubeShader.h">
+      <Filter>B_3D_Client\09.Shader\09_01. EnvironmentShader\03.TerrainCubeShader</Filter>
+    </ClInclude>
+    <ClInclude Include="TerrainCubeMesh.h">
+      <Filter>B_3D_Client\04.Mesh\04_04. TerrainCubeMesh</Filter>
+    </ClInclude>
+    <ClInclude Include="CubeTerrainManager.h">
+      <Filter>B_3D_Client\00.Manager\05.CubeTerrain</Filter>
+    </ClInclude>
+    <ClInclude Include="Sample.h">
+      <Filter>B_3D_Client\08.Script</Filter>
+    </ClInclude>
+    <ClInclude Include="FBXLoader.h">
+      <Filter>B_3D_Client\12.Utill\12_07. FBX Loader</Filter>
+    </ClInclude>
+    <ClInclude Include="LightingManger.h">
+      <Filter>B_3D_Client\00.Manager\06.Lighting</Filter>
+    </ClInclude>
+    <ClInclude Include="InputManager.h">
+      <Filter>B_3D_Client\00.Manager\08.Input</Filter>
+    </ClInclude>
+    <ClInclude Include="PositionObject.h">
+      <Filter>B_3D_Client\06.Object\06_02. PositionObject</Filter>
+    </ClInclude>
+    <ClInclude Include="ScreenShader.h">
+      <Filter>B_3D_Client\09.Shader\09_05.ScreenShader</Filter>
+    </ClInclude>
+    <ClInclude Include="BillBoardShader.h">
+      <Filter>B_3D_Client\09.Shader\09_07 BillboardShader</Filter>
+    </ClInclude>
+    <ClInclude Include="QuadrangleMesh.h">
+      <Filter>B_3D_Client\04.Mesh\04_06. QuadrangleMesh</Filter>
+    </ClInclude>
+    <ClInclude Include="TSCubeMesh.h">
+      <Filter>B_3D_Client\04.Mesh\04_07 TSCubeMesh</Filter>
+    </ClInclude>
+    <ClInclude Include="TSCubeShader.h">
+      <Filter>B_3D_Client\09.Shader\09_08. TSCubeShader</Filter>
+    </ClInclude>
+    <ClInclude Include="Define.h">
+      <Filter>A_Read &amp; Define</Filter>
+    </ClInclude>
+    <ClInclude Include="MyStruct.h">
+      <Filter>A_Read &amp; Define</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>A_Read &amp; Define</Filter>
+    </ClInclude>
+    <ClInclude Include="ParticleShader.h">
+      <Filter>B_3D_Client\09.Shader\09_09. ParticleShader</Filter>
+    </ClInclude>
+    <ClInclude Include="FireParticleShader.h">
+      <Filter>B_3D_Client\09.Shader\09_09. ParticleShader\FireParticle</Filter>
+    </ClInclude>
+    <ClInclude Include="Helper.h">
+      <Filter>B_3D_Client\12.Utill\12_06. Helper</Filter>
+    </ClInclude>
+    <ClInclude Include="AABBRenderShader.h">
+      <Filter>B_3D_Client\09.Shader\09_03.GeoMetry\GS_AABB</Filter>
+    </ClInclude>
+    <ClInclude Include="GeoAABBMesh.h">
+      <Filter>B_3D_Client\04.Mesh\04_03. GeoMetryMesh\GS_AABB</Filter>
+    </ClInclude>
+    <ClInclude Include="TextMesh.h">
+      <Filter>B_3D_Client\12.Utill\12_08. Font</Filter>
+    </ClInclude>
+    <ClInclude Include="GameFrameWork_2D.h">
+      <Filter>C_2D_Client\01. FrameWork</Filter>
+    </ClInclude>
+    <ClInclude Include="GraphicObject_2D.h">
+      <Filter>C_2D_Client\03. Image\GraphicObject</Filter>
+    </ClInclude>
+    <ClInclude Include="SpriteObject_2D.h">
+      <Filter>C_2D_Client\03. Image\SprichObject</Filter>
+    </ClInclude>
+    <ClInclude Include="Draw_2D.h">
+      <Filter>C_2D_Client\06. Utill</Filter>
+    </ClInclude>
+    <ClInclude Include="MyFunction.h">
+      <Filter>C_2D_Client\06. Utill</Filter>
+    </ClInclude>
+    <ClInclude Include="RenderManager_2D.h">
+      <Filter>C_2D_Client\04. RenderManager</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObject_2D.h">
+      <Filter>C_2D_Client\03. Image</Filter>
+    </ClInclude>
+    <ClInclude Include="GameState_2D.h">
+      <Filter>C_2D_Client\06. Utill</Filter>
+    </ClInclude>
+    <ClInclude Include="Lusian_Scrool.h">
+      <Filter>C_2D_Client\06. Utill</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneSelectMenu_2D.h">
+      <Filter>C_2D_Client\05. Scene\Temp_Menu</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneLoading_2D.h">
+      <Filter>C_2D_Client\05. Scene\Lodaing</Filter>
+    </ClInclude>
+    <ClInclude Include="GeoInstanceingCubeShader.h">
+      <Filter>B_3D_Client\09.Shader\09_03.GeoMetry\GS_Cube</Filter>
+    </ClInclude>
+    <ClInclude Include="GeoTerrainCubeShader.h">
+      <Filter>B_3D_Client\09.Shader\09_03.GeoMetry\GS_TerrainCube</Filter>
+    </ClInclude>
+    <ClInclude Include="MatrixShader.h">
+      <Filter>B_3D_Client\09.Shader\09_06 MatrixShader</Filter>
+    </ClInclude>
+    <ClInclude Include="FBXSkinningShader.h">
+      <Filter>B_3D_Client\09.Shader\09_10. FBXSkinningShader</Filter>
+    </ClInclude>
+    <ClInclude Include="FBXSingleMesh.h">
+      <Filter>B_3D_Client\04.Mesh\04_05. FBXSingleMesh</Filter>
+    </ClInclude>
+    <ClInclude Include="AnimationComponent.h">
+      <Filter>B_3D_Client\08.Script\08_01. AnmationComponent</Filter>
+    </ClInclude>
+    <ClInclude Include="TCP_Client.h">
+      <Filter>E_NetWork\CommModule</Filter>
+    </ClInclude>
+    <ClInclude Include="PacketManger.h">
+      <Filter>E_NetWork\PacketManager</Filter>
+    </ClInclude>
+    <ClInclude Include="CriticalSection.h">
+      <Filter>E_NetWork\Sync</Filter>
+    </ClInclude>
+    <ClInclude Include="Event.h">
+      <Filter>E_NetWork\Sync</Filter>
+    </ClInclude>
+    <ClInclude Include="CommClientDefine.h">
+      <Filter>E_NetWork</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneGameRoom_2D.h">
+      <Filter>C_2D_Client\05. Scene\GameRoom</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneLobby_2D.h">
+      <Filter>C_2D_Client\05. Scene\Lobby</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneMatchStandby_2D.h">
+      <Filter>C_2D_Client\05. Scene\MatchStandby</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneResult_2D.h">
+      <Filter>C_2D_Client\05. Scene\Result</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneRoomCreate_2D.h">
+      <Filter>C_2D_Client\05. Scene\RoomCreate</Filter>
+    </ClInclude>
+    <ClInclude Include="Scene.h">
+      <Filter>B_3D_Client\10.Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="ItemSpeedUp.h">
+      <Filter>B_3D_Client\08.Script\08_04.Item</Filter>
+    </ClInclude>
+    <ClInclude Include="RotatingScript.h">
+      <Filter>B_3D_Client\08.Script\08_04.Item</Filter>
+    </ClInclude>
+    <ClInclude Include="RevolvingObject.h">
+      <Filter>B_3D_Client\08.Script\08_04.Item</Filter>
+    </ClInclude>
+    <ClInclude Include="Minyoung.h">
+      <Filter>B_3D_Client\08.Script\Test</Filter>
+    </ClInclude>
+    <ClInclude Include="RangeMove.h">
+      <Filter>B_3D_Client\08.Script\Test</Filter>
+    </ClInclude>
+    <ClInclude Include="MonsterPatrol.h">
+      <Filter>B_3D_Client\08.Script\08_05.Monster</Filter>
+    </ClInclude>
+    <ClInclude Include="ShadowMapShader.h">
+      <Filter>B_3D_Client\09.Shader\09_12. ShadowShader</Filter>
+    </ClInclude>
+    <ClInclude Include="ItemHide.h">
+      <Filter>B_3D_Client\08.Script\08_04.Item</Filter>
+    </ClInclude>
+    <ClInclude Include="BushShader.h">
+      <Filter>B_3D_Client\09.Shader\09_15. BlendShader\BushShader</Filter>
+    </ClInclude>
+    <ClInclude Include="EditBox_2D.h">
+      <Filter>C_2D_Client\07.EditBox</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneLogin_2D.h">
+      <Filter>C_2D_Client\05. Scene\Login</Filter>
+    </ClInclude>
+    <ClInclude Include="BulletShader.h">
+      <Filter>B_3D_Client\09.Shader\09_14. BulletShader</Filter>
+    </ClInclude>
+    <ClInclude Include="ItemBasic.h">
+      <Filter>B_3D_Client\08.Script\08_04.Item</Filter>
+    </ClInclude>
+    <ClInclude Include="UIManager.h">
+      <Filter>B_3D_Client\00.Manager\11.UIManager</Filter>
+    </ClInclude>
+    <ClInclude Include="WARP3DMesh.h">
+      <Filter>Warp3D</Filter>
+    </ClInclude>
+    <ClInclude Include="Warp3DModel.h">
+      <Filter>Warp3D</Filter>
+    </ClInclude>
+    <ClInclude Include="Warp3DModelManager.h">
+      <Filter>Warp3D</Filter>
+    </ClInclude>
+    <ClInclude Include="UIState.h">
+      <Filter>B_3D_Client\08.Script\08_06.UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UIEatItem.h">
+      <Filter>B_3D_Client\08.Script\08_06.UI</Filter>
+    </ClInclude>
+    <ClInclude Include="HashTable.h">
+      <Filter>B_3D_Client\12.Utill\12_02. ItemHashName</Filter>
+    </ClInclude>
+    <ClInclude Include="FontManager.h">
+      <Filter>B_3D_Client\00.Manager\09.Font</Filter>
+    </ClInclude>
+    <ClInclude Include="BlendShader.h">
+      <Filter>B_3D_Client\09.Shader\09_15. BlendShader</Filter>
+    </ClInclude>
+    <ClInclude Include="BasicSystem.h">
+      <Filter>B_3D_Client\11.System\11_01 BasicSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerState.h">
+      <Filter>B_3D_Client\08.Script\08_02.Player</Filter>
+    </ClInclude>
+    <ClInclude Include="WarpAnimation.h">
+      <Filter>Warp3D</Filter>
+    </ClInclude>
+    <ClInclude Include="OtherPlayer.h">
+      <Filter>B_3D_Client\03.Player\03_03 OtherPlayer</Filter>
+    </ClInclude>
+    <ClInclude Include="CameraMove.h">
+      <Filter>B_3D_Client\08.Script\08_07.Camera</Filter>
+    </ClInclude>
+    <ClInclude Include="CloudPatrol.h">
+      <Filter>B_3D_Client\08.Script\08_99.Etc</Filter>
+    </ClInclude>
+    <ClInclude Include="UpDownPatrol.h">
+      <Filter>B_3D_Client\08.Script\08_99.Etc</Filter>
+    </ClInclude>
+    <ClInclude Include="ActiviceSkill.h">
+      <Filter>B_3D_Client\08.Script\08_08. Skill\ActiviceSkill</Filter>
+    </ClInclude>
+    <ClInclude Include="Skill.h">
+      <Filter>B_3D_Client\08.Script\08_08. Skill</Filter>
+    </ClInclude>
+    <ClInclude Include="PassiveSkill.h">
+      <Filter>B_3D_Client\08.Script\08_08. Skill\PassiveSkill</Filter>
+    </ClInclude>
+    <ClInclude Include="Teleport.h">
+      <Filter>B_3D_Client\08.Script\08_08. Skill\ActiviceSkill\TelerPort</Filter>
+    </ClInclude>
+    <ClInclude Include="ThrowSkill.h">
+      <Filter>B_3D_Client\08.Script\08_08. Skill\ActiviceSkill\ThrowSkill</Filter>
+    </ClInclude>
+    <ClInclude Include="ItemCooldownDecrease.h">
+      <Filter>B_3D_Client\08.Script\08_04.Item</Filter>
+    </ClInclude>
+    <ClInclude Include="Warp3DSkinningShader.h">
+      <Filter>B_3D_Client\09.Shader\09_16. Warp3DSkinningShader</Filter>
+    </ClInclude>
+    <ClInclude Include="Warp3DPlayerShader.h">
+      <Filter>B_3D_Client\09.Shader\09_04.PlayerShader\01.Warp3DPlayerShader</Filter>
+    </ClInclude>
+    <ClInclude Include="Warp3DOtherPlayerShader.h">
+      <Filter>B_3D_Client\09.Shader\09_04.PlayerShader\02.Warp3DOtherPlayerShader</Filter>
+    </ClInclude>
+    <ClInclude Include="HeadBangBangShader.h">
+      <Filter>B_3D_Client\09.Shader\09_17 HeadBangBangShader</Filter>
+    </ClInclude>
+    <ClInclude Include="BulletinShader.h">
+      <Filter>B_3D_Client\09.Shader\09_18 BulletinShader</Filter>
+    </ClInclude>
+    <ClInclude Include="GameSystem.h">
+      <Filter>B_3D_Client\11.System</Filter>
+    </ClInclude>
+    <ClInclude Include="EvasionSkill.h">
+      <Filter>B_3D_Client\08.Script\08_08. Skill\PassiveSkill\Evasion</Filter>
+    </ClInclude>
+    <ClInclude Include="SpeedSkill.h">
+      <Filter>B_3D_Client\08.Script\08_08. Skill\PassiveSkill\Speedup</Filter>
+    </ClInclude>
+    <ClInclude Include="ThreadProcessor.h">
+      <Filter>B_3D_Client\01.Framework\ThreadLoading</Filter>
+    </ClInclude>
+    <ClInclude Include="Warp3DSkinningShaderforBunny.h">
+      <Filter>B_3D_Client\09.Shader\09_16. Warp3DSkinningShader\01. Warp3DSkinningShaderforBunny</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneGameResultLoading_2D.h">
+      <Filter>C_2D_Client\05. Scene\SceneGameResultLoading_2D</Filter>
+    </ClInclude>
+    <ClInclude Include="MonsterAnimationComponent.h">
+      <Filter>B_3D_Client\08.Script\08_05.Monster</Filter>
+    </ClInclude>
+    <ClInclude Include="SoundManager.h">
+      <Filter>B_3D_Client\00.Manager\12.SoundManager</Filter>
+    </ClInclude>
+    <ClInclude Include="HideSkill.h">
+      <Filter>B_3D_Client\08.Script\08_08. Skill\ActiviceSkill\Hide</Filter>
+    </ClInclude>
+    <ClInclude Include="MonsterComponent.h">
+      <Filter>B_3D_Client\08.Script\08_05.Monster</Filter>
+    </ClInclude>
+    <ClInclude Include="MathCalu.h">
+      <Filter>C_2D_Client\06. Utill</Filter>
+    </ClInclude>
+    <ClInclude Include="MonsterHeadCubeShader.h">
+      <Filter>B_3D_Client\09.Shader\09_19 MonsterHeadShader</Filter>
+    </ClInclude>
+    <ClInclude Include="MonsterHeadBangBang.h">
+      <Filter>B_3D_Client\08.Script\08_05.Monster</Filter>
+    </ClInclude>
+    <ClInclude Include="MonsterState.h">
+      <Filter>B_3D_Client\08.Script\08_05.Monster</Filter>
+    </ClInclude>
+    <ClInclude Include="OtherPlayerAnimation.h">
+      <Filter>B_3D_Client\08.Script\08_02.Player\OtherPlayer</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerComponet.h">
+      <Filter>B_3D_Client\08.Script\08_02.Player\MyPlayer</Filter>
+    </ClInclude>
+    <ClInclude Include="OtherPlayerComponent.h">
+      <Filter>B_3D_Client\08.Script\08_02.Player\OtherPlayer</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerAnimation.h">
+      <Filter>B_3D_Client\08.Script\08_02.Player\MyPlayer</Filter>
+    </ClInclude>
+    <ClInclude Include="ItemThrow.h">
+      <Filter>B_3D_Client\08.Script\08_04.Item</Filter>
+    </ClInclude>
+    <ClInclude Include="ItemBoom.h">
+      <Filter>B_3D_Client\08.Script\08_04.Item\Trap</Filter>
+    </ClInclude>
+    <ClInclude Include="ItemFake.h">
+      <Filter>B_3D_Client\08.Script\08_04.Item\Trap</Filter>
+    </ClInclude>
+    <ClInclude Include="ItemTrap.h">
+      <Filter>B_3D_Client\08.Script\08_04.Item\Trap</Filter>
+    </ClInclude>
+    <ClInclude Include="BulletComponent.h">
+      <Filter>B_3D_Client\08.Script</Filter>
+    </ClInclude>
+    <ClInclude Include="ParticleManager.h">
+      <Filter>B_3D_Client\00.Manager\10.ParticleManager</Filter>
+    </ClInclude>
+    <ClInclude Include="TrapShader.h">
+      <Filter>B_3D_Client\09.Shader\09_20 TrapShader</Filter>
+    </ClInclude>
+    <ClInclude Include="ItemFlahsBang.h">
+      <Filter>B_3D_Client\08.Script\08_04.Item</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerHeadBangBang.h">
+      <Filter>B_3D_Client\08.Script\08_02.Player</Filter>
+    </ClInclude>
+    <ClInclude Include="CubeParticleShader.h">
+      <Filter>B_3D_Client\09.Shader\09_09. ParticleShader\CubeParticle</Filter>
+    </ClInclude>
+    <ClInclude Include="QuadParticleShader.h">
+      <Filter>B_3D_Client\09.Shader\09_09. ParticleShader\QuadParticle</Filter>
+    </ClInclude>
+    <ClInclude Include="WaterFallShader.h">
+      <Filter>B_3D_Client\09.Shader\09_09. ParticleShader\WaterFallParticle</Filter>
+    </ClInclude>
+    <ClInclude Include="ChochShader.h">
+      <Filter>B_3D_Client\09.Shader\09_01. EnvironmentShader\04.ChocoShader</Filter>
+    </ClInclude>
+    <ClInclude Include="WaterShader.h">
+      <Filter>B_3D_Client\09.Shader\09_01. EnvironmentShader\02. WaterShader</Filter>
+    </ClInclude>
+    <ClInclude Include="UISpriteMesh.h">
+      <Filter>B_3D_Client\04.Mesh\04_07 UISpriteMesh</Filter>
+    </ClInclude>
+    <ClInclude Include="BillBoardSpriteShader.h">
+      <Filter>B_3D_Client\09.Shader\09_07 BillboardShader\BillBoardSpriteShader</Filter>
+    </ClInclude>
+    <ClInclude Include="QuadrangleSpriteMesh.h">
+      <Filter>B_3D_Client\04.Mesh\04_06. QuadrangleMesh\QuadrangleSpriteMesh</Filter>
+    </ClInclude>
+    <ClInclude Include="UIGauge.h">
+      <Filter>B_3D_Client\06.Object\UIGauge</Filter>
+    </ClInclude>
+    <ClInclude Include="WaterFallMeshShader.h">
+      <Filter>B_3D_Client\09.Shader\09_21 WaterFallMeshShader</Filter>
+    </ClInclude>
+    <ClInclude Include="InstancedSpriteShader.h">
+      <Filter>B_3D_Client\09.Shader\09_33 InstancedSpriteShader</Filter>
+    </ClInclude>
+    <ClInclude Include="BillBoardDisappearShader.h">
+      <Filter>B_3D_Client\09.Shader\09_07 BillboardShader\BillBoardAlphaShader</Filter>
+    </ClInclude>
+    <ClInclude Include="FlowerParticleShader.h">
+      <Filter>B_3D_Client\09.Shader\09_09. ParticleShader\FlowerParticle</Filter>
+    </ClInclude>
+    <ClInclude Include="PostProcessingManager.h">
+      <Filter>B_3D_Client\00.Manager\13. PostProcessingManager</Filter>
+    </ClInclude>
+    <ClInclude Include="TwBarManager.h">
+      <Filter>B_3D_Client\00.Manager\14. TwBarManager</Filter>
+    </ClInclude>
+    <ClInclude Include="RenderTargetShader.h">
+      <Filter>B_3D_Client\09.Shader\09_34 RenderTargeShader</Filter>
+    </ClInclude>
+    <ClInclude Include="Warp3D_PlayerMesh.h">
+      <Filter>Warp3D</Filter>
+    </ClInclude>
+    <ClInclude Include="Globalvariable.h">
+      <Filter>B_3D_Client\14.DX12</Filter>
+    </ClInclude>
+    <ClInclude Include="MyEnum.h">
+      <Filter>B_3D_Client\14.DX12</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Camera.cpp">
+      <Filter>B_3D_Client\02.Camera</Filter>
+    </ClCompile>
+    <ClCompile Include="Mesh.cpp">
+      <Filter>B_3D_Client\04.Mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="Shader.cpp">
+      <Filter>B_3D_Client\09.Shader</Filter>
+    </ClCompile>
+    <ClCompile Include="Timer.cpp">
+      <Filter>B_3D_Client\00.Manager\01.Timer</Filter>
+    </ClCompile>
+    <ClCompile Include="ModelParsingMesh.cpp">
+      <Filter>B_3D_Client\04.Mesh\04_01. ModelMesh</Filter>
+    </ClCompile>
+    <ClCompile Include="SkyBoxShader.cpp">
+      <Filter>B_3D_Client\09.Shader\09_01. EnvironmentShader\01.SkyBoxShader</Filter>
+    </ClCompile>
+    <ClCompile Include="Texture.cpp">
+      <Filter>B_3D_Client\05.Material\Texture</Filter>
+    </ClCompile>
+    <ClCompile Include="MaterialColors.cpp">
+      <Filter>B_3D_Client\05.Material\MaterialColors</Filter>
+    </ClCompile>
+    <ClCompile Include="Material.cpp">
+      <Filter>B_3D_Client\05.Material</Filter>
+    </ClCompile>
+    <ClCompile Include="HeightMap.cpp">
+      <Filter>B_3D_Client\06.Object\06_01. Environment\02.Terrain\HeightMap</Filter>
+    </ClCompile>
+    <ClCompile Include="HeightMapTerrain.cpp">
+      <Filter>B_3D_Client\06.Object\06_01. Environment\02.Terrain\HeightMapTerrain</Filter>
+    </ClCompile>
+    <ClCompile Include="SkyBox.cpp">
+      <Filter>B_3D_Client\06.Object\06_01. Environment\01.SkyBoxObject</Filter>
+    </ClCompile>
+    <ClCompile Include="TerrainWater.cpp">
+      <Filter>B_3D_Client\06.Object\06_01. Environment\04.TerrainWater</Filter>
+    </ClCompile>
+    <ClCompile Include="InstancedObjectsShader.cpp">
+      <Filter>B_3D_Client\09.Shader\09_00. InstanceShader</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObject.cpp">
+      <Filter>B_3D_Client\06.Object\06_00.GameObject</Filter>
+    </ClCompile>
+    <ClCompile Include="Object.cpp">
+      <Filter>B_3D_Client\06.Object</Filter>
+    </ClCompile>
+    <ClCompile Include="Component.cpp">
+      <Filter>B_3D_Client\07.Component</Filter>
+    </ClCompile>
+    <ClCompile Include="TerrainPlayer.cpp">
+      <Filter>B_3D_Client\03.Player\03_02 TerrainPlayer</Filter>
+    </ClCompile>
+    <ClCompile Include="GeoMetryInstanceShader.cpp">
+      <Filter>B_3D_Client\09.Shader\09_03.GeoMetry</Filter>
+    </ClCompile>
+    <ClCompile Include="GeoMetryMesh.cpp">
+      <Filter>B_3D_Client\04.Mesh\04_03. GeoMetryMesh</Filter>
+    </ClCompile>
+    <ClCompile Include="GeoCubeMesh.cpp">
+      <Filter>B_3D_Client\04.Mesh\04_03. GeoMetryMesh\GS_Cube</Filter>
+    </ClCompile>
+    <ClCompile Include="ThirdPersonCamera.cpp">
+      <Filter>B_3D_Client\02.Camera\02_03. ThridPersonCamera</Filter>
+    </ClCompile>
+    <ClCompile Include="FirstPersonCamera.cpp">
+      <Filter>B_3D_Client\02.Camera\02_01. FirstPerson</Filter>
+    </ClCompile>
+    <ClCompile Include="SpaceShipCamera.cpp">
+      <Filter>B_3D_Client\02.Camera\02_02. SpaceShipCamera</Filter>
+    </ClCompile>
+    <ClCompile Include="UIShader.cpp">
+      <Filter>B_3D_Client\09.Shader\09_02. UIShader</Filter>
+    </ClCompile>
+    <ClCompile Include="UIMesh.cpp">
+      <Filter>B_3D_Client\04.Mesh\04_02. UIMesh</Filter>
+    </ClCompile>
+    <ClCompile Include="GeoSphereMesh.cpp">
+      <Filter>B_3D_Client\04.Mesh\04_03. GeoMetryMesh\GS_Sphere</Filter>
+    </ClCompile>
+    <ClCompile Include="GeoInstanceSpereShader.cpp">
+      <Filter>B_3D_Client\09.Shader\09_03.GeoMetry\GS_Sphere</Filter>
+    </ClCompile>
+    <ClCompile Include="SpaceNode.cpp">
+      <Filter>B_3D_Client\00.Manager\07.SpacePartition\02. Quad Tree\SpaceNode</Filter>
+    </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>B_3D_Client\03.Player\03_01 Player</Filter>
+    </ClCompile>
+    <ClCompile Include="ContentManager.cpp">
+      <Filter>B_3D_Client\00.Manager\03.Content</Filter>
+    </ClCompile>
+    <ClCompile Include="GameFramework.cpp">
+      <Filter>B_3D_Client\01.Framework\GameFramework</Filter>
+    </ClCompile>
+    <ClCompile Include="DefferedThreadProc.cpp">
+      <Filter>B_3D_Client\02.Camera\DeferredThreadProc</Filter>
+    </ClCompile>
+    <ClCompile Include="SpaceNodeQuad.cpp">
+      <Filter>B_3D_Client\00.Manager\07.SpacePartition\01. Arrary\SpaceNodeQuad</Filter>
+    </ClCompile>
+    <ClCompile Include="SpacePartitionQuad.cpp">
+      <Filter>B_3D_Client\00.Manager\07.SpacePartition\01. Arrary</Filter>
+    </ClCompile>
+    <ClCompile Include="SpacePartition.cpp">
+      <Filter>B_3D_Client\00.Manager\07.SpacePartition\02. Quad Tree</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerManager.cpp">
+      <Filter>B_3D_Client\00.Manager\02.Player</Filter>
+    </ClCompile>
+    <ClCompile Include="CameraManager.cpp">
+      <Filter>B_3D_Client\00.Manager\04.Camera</Filter>
+    </ClCompile>
+    <ClCompile Include="FreeCamera.cpp">
+      <Filter>B_3D_Client\02.Camera\02_04. FreeCamera</Filter>
+    </ClCompile>
+    <ClCompile Include="TerrainCubeShader.cpp">
+      <Filter>B_3D_Client\09.Shader\09_01. EnvironmentShader\03.TerrainCubeShader</Filter>
+    </ClCompile>
+    <ClCompile Include="TerrainCubeMesh.cpp">
+      <Filter>B_3D_Client\04.Mesh\04_04. TerrainCubeMesh</Filter>
+    </ClCompile>
+    <ClCompile Include="CubeTerrainManager.cpp">
+      <Filter>B_3D_Client\00.Manager\05.CubeTerrain</Filter>
+    </ClCompile>
+    <ClCompile Include="FBXLoader.cpp">
+      <Filter>B_3D_Client\12.Utill\12_07. FBX Loader</Filter>
+    </ClCompile>
+    <ClCompile Include="LightingManger.cpp">
+      <Filter>B_3D_Client\00.Manager\06.Lighting</Filter>
+    </ClCompile>
+    <ClCompile Include="InputManager.cpp">
+      <Filter>B_3D_Client\00.Manager\08.Input</Filter>
+    </ClCompile>
+    <ClCompile Include="PositionObject.cpp">
+      <Filter>B_3D_Client\06.Object\06_02. PositionObject</Filter>
+    </ClCompile>
+    <ClCompile Include="ScreenShader.cpp">
+      <Filter>B_3D_Client\09.Shader\09_05.ScreenShader</Filter>
+    </ClCompile>
+    <ClCompile Include="BillBoardShader.cpp">
+      <Filter>B_3D_Client\09.Shader\09_07 BillboardShader</Filter>
+    </ClCompile>
+    <ClCompile Include="QuadrangleMesh.cpp">
+      <Filter>B_3D_Client\04.Mesh\04_06. QuadrangleMesh</Filter>
+    </ClCompile>
+    <ClCompile Include="TSCubeMesh.cpp">
+      <Filter>B_3D_Client\04.Mesh\04_07 TSCubeMesh</Filter>
+    </ClCompile>
+    <ClCompile Include="TSCubeShader.cpp">
+      <Filter>B_3D_Client\09.Shader\09_08. TSCubeShader</Filter>
+    </ClCompile>
+    <ClCompile Include="ParticleShader.cpp">
+      <Filter>B_3D_Client\09.Shader\09_09. ParticleShader</Filter>
+    </ClCompile>
+    <ClCompile Include="FireParticleShader.cpp">
+      <Filter>B_3D_Client\09.Shader\09_09. ParticleShader\FireParticle</Filter>
+    </ClCompile>
+    <ClCompile Include="AABBRenderShader.cpp">
+      <Filter>B_3D_Client\09.Shader\09_03.GeoMetry\GS_AABB</Filter>
+    </ClCompile>
+    <ClCompile Include="GeoAABBMesh.cpp">
+      <Filter>B_3D_Client\04.Mesh\04_03. GeoMetryMesh\GS_AABB</Filter>
+    </ClCompile>
+    <ClCompile Include="TextMesh.cpp">
+      <Filter>B_3D_Client\12.Utill\12_08. Font</Filter>
+    </ClCompile>
+    <ClCompile Include="GameFrameWork_2D.cpp">
+      <Filter>C_2D_Client\01. FrameWork</Filter>
+    </ClCompile>
+    <ClCompile Include="GraphicObject_2D.cpp">
+      <Filter>C_2D_Client\03. Image\GraphicObject</Filter>
+    </ClCompile>
+    <ClCompile Include="SpriteObject_2D.cpp">
+      <Filter>C_2D_Client\03. Image\SprichObject</Filter>
+    </ClCompile>
+    <ClCompile Include="RenderManager_2D.cpp">
+      <Filter>C_2D_Client\04. RenderManager</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObject_2D.cpp">
+      <Filter>C_2D_Client\03. Image</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>A_Read &amp; Define</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneSelectMenu_2D.cpp">
+      <Filter>C_2D_Client\05. Scene\Temp_Menu</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneLoading_2D.cpp">
+      <Filter>C_2D_Client\05. Scene\Lodaing</Filter>
+    </ClCompile>
+    <ClCompile Include="GeoInstanceingCubeShader.cpp">
+      <Filter>B_3D_Client\09.Shader\09_03.GeoMetry\GS_Cube</Filter>
+    </ClCompile>
+    <ClCompile Include="GeoTerrainCubeShader.cpp">
+      <Filter>B_3D_Client\09.Shader\09_03.GeoMetry\GS_TerrainCube</Filter>
+    </ClCompile>
+    <ClCompile Include="MatrixShader.cpp">
+      <Filter>B_3D_Client\09.Shader\09_06 MatrixShader</Filter>
+    </ClCompile>
+    <ClCompile Include="FBXSkinningShader.cpp">
+      <Filter>B_3D_Client\09.Shader\09_10. FBXSkinningShader</Filter>
+    </ClCompile>
+    <ClCompile Include="FBXSingleMesh.cpp">
+      <Filter>B_3D_Client\04.Mesh\04_05. FBXSingleMesh</Filter>
+    </ClCompile>
+    <ClCompile Include="PacketManager.cpp">
+      <Filter>E_NetWork\PacketManager</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneGameRoom_2D.cpp">
+      <Filter>C_2D_Client\05. Scene\GameRoom</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneLobby_2D.cpp">
+      <Filter>C_2D_Client\05. Scene\Lobby</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneMatchStandby_2D.cpp">
+      <Filter>C_2D_Client\05. Scene\MatchStandby</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneResult_2D.cpp">
+      <Filter>C_2D_Client\05. Scene\Result</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneRoomCreate_2D.cpp">
+      <Filter>C_2D_Client\05. Scene\RoomCreate</Filter>
+    </ClCompile>
+    <ClCompile Include="Scene.cpp">
+      <Filter>B_3D_Client\10.Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="ShadowMapShader.cpp">
+      <Filter>B_3D_Client\09.Shader\09_12. ShadowShader</Filter>
+    </ClCompile>
+    <ClCompile Include="LabProject14.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="BushShader.cpp">
+      <Filter>B_3D_Client\09.Shader\09_15. BlendShader\BushShader</Filter>
+    </ClCompile>
+    <ClCompile Include="EditBox_2D.cpp">
+      <Filter>C_2D_Client\07.EditBox</Filter>
+    </ClCompile>
+    <ClCompile Include="BulletShader.cpp">
+      <Filter>B_3D_Client\09.Shader\09_14. BulletShader</Filter>
+    </ClCompile>
+    <ClCompile Include="UIManager.cpp">
+      <Filter>B_3D_Client\00.Manager\11.UIManager</Filter>
+    </ClCompile>
+    <ClCompile Include="WARP3DMesh.cpp">
+      <Filter>Warp3D</Filter>
+    </ClCompile>
+    <ClCompile Include="Warp3DModel.cpp">
+      <Filter>Warp3D</Filter>
+    </ClCompile>
+    <ClCompile Include="Warp3DModelManager.cpp">
+      <Filter>Warp3D</Filter>
+    </ClCompile>
+    <ClCompile Include="FontManager.cpp">
+      <Filter>B_3D_Client\00.Manager\09.Font</Filter>
+    </ClCompile>
+    <ClCompile Include="BlendShader.cpp">
+      <Filter>B_3D_Client\09.Shader\09_15. BlendShader</Filter>
+    </ClCompile>
+    <ClCompile Include="BasicSystem.cpp">
+      <Filter>B_3D_Client\11.System\11_01 BasicSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="WarpAnimation.cpp">
+      <Filter>Warp3D</Filter>
+    </ClCompile>
+    <ClCompile Include="OtherPlayer.cpp">
+      <Filter>B_3D_Client\03.Player\03_03 OtherPlayer</Filter>
+    </ClCompile>
+    <ClCompile Include="Warp3DSkinningShader.cpp">
+      <Filter>B_3D_Client\09.Shader\09_16. Warp3DSkinningShader</Filter>
+    </ClCompile>
+    <ClCompile Include="Warp3DPlayerShader.cpp">
+      <Filter>B_3D_Client\09.Shader\09_04.PlayerShader\01.Warp3DPlayerShader</Filter>
+    </ClCompile>
+    <ClCompile Include="Warp3DOtherPlayerShader.cpp">
+      <Filter>B_3D_Client\09.Shader\09_04.PlayerShader\02.Warp3DOtherPlayerShader</Filter>
+    </ClCompile>
+    <ClCompile Include="HeadBangBangShader.cpp">
+      <Filter>B_3D_Client\09.Shader\09_17 HeadBangBangShader</Filter>
+    </ClCompile>
+    <ClCompile Include="BulletinShader.cpp">
+      <Filter>B_3D_Client\09.Shader\09_18 BulletinShader</Filter>
+    </ClCompile>
+    <ClCompile Include="ThreadProcessor.cpp">
+      <Filter>B_3D_Client\01.Framework\ThreadLoading</Filter>
+    </ClCompile>
+    <ClCompile Include="Warp3DSkinningShaderforBunny.cpp">
+      <Filter>B_3D_Client\09.Shader\09_16. Warp3DSkinningShader\01. Warp3DSkinningShaderforBunny</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneGameResultLoading_2D.cpp">
+      <Filter>C_2D_Client\05. Scene\SceneGameResultLoading_2D</Filter>
+    </ClCompile>
+    <ClCompile Include="SoundManager.cpp">
+      <Filter>B_3D_Client\00.Manager\12.SoundManager</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneLogln_2D.cpp">
+      <Filter>C_2D_Client\05. Scene\Login</Filter>
+    </ClCompile>
+    <ClCompile Include="MonsterHeadCubeShader.cpp">
+      <Filter>B_3D_Client\09.Shader\09_19 MonsterHeadShader</Filter>
+    </ClCompile>
+    <ClCompile Include="TCP_Client.cpp">
+      <Filter>E_NetWork\CommModule</Filter>
+    </ClCompile>
+    <ClCompile Include="ParticleManager.cpp">
+      <Filter>B_3D_Client\00.Manager\10.ParticleManager</Filter>
+    </ClCompile>
+    <ClCompile Include="TrapShader.cpp">
+      <Filter>B_3D_Client\09.Shader\09_20 TrapShader</Filter>
+    </ClCompile>
+    <ClCompile Include="CubeParticleShader.cpp">
+      <Filter>B_3D_Client\09.Shader\09_09. ParticleShader\CubeParticle</Filter>
+    </ClCompile>
+    <ClCompile Include="QuadParticleShader.cpp">
+      <Filter>B_3D_Client\09.Shader\09_09. ParticleShader\QuadParticle</Filter>
+    </ClCompile>
+    <ClCompile Include="WaterFallShader.cpp">
+      <Filter>B_3D_Client\09.Shader\09_09. ParticleShader\WaterFallParticle</Filter>
+    </ClCompile>
+    <ClCompile Include="ChochShader.cpp">
+      <Filter>B_3D_Client\09.Shader\09_01. EnvironmentShader\04.ChocoShader</Filter>
+    </ClCompile>
+    <ClCompile Include="WaterShader.cpp">
+      <Filter>B_3D_Client\09.Shader\09_01. EnvironmentShader\02. WaterShader</Filter>
+    </ClCompile>
+    <ClCompile Include="UISpriteMesh.cpp">
+      <Filter>B_3D_Client\04.Mesh\04_07 UISpriteMesh</Filter>
+    </ClCompile>
+    <ClCompile Include="BillBoardSpriteShader.cpp">
+      <Filter>B_3D_Client\09.Shader\09_07 BillboardShader\BillBoardSpriteShader</Filter>
+    </ClCompile>
+    <ClCompile Include="QuadrangleSpriteMesh.cpp">
+      <Filter>B_3D_Client\04.Mesh\04_06. QuadrangleMesh\QuadrangleSpriteMesh</Filter>
+    </ClCompile>
+    <ClCompile Include="UIGauge.cpp">
+      <Filter>B_3D_Client\06.Object\UIGauge</Filter>
+    </ClCompile>
+    <ClCompile Include="WaterFallMeshShader.cpp">
+      <Filter>B_3D_Client\09.Shader\09_21 WaterFallMeshShader</Filter>
+    </ClCompile>
+    <ClCompile Include="InstancedSpriteShader.cpp">
+      <Filter>B_3D_Client\09.Shader\09_33 InstancedSpriteShader</Filter>
+    </ClCompile>
+    <ClCompile Include="BillBoardDisappearShader.cpp">
+      <Filter>B_3D_Client\09.Shader\09_07 BillboardShader\BillBoardAlphaShader</Filter>
+    </ClCompile>
+    <ClCompile Include="FlowerParticleShader.cpp">
+      <Filter>B_3D_Client\09.Shader\09_09. ParticleShader\FlowerParticle</Filter>
+    </ClCompile>
+    <ClCompile Include="PostProcessingManager.cpp">
+      <Filter>B_3D_Client\00.Manager\13. PostProcessingManager</Filter>
+    </ClCompile>
+    <ClCompile Include="TwBarManager.cpp">
+      <Filter>B_3D_Client\00.Manager\14. TwBarManager</Filter>
+    </ClCompile>
+    <ClCompile Include="RenderTargetShader.cpp">
+      <Filter>B_3D_Client\09.Shader\09_34 RenderTargeShader</Filter>
+    </ClCompile>
+    <ClCompile Include="Warp3D_PlayerMesh.cpp">
+      <Filter>Warp3D</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="LabProject14.rc">
+      <Filter>리소스 파일</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="GS_Instance_Cube.fx">
+      <Filter>D.HLSL\03. GSShader\02.Instance</Filter>
+    </FxCompile>
+    <FxCompile Include="FxDefine.fx">
+      <Filter>D.HLSL\00. Define</Filter>
+    </FxCompile>
+    <FxCompile Include="GSShader.fx">
+      <Filter>D.HLSL\03. GSShader</Filter>
+    </FxCompile>
+    <FxCompile Include="BillBoard.fx">
+      <Filter>D.HLSL\04. BillBoard</Filter>
+    </FxCompile>
+    <FxCompile Include="TSShader.fx">
+      <Filter>D.HLSL\06. TSShader</Filter>
+    </FxCompile>
+    <FxCompile Include="NormalnBumpCube.fx">
+      <Filter>D.HLSL\06. TSShader\02. NormalnBump</Filter>
+    </FxCompile>
+    <FxCompile Include="A_ARead.fx">
+      <Filter>A_Read &amp; Define</Filter>
+    </FxCompile>
+    <FxCompile Include="Light.fx">
+      <Filter>D.HLSL</Filter>
+    </FxCompile>
+    <FxCompile Include="Fire.fx">
+      <Filter>D.HLSL\07.ParticleShader\Fire</Filter>
+    </FxCompile>
+    <FxCompile Include="Particle.fx">
+      <Filter>D.HLSL\07.ParticleShader</Filter>
+    </FxCompile>
+    <FxCompile Include="GS_AABB.fx">
+      <Filter>D.HLSL\03. GSShader\02.Instance</Filter>
+    </FxCompile>
+    <FxCompile Include="GS_TerrainMeshCube.fx">
+      <Filter>D.HLSL\03. GSShader\02.Instance</Filter>
+    </FxCompile>
+    <FxCompile Include="OtherPlayerSkinningInstanced.fx">
+      <Filter>D.HLSL\09. FBXSkinningInstanced</Filter>
+    </FxCompile>
+    <FxCompile Include="Bush.fx">
+      <Filter>D.HLSL\12.BlendShader\BushShader</Filter>
+    </FxCompile>
+    <FxCompile Include="Blend.fx">
+      <Filter>D.HLSL\12.BlendShader</Filter>
+    </FxCompile>
+    <FxCompile Include="VS.fx">
+      <Filter>D.HLSL\00. Define</Filter>
+    </FxCompile>
+    <FxCompile Include="PS.fx">
+      <Filter>D.HLSL\00. Define</Filter>
+    </FxCompile>
+    <FxCompile Include="GS.fx">
+      <Filter>D.HLSL\00. Define</Filter>
+    </FxCompile>
+    <FxCompile Include="ParticleDefine.fx">
+      <Filter>D.HLSL\07.ParticleShader</Filter>
+    </FxCompile>
+    <FxCompile Include="Instanced.fx">
+      <Filter>D.HLSL\01. Instance</Filter>
+    </FxCompile>
+    <FxCompile Include="VSStream.fx">
+      <Filter>D.HLSL\00. Define</Filter>
+    </FxCompile>
+    <FxCompile Include="Water.fx">
+      <Filter>D.HLSL</Filter>
+    </FxCompile>
+    <FxCompile Include="BillBoardSpritePS.fx">
+      <Filter>D.HLSL\04. BillBoard</Filter>
+    </FxCompile>
+    <FxCompile Include="UIGauge.hlsl">
+      <Filter>D.HLSL\02. UI</Filter>
+    </FxCompile>
+    <FxCompile Include="UIGaugeBackground.hlsl">
+      <Filter>D.HLSL\02. UI</Filter>
+    </FxCompile>
+    <FxCompile Include="BillBoardAlpha.hlsl">
+      <Filter>D.HLSL\04. BillBoard</Filter>
+    </FxCompile>
+    <FxCompile Include="BillBoardAlphaVS.hlsl">
+      <Filter>D.HLSL\04. BillBoard</Filter>
+    </FxCompile>
+    <FxCompile Include="BillBoardSpriteVS.fx">
+      <Filter>D.HLSL\04. BillBoard</Filter>
+    </FxCompile>
+    <FxCompile Include="GSQuad_Particle.hlsl">
+      <Filter>D.HLSL\07.ParticleShader</Filter>
+    </FxCompile>
+    <FxCompile Include="GSStream.fx">
+      <Filter>D.HLSL\07.ParticleShader</Filter>
+    </FxCompile>
+    <FxCompile Include="GSQuadBubble.hlsl">
+      <Filter>D.HLSL\07.ParticleShader</Filter>
+    </FxCompile>
+    <FxCompile Include="CSBloom.hlsl">
+      <Filter>B_3D_Client\13.PostProcessing\HLSL\CSO\Bloom</Filter>
+    </FxCompile>
+    <FxCompile Include="CSVerticalBlur.hlsl">
+      <Filter>B_3D_Client\13.PostProcessing\HLSL\CSO\Bloom</Filter>
+    </FxCompile>
+    <FxCompile Include="CSHorizontalBlur.hlsl">
+      <Filter>B_3D_Client\13.PostProcessing\HLSL\CSO\Bloom</Filter>
+    </FxCompile>
+    <FxCompile Include="CSDownScaleSecondPass.hlsl">
+      <Filter>B_3D_Client\13.PostProcessing\HLSL\CSO\DownScale</Filter>
+    </FxCompile>
+    <FxCompile Include="CSDownScaleFirstPass.hlsl">
+      <Filter>B_3D_Client\13.PostProcessing\HLSL\CSO\DownScale</Filter>
+    </FxCompile>
+    <FxCompile Include="PSPostProcessing.hlsl">
+      <Filter>B_3D_Client\13.PostProcessing\HLSL\CSO\PostPrcessingScreen</Filter>
+    </FxCompile>
+    <FxCompile Include="VSPostProcessing.hlsl">
+      <Filter>B_3D_Client\13.PostProcessing\HLSL\CSO\PostPrcessingScreen</Filter>
+    </FxCompile>
+    <FxCompile Include="InstancedSpritePS.hlsl">
+      <Filter>D.HLSL\01. Instance\Instancedsprite</Filter>
+    </FxCompile>
+    <FxCompile Include="InstancedSpriteVS.hlsl">
+      <Filter>D.HLSL\01. Instance\Instancedsprite</Filter>
+    </FxCompile>
+    <FxCompile Include="ScreenShaderFreeCamera.hlsl">
+      <Filter>D.HLSL\05. Deffere Render</Filter>
+    </FxCompile>
+    <FxCompile Include="Shadow.fx" />
+    <FxCompile Include="ScreenShaderPS.hlsl">
+      <Filter>D.HLSL\05. Deffere Render</Filter>
+    </FxCompile>
+    <FxCompile Include="ScreenShaderVS.hlsl">
+      <Filter>D.HLSL\05. Deffere Render</Filter>
+    </FxCompile>
+    <FxCompile Include="PSRenderTargetShader.hlsl">
+      <Filter>D.HLSL\14. RenderTargetShader</Filter>
+    </FxCompile>
+    <FxCompile Include="VSRenderTargetShader.hlsl">
+      <Filter>D.HLSL\14. RenderTargetShader</Filter>
+    </FxCompile>
+    <FxCompile Include="InstancedPS.hlsl">
+      <Filter>D.HLSL\01. Instance</Filter>
+    </FxCompile>
+    <FxCompile Include="InstancedVS.hlsl">
+      <Filter>D.HLSL\01. Instance</Filter>
+    </FxCompile>
+    <FxCompile Include="NormalBumpVS_LimLighting.hlsl">
+      <Filter>D.HLSL\06. TSShader\02. NormalnBump</Filter>
+    </FxCompile>
+    <FxCompile Include="NormalBumpPS_LimLighting.hlsl">
+      <Filter>D.HLSL\06. TSShader\02. NormalnBump</Filter>
+    </FxCompile>
+    <FxCompile Include="NormalBumpHS_LimLighting.hlsl">
+      <Filter>D.HLSL\06. TSShader\02. NormalnBump</Filter>
+    </FxCompile>
+    <FxCompile Include="NormalBumpDS_LimLighting.hlsl">
+      <Filter>D.HLSL\06. TSShader\02. NormalnBump</Filter>
+    </FxCompile>
+    <FxCompile Include="Warp3D_PSPlayerShader.hlsl">
+      <Filter>D.HLSL\10. PlayerShader\Player</Filter>
+    </FxCompile>
+    <FxCompile Include="Warp3D_VSPlayerShader.hlsl">
+      <Filter>D.HLSL\10. PlayerShader\Player</Filter>
+    </FxCompile>
+    <FxCompile Include="Warp3D_VSOtherPlayerShader.hlsl">
+      <Filter>D.HLSL\10. PlayerShader\OtherPlayerShader</Filter>
+    </FxCompile>
+    <FxCompile Include="Warp3D_PSOtherPlayerShader.hlsl">
+      <Filter>D.HLSL\10. PlayerShader\OtherPlayerShader</Filter>
+    </FxCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Lab.ico">
+      <Filter>리소스 파일</Filter>
+    </Image>
+  </ItemGroup>
+</Project>
