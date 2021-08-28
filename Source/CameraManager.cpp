@@ -24,7 +24,7 @@ CCameraManager::~CCameraManager()
 {
 }
 
-void CCameraManager::Load(ID3D11Device *pd3dDevice)
+void CCameraManager::Load(ID3D11Device* pd3dDevice)
 {
 	auto pMainCamera = std::make_shared<CThirdPersonCamera>();
 	pMainCamera->name = "MainCamera";
@@ -47,7 +47,7 @@ void CCameraManager::SetData(CPlayer* pPlayer)
 {
 }
 
-void CCameraManager::CreateCamera(ID3D11Device * pd3dDevice, DWORD nCameraMode)
+void CCameraManager::CreateCamera(ID3D11Device*  pd3dDevice, DWORD nCameraMode)
 {
 	std::shared_ptr<CCamera> pNewCamera = nullptr;
 	XMFLOAT3 d3dxvUp;
@@ -102,7 +102,7 @@ std::shared_ptr<CCamera> CCameraManager::ChnageCamera(DWORD nCameraMode, int ind
 
 std::shared_ptr<CCamera> CCameraManager::CreateCamera
 (
-	ID3D11Device *pd3dDevice,
+	ID3D11Device* pd3dDevice,
 	DWORD nNewCameraMode, 
 	DWORD nCurrentCameraMode,
 	XMFLOAT3 d3dxvRight, 

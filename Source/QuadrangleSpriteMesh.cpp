@@ -1,7 +1,7 @@
 #include "stdafx.h"
 #include "QuadrangleSpriteMesh.h"
 
-CQuadrangleSpriteMesh::CQuadrangleSpriteMesh(ID3D11Device *pd3dDevice, float fWidth, float fHeight) : CQuadrangleMesh(pd3dDevice)
+CQuadrangleSpriteMesh::CQuadrangleSpriteMesh(ID3D11Device* pd3dDevice, float fWidth, float fHeight) : CQuadrangleMesh(pd3dDevice)
 {
 	m_nVertices = 6;
 	m_d3dPrimitiveTopology = D3D11_PRIMITIVE_TOPOLOGY_TRIANGLELIST;

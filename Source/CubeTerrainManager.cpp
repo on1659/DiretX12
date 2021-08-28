@@ -67,7 +67,7 @@ void CCubeTerrainManager::ReleseInstance()
 	m_vPlaneShader.clear();
 }
 
-void CCubeTerrainManager::Load(ID3D11Device *pd3dDevice)
+void CCubeTerrainManager::Load(ID3D11Device* pd3dDevice)
 {
 	//KYT '16.04.04
 	/*

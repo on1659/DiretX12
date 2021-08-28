@@ -46,7 +46,7 @@ CWarp3DOtherPlayerShader::~CWarp3DOtherPlayerShader()
 
 }
 
-void CWarp3DOtherPlayerShader::CreateShader(ID3D11Device *pd3dDevice)
+void CWarp3DOtherPlayerShader::CreateShader(ID3D11Device* pd3dDevice)
 {
 	//뼈대 변환행렬들의 상수버퍼 생성
 	bBoneTransformSetting = true;
@@ -93,7 +93,7 @@ void CWarp3DOtherPlayerShader::CreateShader(ID3D11Device *pd3dDevice)
 
 }
 
-void CWarp3DOtherPlayerShader::BuildObjects(ID3D11Device *pd3dDevice, void *pContext)
+void CWarp3DOtherPlayerShader::BuildObjects(ID3D11Device* pd3dDevice, void *pContext)
 {
 	CObjectsShader::BuildObjects(pd3dDevice, pContext);
 
@@ -246,7 +246,7 @@ void CWarp3DOtherPlayerShader::UpdateConstBuffer(ID3D11DeviceContext *pd3dDevice
 	팀 선택에 따라 팀 식별용 메쉬 바꾸기
 	함수 일부 수정
 */
-void CWarp3DOtherPlayerShader::CreateTeamMarkMesh(ID3D11Device * pd3dDevice, UINT team_line)
+void CWarp3DOtherPlayerShader::CreateTeamMarkMesh(ID3D11Device*  pd3dDevice, UINT team_line)
 {
 	m_pCubeShader = std::make_unique<CInstancedObjectsShader>();
 	m_pCubeShader->CreateShader(pd3dDevice);

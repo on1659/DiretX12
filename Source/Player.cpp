@@ -99,7 +99,7 @@ void CPlayer::Release()
 
 }
 
-void CPlayer::CreateConstBuffers(ID3D11Device *pd3dDevice){}
+void CPlayer::CreateConstBuffers(ID3D11Device* pd3dDevice){}
 
 void CPlayer::UpdateConstBuffers(ID3D11DeviceContext *pd3dDeviceContext){}
 
@@ -295,7 +295,7 @@ void CPlayer::SetRotation(float x, float y, float z)
 	//if (m_pCamera)m_pCamera->SetRotation(x, y, z);
 }
 
-void CPlayer::ChangeCamera(ID3D11Device *pd3dDevice, DWORD nNewCameraMode, float fTimeElapsed)
+void CPlayer::ChangeCamera(ID3D11Device* pd3dDevice, DWORD nNewCameraMode, float fTimeElapsed)
 {
 	
 }

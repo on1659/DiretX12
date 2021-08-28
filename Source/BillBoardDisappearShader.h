@@ -40,7 +40,7 @@ public:
 
 	void Start() { m_fAlpha = 1.0f; }
 
-	virtual void CreateShader(ID3D11Device *pd3dDevice) override;
+	virtual void CreateShader(ID3D11Device* pd3dDevice) override;
 	
 	virtual void CreateConstBuffer(ID3D11Device* pd3dDevice);
 

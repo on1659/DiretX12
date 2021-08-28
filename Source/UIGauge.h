@@ -25,7 +25,7 @@ public:
 
 	virtual ~CUIGauge();
 
-	void Initialize(ID3D11Device * pd3dDevice, XMFLOAT2 position, XMFLOAT2 fSize, float frameFPS);
+	void Initialize(ID3D11Device*  pd3dDevice, XMFLOAT2 position, XMFLOAT2 fSize, float frameFPS);
 
 	void CreateConstBuffer(ID3D11Device* pd3dDevice);
 

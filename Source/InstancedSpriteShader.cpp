@@ -20,13 +20,13 @@ CInstancedSpriteShader::~CInstancedSpriteShader()
 {
 }
 
-void CInstancedSpriteShader::BuildObjects(ID3D11Device *pd3dDevice, void *pContext)
+void CInstancedSpriteShader::BuildObjects(ID3D11Device* pd3dDevice, void *pContext)
 {
 	CInstancedObjectsShader::BuildObjects(pd3dDevice, pContext);
 	//Object::SetBlendState("BillBoardSprite");
 }
 
-void CInstancedSpriteShader::CreateShader(ID3D11Device *pd3dDevice)
+void CInstancedSpriteShader::CreateShader(ID3D11Device* pd3dDevice)
 {
 	
 	UINT nSlot = 0;
@@ -49,7 +49,7 @@ void CInstancedSpriteShader::CreateShader(ID3D11Device *pd3dDevice)
 
 }
 
-void CInstancedSpriteShader::Initialize(ID3D11Device *pd3dDevice, float frameFPS, int frameCount, int loop)
+void CInstancedSpriteShader::Initialize(ID3D11Device* pd3dDevice, float frameFPS, int frameCount, int loop)
 {
 	m_frameFPS = 1 / frameFPS;			// 증가량
 	m_frameCount = frameCount;			// 몇장이니
@@ -67,7 +67,7 @@ void CInstancedSpriteShader::Initialize(ID3D11Device *pd3dDevice, float frameFPS
 	CInstancedSpriteShader::CreateConstBuffer(pd3dDevice);
 }
 
-void CInstancedSpriteShader::CreateConstBuffer(ID3D11Device * pd3dDevice)
+void CInstancedSpriteShader::CreateConstBuffer(ID3D11Device*  pd3dDevice)
 {
 	SpriteAnimation* animation = new SpriteAnimation();
 

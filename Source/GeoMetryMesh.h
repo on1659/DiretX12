@@ -10,7 +10,7 @@ protected:
 	ID3D11Buffer					*m_pd3dSizeBuffer;
 
 public:
-	CGeoMetryMesh(ID3D11Device *pd3dDevice);
+	CGeoMetryMesh(ID3D11Device* pd3dDevice);
 
 	virtual ~CGeoMetryMesh();
 };

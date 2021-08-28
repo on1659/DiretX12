@@ -21,7 +21,7 @@ public:
 	
 	void ReleseInstance();
 
-	void Load(ID3D11Device *pd3dDevice);
+	void Load(ID3D11Device* pd3dDevice);
 
 	void Render(ID3D11DeviceContext *pd3dDeviceContext);
 

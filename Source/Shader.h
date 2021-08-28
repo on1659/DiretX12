@@ -68,27 +68,27 @@ protected:
 	ID3D11ComputeShader				*m_pd3dComputeShader;		//Compute   - SHader
 
 protected:
-	void CreateVertexShaderFromFile(ID3D11Device *pd3dDevice, WCHAR *pszFileName, LPCSTR pszShaderName, LPCSTR pszShaderModel, ID3D11VertexShader **ppd3dVertexShader, D3D11_INPUT_ELEMENT_DESC *pd3dInputElements, UINT nElements, ID3D11InputLayout **ppd3dInputLayout);
-	void CreatePixelShaderFromFile(ID3D11Device *pd3dDevice, WCHAR *pszFileName, LPCSTR pszShaderName, LPCSTR pszShaderModel, ID3D11PixelShader **ppd3dPixelShader);
-	void CreateGeometryShaderFromFile(ID3D11Device *pd3dDevice, WCHAR *pszFileName, LPCSTR pszShaderName, LPCSTR pszShaderModel, ID3D11GeometryShader **ppd3dGeometryShader);
-	void CreateSOGeometryShaderFromFile(ID3D11Device *pd3dDevice, WCHAR *pszFileName, LPCSTR pszShaderName, LPCSTR pszShaderModel, ID3D11GeometryShader **ppd3dGeometryShader);
-	void CreateSOGeometryShaderFromFile(ID3D11Device *pd3dDevice, WCHAR *pszFileName, LPCSTR pszShaderName, LPCSTR pszShaderModel, ID3D11GeometryShader **ppd3dGeometryShader, SO_Geometry_INFO sgi);
-	void CreateHullShaderFromFile(ID3D11Device *pd3dDevice, WCHAR *pszFileName, LPCSTR pszShaderName, LPCSTR pszShaderModel, ID3D11HullShader **ppd3dHullShader);
-	void CreateDomainShaderFromFile(ID3D11Device *pd3dDevice, WCHAR *pszFileName, LPCSTR pszShaderName, LPCSTR pszShaderModel, ID3D11DomainShader **ppd3dDomainShader);
-	void CreateComputeShaderFromFile(ID3D11Device *pd3dDevice, WCHAR *pszFileName, LPCSTR pszShaderName, LPCSTR pszShaderModel, ID3D11ComputeShader **ppd3dComputeShader);
+	void CreateVertexShaderFromFile(ID3D11Device* pd3dDevice, WCHAR *pszFileName, LPCSTR pszShaderName, LPCSTR pszShaderModel, ID3D11VertexShader **ppd3dVertexShader, D3D11_INPUT_ELEMENT_DESC *pd3dInputElements, UINT nElements, ID3D11InputLayout **ppd3dInputLayout);
+	void CreatePixelShaderFromFile(ID3D11Device* pd3dDevice, WCHAR *pszFileName, LPCSTR pszShaderName, LPCSTR pszShaderModel, ID3D11PixelShader **ppd3dPixelShader);
+	void CreateGeometryShaderFromFile(ID3D11Device* pd3dDevice, WCHAR *pszFileName, LPCSTR pszShaderName, LPCSTR pszShaderModel, ID3D11GeometryShader **ppd3dGeometryShader);
+	void CreateSOGeometryShaderFromFile(ID3D11Device* pd3dDevice, WCHAR *pszFileName, LPCSTR pszShaderName, LPCSTR pszShaderModel, ID3D11GeometryShader **ppd3dGeometryShader);
+	void CreateSOGeometryShaderFromFile(ID3D11Device* pd3dDevice, WCHAR *pszFileName, LPCSTR pszShaderName, LPCSTR pszShaderModel, ID3D11GeometryShader **ppd3dGeometryShader, SO_Geometry_INFO sgi);
+	void CreateHullShaderFromFile(ID3D11Device* pd3dDevice, WCHAR *pszFileName, LPCSTR pszShaderName, LPCSTR pszShaderModel, ID3D11HullShader **ppd3dHullShader);
+	void CreateDomainShaderFromFile(ID3D11Device* pd3dDevice, WCHAR *pszFileName, LPCSTR pszShaderName, LPCSTR pszShaderModel, ID3D11DomainShader **ppd3dDomainShader);
+	void CreateComputeShaderFromFile(ID3D11Device* pd3dDevice, WCHAR *pszFileName, LPCSTR pszShaderName, LPCSTR pszShaderModel, ID3D11ComputeShader **ppd3dComputeShader);
 
 	//KYT 16.08.06 
 	/*
 		컴파일 된 쉐이더를 사용하기 위해 추가.
 										feat.백길쌍
 	*/
-	void CreateVertexShaderFromCompiledFile(ID3D11Device *pd3dDevice, WCHAR *pszFileName, D3D11_INPUT_ELEMENT_DESC *pd3dInputLayout, UINT nElements, ID3D11VertexShader **ppd3dVertexShader);
-	void CreateSOVertexShaderFromCompiledFile(ID3D11Device *pd3dDevice, WCHAR *pszFileName, D3D11_INPUT_ELEMENT_DESC *pd3dInputLayout, UINT nElements, ID3D11VertexShader **ppd3dVertexShader, ID3D11InputLayout *ppInputLayout);
-	void CreateGeoMoetryShaderFromCompiledFile(ID3D11Device *pd3dDevice, WCHAR *pszFileName, ID3D11GeometryShader **ppd3dGeomeotryShader);
-	void CreatePixelShaderFromCompiledFile(ID3D11Device *pd3dDevice, WCHAR *pszFileName, ID3D11PixelShader **ppd33dPixelShader);
-	void CreateComputeShaderFromCompiledFile(ID3D11Device *pd3dDevice, WCHAR *pszFileName, ID3D11ComputeShader **ppd33dComputeShader);
-	void CreateDomainShaderFromCompiledFile(ID3D11Device *pd3dDevice, WCHAR *pszFileName, ID3D11DomainShader **ppd33dPixelShader);
-	void CreateHullShaderFromCompiledFile(ID3D11Device *pd3dDevice, WCHAR *pszFileName, ID3D11HullShader **ppd33dHullShader);
+	void CreateVertexShaderFromCompiledFile(ID3D11Device* pd3dDevice, WCHAR *pszFileName, D3D11_INPUT_ELEMENT_DESC *pd3dInputLayout, UINT nElements, ID3D11VertexShader **ppd3dVertexShader);
+	void CreateSOVertexShaderFromCompiledFile(ID3D11Device* pd3dDevice, WCHAR *pszFileName, D3D11_INPUT_ELEMENT_DESC *pd3dInputLayout, UINT nElements, ID3D11VertexShader **ppd3dVertexShader, ID3D11InputLayout *ppInputLayout);
+	void CreateGeoMoetryShaderFromCompiledFile(ID3D11Device* pd3dDevice, WCHAR *pszFileName, ID3D11GeometryShader **ppd3dGeomeotryShader);
+	void CreatePixelShaderFromCompiledFile(ID3D11Device* pd3dDevice, WCHAR *pszFileName, ID3D11PixelShader **ppd33dPixelShader);
+	void CreateComputeShaderFromCompiledFile(ID3D11Device* pd3dDevice, WCHAR *pszFileName, ID3D11ComputeShader **ppd33dComputeShader);
+	void CreateDomainShaderFromCompiledFile(ID3D11Device* pd3dDevice, WCHAR *pszFileName, ID3D11DomainShader **ppd33dPixelShader);
+	void CreateHullShaderFromCompiledFile(ID3D11Device* pd3dDevice, WCHAR *pszFileName, ID3D11HullShader **ppd33dHullShader);
 
 
 
@@ -97,18 +97,18 @@ public:
 	virtual void GetInputElementDesc(UINT nVertexElementType);
 	virtual void GetShaderName(UINT nVertexElementType, LPCSTR *ppszVSShaderName, LPCSTR *ppszVSShaderModel, LPCSTR *ppszPSShaderName, LPCSTR *ppszPSShaderModel);
 
-	virtual void CreateShader(ID3D11Device *pd3dDevice) { }
-	virtual void CreateShader(ID3D11Device *pd3dDevice, UINT nType);
-	virtual void CreateShader(ID3D11Device *pd3dDevice, D3D11_INPUT_ELEMENT_DESC *pd3dInputElementDesc, int nInputElements, WCHAR *pszFileName, LPCSTR pszVSShaderName, LPCSTR pszVSShaderModel, LPCSTR pszPSShaderName, LPCSTR pszPSShaderModel);
+	virtual void CreateShader(ID3D11Device* pd3dDevice) { }
+	virtual void CreateShader(ID3D11Device* pd3dDevice, UINT nType);
+	virtual void CreateShader(ID3D11Device* pd3dDevice, D3D11_INPUT_ELEMENT_DESC *pd3dInputElementDesc, int nInputElements, WCHAR *pszFileName, LPCSTR pszVSShaderName, LPCSTR pszVSShaderModel, LPCSTR pszPSShaderName, LPCSTR pszPSShaderModel);
 
-	virtual void CreateConstBuffers(ID3D11Device *pd3dDevice);
+	virtual void CreateConstBuffers(ID3D11Device* pd3dDevice);
 	virtual void ReleaseShaderVariables();
 
 	virtual void OnPrepareRender(ID3D11DeviceContext *pd3dDeviceContext);
 	virtual void Render(ID3D11DeviceContext *pd3dDeviceContext, std::shared_ptr<CCamera> pCamera);
 
 public:
-	static ID3D11Buffer *CreateBuffer(ID3D11Device *pd3dDevice, UINT nStride, int nElements, void *pBufferData, UINT nBindFlags, D3D11_USAGE d3dUsage, UINT nCPUAccessFlags);
+	static ID3D11Buffer *CreateBuffer(ID3D11Device* pd3dDevice, UINT nStride, int nElements, void *pBufferData, UINT nBindFlags, D3D11_USAGE d3dUsage, UINT nCPUAccessFlags);
 
 
 protected:
@@ -171,7 +171,7 @@ private:
 	int								m_nIndexToAdd;
 
 public:
-	virtual void BuildObjects(ID3D11Device *pd3dDevice, void *pContext = nullptr);
+	virtual void BuildObjects(ID3D11Device* pd3dDevice, void *pContext = nullptr);
 	virtual void ReleaseObjects();
 	virtual void AnimateObjects(float fTimeElapsed);
 	virtual void OnPrepareRender(ID3D11DeviceContext *pd3dDeviceContext);
@@ -199,13 +199,13 @@ public:
 	  Material을 조금 더 쉽게 추가할 수 있게 변형하였다.
 	  칼라는 기본적으로 텍스쳐 칼라를 그대로 가져다 쓴다.
 	*/
-	void SetMaterial(ID3D11Device *pd3dDevice, std::string path, int nStartSampler = PS_SLOT_SAMPLER, int nCountSampler = 1, YT_SAMPLER eSampler = SAMPLESTATE_DEFAULT);
+	void SetMaterial(ID3D11Device* pd3dDevice, std::string path, int nStartSampler = PS_SLOT_SAMPLER, int nCountSampler = 1, YT_SAMPLER eSampler = SAMPLESTATE_DEFAULT);
 
-	void SetMaterial(ID3D11Device *pd3dDevice, std::vector<std::string> vPath, int nStartSampler = PS_SLOT_SAMPLER, int nCountSampler = 1, YT_SAMPLER eSampler = SAMPLESTATE_DEFAULT);
+	void SetMaterial(ID3D11Device* pd3dDevice, std::vector<std::string> vPath, int nStartSampler = PS_SLOT_SAMPLER, int nCountSampler = 1, YT_SAMPLER eSampler = SAMPLESTATE_DEFAULT);
 
-	void SetUIMaterial(ID3D11Device *pd3dDevice, std::string path, int nStartSampler = PS_SLOT_SAMPLER, int nCountSampler = 1, YT_SAMPLER eSampler = SAMPLESTATE_DEFAULT);
+	void SetUIMaterial(ID3D11Device* pd3dDevice, std::string path, int nStartSampler = PS_SLOT_SAMPLER, int nCountSampler = 1, YT_SAMPLER eSampler = SAMPLESTATE_DEFAULT);
 
-	void SetMaterial_NormalNBump(ID3D11Device *pd3dDevice, std::string texture, std::string normal, std::string bump);
+	void SetMaterial_NormalNBump(ID3D11Device* pd3dDevice, std::string texture, std::string normal, std::string bump);
 
 
 	//SpaceParitioning

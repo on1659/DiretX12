@@ -44,7 +44,7 @@ void Component::Animate(std::shared_ptr<CGameObject> object, float fTimeElapsed)
 {
 }
 
-void Component::CreateConstBuffer(ID3D11Device * pd3dDevice)
+void Component::CreateConstBuffer(ID3D11Device*  pd3dDevice)
 {
 }
 

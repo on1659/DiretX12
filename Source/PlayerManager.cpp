@@ -567,7 +567,7 @@ void CPlayerManager::Render(ID3D11DeviceContext *pd3dDeviceContext)
 
 }
 
-void CPlayerManager::OrthoCameraLoad(ID3D11Device *pd3dDevice, ID3D11DeviceContext *pd3dDeviceContext)
+void CPlayerManager::OrthoCameraLoad(ID3D11Device* pd3dDevice, ID3D11DeviceContext *pd3dDeviceContext)
 {
 	if (pd3dDeviceContext)
 		m_pCamera->OrthoCameraLoad(pd3dDevice, pd3dDeviceContext);

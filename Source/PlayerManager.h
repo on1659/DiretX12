@@ -49,7 +49,7 @@ public:
 
 	void OnProcessingKeyboardMessage(UINT nMessageID, WPARAM wParam);
 
-	void OrthoCameraLoad(ID3D11Device *pd3dDevice, ID3D11DeviceContext *pd3dDeviceContext = nullptr);
+	void OrthoCameraLoad(ID3D11Device* pd3dDevice, ID3D11DeviceContext *pd3dDeviceContext = nullptr);
 
 
 	//kYT '16.05.02 

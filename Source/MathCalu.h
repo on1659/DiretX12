@@ -149,7 +149,7 @@ public:
 		float dot    = InnerProduct(x, y, x2, y2);
 		float length =  VectorScale(x, y, x2, y2);
 		float radian = acos(dot / length);
-		float degree = radian * 180.f / PI;
+		float degree = radian * 180 / PI;
 		return degree;
 	}
 
@@ -161,7 +161,7 @@ public:
 		float tmp_dot = InnerProduct(a, b, x2, y2);
 		float tmp_length = VectorScale(a, b, x2, y2);
 		float tmp_radian = acos(tmp_dot / tmp_length);
-		float tmp_degree = tmp_radian * 180.f / PI;
+		float tmp_degree = tmp_radian * 180 / PI;
 
 		if (tmp_degree < 90)
 			return getACOS(x, y, x2, y2);

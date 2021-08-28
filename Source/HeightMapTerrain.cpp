@@ -1,7 +1,7 @@
 #include "stdafx.h"
 #include "HeightMapTerrain.h"
 
-CHeightMapTerrain::CHeightMapTerrain(ID3D11Device *pd3dDevice, LPCTSTR pFileName, int nWidth, int nLength, int nBlockWidth, int nBlockLength, XMVECTOR d3dxvScale) : CGameObject(0)
+CHeightMapTerrain::CHeightMapTerrain(ID3D11Device* pd3dDevice, LPCTSTR pFileName, int nWidth, int nLength, int nBlockWidth, int nBlockLength, XMVECTOR d3dxvScale) : CGameObject(0)
 {
 	m_nWidth = nWidth;
 	m_nLength = nLength;

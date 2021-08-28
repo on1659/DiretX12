@@ -44,7 +44,7 @@ void CTerrainPlayer::Release()
 	if (m_pCamera) m_pCamera.reset();
 }
 
-void CTerrainPlayer::ChangeCamera(ID3D11Device *pd3dDevice, DWORD nNewCameraMode, float fTimeElapsed)
+void CTerrainPlayer::ChangeCamera(ID3D11Device* pd3dDevice, DWORD nNewCameraMode, float fTimeElapsed)
 {
 	DWORD nCurrentCameraMode = (m_pCamera) ? m_pCamera->GetMode() : 0x00;
 	if (nCurrentCameraMode == nNewCameraMode) return;
@@ -358,7 +358,7 @@ void CTerrainPlayer::Render(ID3D11DeviceContext *pd3dDeviceContext, std::shared_
 	#endif
 }
 
-std::shared_ptr<CCamera> CTerrainPlayer::OnChangeCamera(ID3D11Device *pd3dDevice, DWORD nNewCameraMode, DWORD nCurrentCameraMode)
+std::shared_ptr<CCamera> CTerrainPlayer::OnChangeCamera(ID3D11Device* pd3dDevice, DWORD nNewCameraMode, DWORD nCurrentCameraMode)
 {
 	std::shared_ptr<CCamera> pNewCamera = nullptr;
 

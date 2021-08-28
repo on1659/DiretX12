@@ -23,13 +23,13 @@ CShadowMapShader::~CShadowMapShader()
 {
 }
 
-void CShadowMapShader::BuildObjects(ID3D11Device *pd3dDevice, void *pContext)
+void CShadowMapShader::BuildObjects(ID3D11Device* pd3dDevice, void *pContext)
 {
 	CInstancedObjectsShader::BuildObjects(pd3dDevice, pContext);
 	CShadowMapShader::SetBlendState("Default");
 }
 
-void CShadowMapShader::CreateShader(ID3D11Device *pd3dDevice)
+void CShadowMapShader::CreateShader(ID3D11Device* pd3dDevice)
 {
 	UINT nSlot = 0;
 
@@ -201,7 +201,7 @@ void CShadowMapShader::SetPosition_Ver2(const XMFLOAT3& position)
 	{
 	}
 
-	void CShadowMapShader::CreateShader(ID3D11Device * pd3dDevice)
+	void CShadowMapShader::CreateShader(ID3D11Device*  pd3dDevice)
 	{
 		//화면 좌표계 4개 준다
 		ShadowsMap_VS_INPUT v[4];

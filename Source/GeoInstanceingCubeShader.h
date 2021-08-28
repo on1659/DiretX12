@@ -21,5 +21,5 @@ public:
 
 	virtual ~CGeoInstanceingCubeShader();
 
-	virtual void CreateShader(ID3D11Device *pd3dDevice);
+	virtual void CreateShader(ID3D11Device* pd3dDevice);
 };

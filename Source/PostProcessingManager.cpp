@@ -131,7 +131,7 @@ CPostProcessingManager::~CPostProcessingManager()
 	m_pFinalPassPS = nullptr;
 }
 
-bool CPostProcessingManager::Load(ID3D11Device *pd3dDevice, const int& width, const int& height)
+bool CPostProcessingManager::Load(ID3D11Device* pd3dDevice, const int& width, const int& height)
 {
 
 	HRESULT hr;
@@ -430,7 +430,7 @@ void CPostProcessingManager::PostProcessing
 	m_pPrevAvgLumSRV = p_TempSRV;
 }
 
-void CPostProcessingManager::Read_CSO_Shader(ID3D11Device *pd3dDevice)
+void CPostProcessingManager::Read_CSO_Shader(ID3D11Device* pd3dDevice)
 {
 	//-------------------------- 
 #define _USE_CSO
@@ -656,7 +656,7 @@ void CPostProcessingManager::FinalPass(ID3D11DeviceContext* pd3DeviceContext, ID
 	pd3DeviceContext->PSSetShader(NULL, NULL, 0);
 }
 
-void CPostProcessingManager::BokehLoad(ID3D11Device * pd3dDevice)
+void CPostProcessingManager::BokehLoad(ID3D11Device*  pd3dDevice)
 {
 	const UINT nMaxBokehInst = 4056;
 	D3D11_BUFFER_DESC descBokehBuf;

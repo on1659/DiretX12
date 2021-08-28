@@ -52,7 +52,7 @@ CWarp3DPlayerShader::~CWarp3DPlayerShader()
 
 }
 
-void CWarp3DPlayerShader::BuildObjects(ID3D11Device *pd3dDevice, void *pContext)
+void CWarp3DPlayerShader::BuildObjects(ID3D11Device* pd3dDevice, void *pContext)
 {
 	CObjectsShader::BuildObjects(pd3dDevice, pContext);
 
@@ -96,7 +96,7 @@ void CWarp3DPlayerShader::BuildObjects(ID3D11Device *pd3dDevice, void *pContext)
 	m_pMesh->AssembleToVertexBuffer(1, &m_pd3dInstanceBuffer, &m_nInstanceBufferStride, &m_nInstanceBufferOffset);
 }
 
-void CWarp3DPlayerShader::CreateShader(ID3D11Device *pd3dDevice)
+void CWarp3DPlayerShader::CreateShader(ID3D11Device* pd3dDevice)
 {
 	//뼈대 변환행렬들의 상수버퍼 생성
 	bBoneTransformSetting = true;

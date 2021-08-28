@@ -21,14 +21,14 @@ CBillBoardSpriteShader::~CBillBoardSpriteShader()
 {
 }
 
-void CBillBoardSpriteShader::BuildObjects(ID3D11Device *pd3dDevice, void *pContext)
+void CBillBoardSpriteShader::BuildObjects(ID3D11Device* pd3dDevice, void *pContext)
 {
 	CInstancedObjectsShader::BuildObjects(pd3dDevice, pContext);
 	Object::SetBlendState("BillBoardSprite");
 	Object::CreateRasterizerState(pd3dDevice, D3D11_CULL_NONE, D3D11_FILL_SOLID);
 }
 
-void CBillBoardSpriteShader::CreateShader(ID3D11Device *pd3dDevice)
+void CBillBoardSpriteShader::CreateShader(ID3D11Device* pd3dDevice)
 {
 	int nSlot = 0;
 	D3D11_INPUT_ELEMENT_DESC d3dInputElements[] =
@@ -57,7 +57,7 @@ void CBillBoardSpriteShader::CreateShader(ID3D11Device *pd3dDevice)
 	//#endif
 }
 
-void CBillBoardSpriteShader::Initialize(ID3D11Device *pd3dDevice, std::string path, XMFLOAT3 position, XMFLOAT2 fSize, float frameFPS, int frameCount, int loop)
+void CBillBoardSpriteShader::Initialize(ID3D11Device* pd3dDevice, std::string path, XMFLOAT3 position, XMFLOAT2 fSize, float frameFPS, int frameCount, int loop)
 {
 	m_pMesh = std::make_unique<CUISpriteMesh>(pd3dDevice, fSize.x, fSize.y);
 	SetMaterial(pd3dDevice, path);
@@ -84,7 +84,7 @@ void CBillBoardSpriteShader::Initialize(ID3D11Device *pd3dDevice, std::string pa
 	CBillBoardSpriteShader::CreateConstBuffer(pd3dDevice);
 }
 
-void CBillBoardSpriteShader::CreateConstBuffer(ID3D11Device * pd3dDevice)
+void CBillBoardSpriteShader::CreateConstBuffer(ID3D11Device*  pd3dDevice)
 {
 	SpriteAnimation* animation = new SpriteAnimation();
 

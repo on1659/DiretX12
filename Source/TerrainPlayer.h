@@ -9,7 +9,7 @@ public:
 	virtual ~CTerrainPlayer();
 	virtual void Release();
 
-	virtual void ChangeCamera(ID3D11Device *pd3dDevice, DWORD nNewCameraMode, float fTimeElapsed);
+	virtual void ChangeCamera(ID3D11Device* pd3dDevice, DWORD nNewCameraMode, float fTimeElapsed);
 	virtual void OnPlayerUpdated(float fTimeElapsed);
 	virtual void OnCameraUpdated(float fTimeElapsed);
 
@@ -32,7 +32,7 @@ public:
 
 	void Render(ID3D11DeviceContext *pd3dDeviceContext, std::shared_ptr<CCamera> pCamera);
 
-	std::shared_ptr<CCamera>  OnChangeCamera(ID3D11Device *pd3dDevice, DWORD nNewCameraMode, DWORD nCurrentCameraMode);
+	std::shared_ptr<CCamera>  OnChangeCamera(ID3D11Device* pd3dDevice, DWORD nNewCameraMode, DWORD nCurrentCameraMode);
 
 	void SetPosition(float x, float z);
 

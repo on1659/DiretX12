@@ -9,7 +9,7 @@ CSkyBoxShader::~CSkyBoxShader()
 {
 }
 
-void CSkyBoxShader::CreateShader(ID3D11Device *pd3dDevice)
+void CSkyBoxShader::CreateShader(ID3D11Device* pd3dDevice)
 {
 		D3D11_INPUT_ELEMENT_DESC d3dInputElements[] =
 		{

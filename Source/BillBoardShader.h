@@ -21,11 +21,11 @@ public:
 
 	virtual ~CBillBoardShader();
 
-	virtual void BuildObjects(ID3D11Device *pd3dDevice, void *pContext = nullptr) override;
+	virtual void BuildObjects(ID3D11Device* pd3dDevice, void *pContext = nullptr) override;
 
-	virtual void CreateShader(ID3D11Device *pd3dDevice) override;
+	virtual void CreateShader(ID3D11Device* pd3dDevice) override;
 
-	virtual void CreatePixcelShader(ID3D11Device *pd3dDevice, WCHAR* path);
+	virtual void CreatePixcelShader(ID3D11Device* pd3dDevice, WCHAR* path);
 
 	virtual void Render(ID3D11DeviceContext *pd3dDeviceContext, std::shared_ptr<CCamera> pCamera) override;
 
@@ -35,7 +35,7 @@ public:
 
 	virtual void Blend(ID3D11DeviceContext *pd3dDeviceContext);
 
-	virtual void Initialize(ID3D11Device *pd3dDevice, std::string path, XMFLOAT3 position, XMFLOAT2 fSize, float frameFPS, int frameCount, int loop = -999) {}
+	virtual void Initialize(ID3D11Device* pd3dDevice, std::string path, XMFLOAT3 position, XMFLOAT2 fSize, float frameFPS, int frameCount, int loop = -999) {}
 
 	virtual void StartBillBoard(int loop = 99) {}
 };

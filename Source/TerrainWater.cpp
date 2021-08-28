@@ -1,7 +1,7 @@
 #include "stdafx.h"
 #include "TerrainWater.h"
 
-CTerrainWater::CTerrainWater(ID3D11Device *pd3dDevice, int nWidth, int nLength, int nBlockWidth, int nBlockLength, XMVECTOR d3dxvScale)
+CTerrainWater::CTerrainWater(ID3D11Device* pd3dDevice, int nWidth, int nLength, int nBlockWidth, int nBlockLength, XMVECTOR d3dxvScale)
 {
 	m_nWidth = nWidth;
 	m_nLength = nLength;

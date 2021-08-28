@@ -11,6 +11,6 @@ CBulletinShader::~CBulletinShader()
 {
 }
 
-void CBulletinShader::CreateShader(ID3D11Device * pd3dDevice)
+void CBulletinShader::CreateShader(ID3D11Device*  pd3dDevice)
 {
 }

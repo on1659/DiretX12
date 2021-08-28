@@ -3,7 +3,7 @@
 #include "Mesh.h"
 
 //------------------------------------------------------------------------------------------------
-CTerrainCubeMesh::CTerrainCubeMesh(ID3D11Device *pd3dDevice, float fWidth, float fHeight, float fDepth) : CMeshTexturedIlluminated(pd3dDevice)
+CTerrainCubeMesh::CTerrainCubeMesh(ID3D11Device* pd3dDevice, float fWidth, float fHeight, float fDepth) : CMeshTexturedIlluminated(pd3dDevice)
 {
 	m_nVertices = 36;
 	m_d3dPrimitiveTopology = D3D11_PRIMITIVE_TOPOLOGY_TRIANGLELIST;

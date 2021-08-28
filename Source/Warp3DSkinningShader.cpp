@@ -34,7 +34,7 @@ CWarp3DSkinningShader::~CWarp3DSkinningShader()
 {
 }
 
-void CWarp3DSkinningShader::CreateShader(ID3D11Device *pd3dDevice)
+void CWarp3DSkinningShader::CreateShader(ID3D11Device* pd3dDevice)
 {
 	bBoneTransformSetting = true;
 	m_pcbBoneTransform = nullptr;
@@ -126,7 +126,7 @@ void CWarp3DSkinningShader::UpdateConstBuffer(ID3D11DeviceContext *pd3dDeviceCon
 	pd3dDeviceContext->VSSetConstantBuffers(VS_CB_SLOT_BONE_TRANSFORM, 1, &m_pcbBoneTransform);
 }
 
-void CWarp3DSkinningShader::BuildObjects(ID3D11Device *pd3dDevice, void *pContext)
+void CWarp3DSkinningShader::BuildObjects(ID3D11Device* pd3dDevice, void *pContext)
 {
 	CObjectsShader::BuildObjects(pd3dDevice, pContext);
 

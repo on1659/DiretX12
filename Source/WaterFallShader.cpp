@@ -12,7 +12,7 @@ CWaterFallShader::~CWaterFallShader()
 {
 }
 
-void CWaterFallShader::Initialize(ID3D11Device *pd3dDevice, TCHAR *pszFileName, XMFLOAT3 d3dxvPosition, UINT nMaxParticles, float frameFPS, int frameCount)
+void CWaterFallShader::Initialize(ID3D11Device* pd3dDevice, TCHAR *pszFileName, XMFLOAT3 d3dxvPosition, UINT nMaxParticles, float frameFPS, float frameCount)
 {
 	//m_pd3dsrvTextureArray = pd3dsrvTexArray;
 	D3DX11CreateShaderResourceViewFromFile(pd3dDevice, pszFileName, NULL, NULL, &m_pd3dsrvTextureArray, NULL);
@@ -91,7 +91,7 @@ void CWaterFallShader::Initialize(ID3D11Device *pd3dDevice, TCHAR *pszFileName, 
 
 }
 
-void CWaterFallShader::CreateConstBuffer(ID3D11Device * pd3dDevice)
+void CWaterFallShader::CreateConstBuffer(ID3D11Device*  pd3dDevice)
 {
 
 	CCubeParticleShader::CreateConstBuffer(pd3dDevice);
@@ -143,7 +143,7 @@ void CWaterFallShader::UpdateConstBuffer(ID3D11DeviceContext *pd3dDeviceContext)
 	SpriteAnimation *animation = (SpriteAnimation*)d3dMappedResource.pData;
 
 	animation->fSpriteAnimation_FPS = m_frameFPS;
-	animation->fSpriteAnimation_Count = m_nCurrentFrame;
+	animation->fSpriteAnimation_Count = (float)m_nCurrentFrame;
 	animation->fSpriteAnimation_Width = m_imageWidth;
 	animation->fSpriteAnimation_Left = m_frameLeft;
 	//(m_imageWidth * (float)m_nCurrentFrame)
@@ -151,7 +151,7 @@ void CWaterFallShader::UpdateConstBuffer(ID3D11DeviceContext *pd3dDeviceContext)
 	pd3dDeviceContext->GSSetConstantBuffers(PS_CB_SLOT_SPRITE_ANIMATION, 1, &m_pd3dcbAnimationSprite);
 }
 
-void CWaterFallShader::AfterCreateShader(ID3D11Device * pd3dDevice)
+void CWaterFallShader::AfterCreateShader(ID3D11Device*  pd3dDevice)
 {
 
 	if (m_pd3dSOGeometryShader)m_pd3dSOGeometryShader->Release();
@@ -169,7 +169,7 @@ void CWaterFallShader::AfterCreateShader(ID3D11Device * pd3dDevice)
 
 }
 
-void CWaterFallShader::AfterAuraCreateShader(ID3D11Device * pd3dDevice)
+void CWaterFallShader::AfterAuraCreateShader(ID3D11Device*  pd3dDevice)
 {
 	if (m_pd3dPixelShader)m_pd3dPixelShader->Release();
 	m_pd3dPixelShader = nullptr;

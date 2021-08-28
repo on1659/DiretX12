@@ -1,7 +1,7 @@
 #include "stdafx.h"
 #include "GeoCubeMesh.h"
 
-CGeoCubeMesh::CGeoCubeMesh(ID3D11Device *pd3dDevice, float fWidth, float fHeight, float fDepth) : CGeoMetryMesh(pd3dDevice)
+CGeoCubeMesh::CGeoCubeMesh(ID3D11Device* pd3dDevice, float fWidth, float fHeight, float fDepth) : CGeoMetryMesh(pd3dDevice)
 {
 	m_nVertices = 1;
 	m_d3dPrimitiveTopology = D3D11_PRIMITIVE_TOPOLOGY_POINTLIST;

@@ -68,7 +68,7 @@ private:
 	//Animatino Sprite
 	std::shared_ptr<CBillBoardShader> FindSpriteAnimationShader(std::string name);
 
-	void AddAnimationSpriteShader(std::string name, std::string path, std::string blending, XMFLOAT2 fSize, float frameFPS, int frameCount);
+	void AddAnimationSpriteShader(std::string name, std::string path, std::string blending, XMFLOAT2 fSize, float frameFPS, float frameCount);
 
 	void AddBillBoardEffectShader(std::string name, std::string path, XMFLOAT2 fSize);
 

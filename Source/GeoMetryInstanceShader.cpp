@@ -23,7 +23,7 @@ CGeoMetryInstanceShader::~CGeoMetryInstanceShader()
 
 }
 
-void CGeoMetryInstanceShader::CreateShader(ID3D11Device *pd3dDevice)
+void CGeoMetryInstanceShader::CreateShader(ID3D11Device* pd3dDevice)
 {
 
 }

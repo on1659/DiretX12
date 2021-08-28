@@ -1,7 +1,7 @@
 #include "stdafx.h"
 #include "TSCubeMesh.h"
 
-CTSCubeMesh::CTSCubeMesh(ID3D11Device *pd3dDevice, float fWidth, float fHeight, float fLength) : CMeshTextured(pd3dDevice)
+CTSCubeMesh::CTSCubeMesh(ID3D11Device* pd3dDevice, float fWidth, float fHeight, float fLength) : CMeshTextured(pd3dDevice)
 {
 	m_nVertices = 24;
 	m_d3dPrimitiveTopology = D3D11_PRIMITIVE_TOPOLOGY_4_CONTROL_POINT_PATCHLIST;

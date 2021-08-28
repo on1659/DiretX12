@@ -12,7 +12,7 @@ CUIGauge::~CUIGauge()
 
 }
 
-void CUIGauge::Initialize(ID3D11Device * pd3dDevice, XMFLOAT2 position, XMFLOAT2 fSize, float frameFPS)
+void CUIGauge::Initialize(ID3D11Device*  pd3dDevice, XMFLOAT2 position, XMFLOAT2 fSize, float frameFPS)
 {
 	auto pMesh = std::make_unique<CUISpriteMesh>(pd3dDevice, fSize.x, fSize.y);
 	m_uiUIGauge = std::make_shared<CUIShader>();

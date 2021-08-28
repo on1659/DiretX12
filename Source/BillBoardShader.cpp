@@ -20,14 +20,14 @@ CBillBoardShader::~CBillBoardShader()
 {
 }
 
-void CBillBoardShader::BuildObjects(ID3D11Device *pd3dDevice, void *pContext)
+void CBillBoardShader::BuildObjects(ID3D11Device* pd3dDevice, void *pContext)
 {
 	CInstancedObjectsShader::BuildObjects(pd3dDevice, pContext);
 	Object::SetBlendState("Billboard");
 	Object::CreateRasterizerState(pd3dDevice, D3D11_CULL_NONE, D3D11_FILL_SOLID);
 }
 
-void CBillBoardShader::CreateShader(ID3D11Device *pd3dDevice)
+void CBillBoardShader::CreateShader(ID3D11Device* pd3dDevice)
 {
 	int nSlot = 0;
 	D3D11_INPUT_ELEMENT_DESC d3dInputElements[] =
@@ -56,7 +56,7 @@ void CBillBoardShader::CreateShader(ID3D11Device *pd3dDevice)
 	//#endif
 }
 
-void CBillBoardShader::CreatePixcelShader(ID3D11Device * pd3dDevice, WCHAR * path)
+void CBillBoardShader::CreatePixcelShader(ID3D11Device*  pd3dDevice, WCHAR * path)
 {
 	if (m_pd3dPixelShader) m_pd3dPixelShader->Release();
 	m_pd3dPixelShader = nullptr;

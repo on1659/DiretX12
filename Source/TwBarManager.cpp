@@ -18,7 +18,7 @@ void CTwBarManager::Release()
 
 }
 
-bool CTwBarManager::Load(ID3D11Device * pd3dDevice)
+bool CTwBarManager::Load(ID3D11Device*  pd3dDevice)
 {
 	// Initialize AntTweakBar
 	if (!TwInit(TW_DIRECT3D11, pd3dDevice))

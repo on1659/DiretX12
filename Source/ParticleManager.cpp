@@ -62,14 +62,14 @@ void CParticleManager::Load(ID3D11Device* pd3dDevice)
 	#endif
 
 	AddAnimationSpriteShader("보라불꽃", "../Assets/03_Image/Sprite/awaken_create.png", "BillBoardSprite",XMFLOAT2(2, 2), 1, 11);
-	AddAnimationSpriteShader("스매시", "../Assets/03_Image/Sprite/smash_effect_sprite2.png","SmashParticle", XMFLOAT2(0.8, 0.8), 2.0f, 7.0f);
+	AddAnimationSpriteShader("스매시", "../Assets/03_Image/Sprite/smash_effect_sprite2.png","SmashParticle", XMFLOAT2(0.8, 0.8), 2, 7);
 	AddBillBoardEffectShader("미스", "../Assets/03_Image/Sprite/Miss.png", XMFLOAT2(0.6f, 0.2f));
 
 
 
 }
 
-void CParticleManager::CreateConstBuffer(ID3D11Device * pd3dDevice)
+void CParticleManager::CreateConstBuffer(ID3D11Device*  pd3dDevice)
 {
 	XMFLOAT3 p = m_pCamera->GetPositionXMFLOAT3();
 
@@ -230,7 +230,7 @@ std::shared_ptr<CBillBoardShader> CParticleManager::FindSpriteAnimationShader(st
 		return iter->second;
 }
 
-void CParticleManager::AddAnimationSpriteShader(std::string name, std::string path, std::string blending, XMFLOAT2 fSize, float frameFPS, int frameCount)
+void CParticleManager::AddAnimationSpriteShader(std::string name, std::string path, std::string blending, XMFLOAT2 fSize, float frameFPS, float frameCount)
 {
 	auto pShader = std::make_shared<CBillBoardSpriteShader>();
 	pShader->CreateShader(m_pd3dDevice);

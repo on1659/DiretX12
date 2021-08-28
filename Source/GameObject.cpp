@@ -159,7 +159,7 @@ void CGameObject::Release()
 
 //Create
 /*WorldMatrix , MaterialClor Matrix*/
-void CGameObject::CreateConstBuffers(ID3D11Device *pd3dDevice)
+void CGameObject::CreateConstBuffers(ID3D11Device* pd3dDevice)
 {
 	D3D11_BUFFER_DESC d3dBufferDesc;
 	ZeroMemory(&d3dBufferDesc, sizeof(D3D11_BUFFER_DESC));

@@ -23,7 +23,7 @@ public:
 
 	void Load(ID3D11Device* pd3dDevice);
 
-	void CreateConstBuffers(ID3D11Device *pd3dDevice);
+	void CreateConstBuffers(ID3D11Device* pd3dDevice);
 
 	void Update(float fTimeElapsed, std::shared_ptr<CCamera> pCamera);
 

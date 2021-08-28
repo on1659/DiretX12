@@ -20,7 +20,7 @@ public:
 
 	virtual ~CBasicSystem();
 
-	void Load(ID3D11Device *pd3dDevice);
+	void Load(ID3D11Device* pd3dDevice);
 
 	bool OnCollision();
 

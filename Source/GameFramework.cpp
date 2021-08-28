@@ -104,13 +104,11 @@ bool CGameFramework::OnCreate(HINSTANCE hInstance, HWND hMainWnd)
 	m_hInstance = hInstance;
 	m_hWnd = hMainWnd;
 
-
-	if (!CreateDirect3DDisplay())
-		return false;
+	if (!CreateDirect3DDisplay()) 
+		return(false);
 
 	//2. 타이머
 	TIMEMGR;
-
 
 	//3. 인풋매니저
 	INPUT->Load();
@@ -136,15 +134,17 @@ bool CGameFramework::OnCreate(HINSTANCE hInstance, HWND hMainWnd)
 	SPACE->Load(WORLDSIZE, WORLD_DEPTH, NODE_DEPTH_LEVEL);
 #else
 	SPACE->Load(WORLDSIZE, 2000, WORLDSIZE, NODE_DEPTH_LEVEL);
-#endif // _QURD_ARRARY
-#endif //_SPACEPARTITIONING
+#endif
+#endif
 
 	CGameFramework::CreateConstBuffers();
 
 
 #ifdef _MULIT_THREAD_LOADING_
+
 	SceneLoad();
-#else // _MULIT_THREAD_LOADING_
+
+#else
 
 #ifdef _MULIT_RENDER_TARGET_
 	//쉐이더 설정
@@ -158,7 +158,8 @@ bool CGameFramework::OnCreate(HINSTANCE hInstance, HWND hMainWnd)
 	m_pTextureToScreenShader->CreateShader(m_pd3dDevice);
 	::GTimeRecord(false, "ScreenShader CreateShader : ");
 	//m_pTextureToScreenShader->ComputeLoad(m_pd3dDevice);
-#endif //_MULIT_RENDER_TARGET_
+
+#endif
 
 
 
@@ -182,7 +183,7 @@ bool CGameFramework::OnCreate(HINSTANCE hInstance, HWND hMainWnd)
 	UIMGR->FinalLoad();
 	::GTimeRecord(false, "FinalLoad  : ");
 
-#endif // _MULIT_THREAD_LOADING_
+#endif
 
 	timeTick = false;
 
@@ -260,24 +261,18 @@ bool CGameFramework::OnCreate(HINSTANCE hInstance, HWND hMainWnd)
 	hr = m_pd3dDevice->CreateBuffer(&blurbd, &d3dFogBufferData, &m_pd3dOutLineBuffer);
 	m_pd3dDeviceContext->PSSetConstantBuffers(PS_CB_SLOT_OUTLINE, 1, &m_pd3dOutLineBuffer);
 
-	return true;
+	return(true);
 }
 
 bool CGameFramework::OnCreate()
 {
-	if (CreateDirect3DDisplay() == false)
+	if (!CreateDirect3DDisplay()) 
 		return false;
-
-	if (CreateRenderTargetDepthStencilView() == false)
-		return false;
-
-#ifdef DX12_MIGRATION
-
-#endif //DX12_MIGRATION
 
 
 	//2. 타이머
 	TIMEMGR;
+
 
 	//3. 인풋매니저
 	INPUT->Load();
@@ -358,7 +353,7 @@ bool CGameFramework::OnCreate()
 #endif
 
 	timeTick = false;
-	return true;
+	return(true);
 }
 
 void CGameFramework::ThreadCreate()
@@ -400,6 +395,7 @@ bool CGameFramework::CreateDirect3DDisplay()
 		//dwCreateDeviceFlags |= D3D11_CREATE_DEVICE_DEBUG;
 	#endif
 
+	// https://docs.microsoft.com/ko-kr/windows/win32/direct3d11/overviews-direct3d-11-devices-downlevel-intro?redirectedfrom=MSDN#Overview
 	D3D_DRIVER_TYPE d3dDriverTypes[] =
 	{
 		// 하드웨어 드라이버, Direct3D의 기능이 최대한 하드웨어로 구현 
@@ -441,86 +437,95 @@ bool CGameFramework::CreateDirect3DDisplay()
 	D3D_DRIVER_TYPE nd3dDriverType = (D3D_DRIVER_TYPE)D3D_DRIVER_TYPE_NULL;
 	D3D_FEATURE_LEVEL nd3dFeatureLevel = (D3D_FEATURE_LEVEL)D3D_FEATURE_LEVEL_11_0;
 	HRESULT hResult = S_OK;
-	dxgiSwapChainDesc.SampleDesc.Count = 1;
-	dxgiSwapChainDesc.SampleDesc.Quality = 0;
 
+#ifdef _WITH_MSAA4_MULTISAMPLING
+			dxgiSwapChainDesc.SampleDesc.Count = 4;
+			dxgiSwapChainDesc.SampleDesc.Quality = m_n4xMSAAQualities - 1;
+#else // _WITH_MSAA4_MULTISAMPLING
+			dxgiSwapChainDesc.SampleDesc.Count = 1;
+			dxgiSwapChainDesc.SampleDesc.Quality = 0;
+#endif //_WITH_MSAA4_MULTISAMPLING
+		IDXGIFactory1*pdxgiFactory = nullptr;
+		IDXGIDevice *pdxgiDevice = nullptr;
+		if (FAILED(hResult = CreateDXGIFactory1(__uuidof(IDXGIFactory1), (void **)&pdxgiFactory)))	// DX11 DX12 공통
+			return false;
 
-	IDXGIFactory1 *pdxgiFactory = nullptr;
-	IDXGIDevice *pdxgiDevice = nullptr;
-	if (FAILED(hResult = CreateDXGIFactory1(__uuidof(IDXGIFactory1), (void **)&pdxgiFactory))) return false;
+		IDXGIAdapter* pAdapter;
 
-	size_t ui64VideoMemory;
-	IDXGIAdapter* pAdapter;
-	DXGI_ADAPTER_DESC adapterDesc;
+#ifdef _SELECT_GPU_DRIVE_170904
+		size_t ui64VideoMemory;
+		DXGI_ADAPTER_DESC adapterDesc;
 
-	// DirectX 그래픽 인터페이스 팩토리를 만듭니다. 
-	//auto result = CreateDXGIFactory(__uuidof(IDXGIFactory), (void**)&pFactory);
+		// DirectX 그래픽 인터페이스 팩토리를 만듭니다. 
+		//auto result = CreateDXGIFactory(__uuidof(IDXGIFactory), (void**)&pFactory);
 
-	if (FAILED(pdxgiFactory->EnumAdapters(0, (IDXGIAdapter**)&pAdapter)))
-	{
-		MessageBox(m_hWnd, TEXT("요청한 그래픽 카드 인터페이스에 대한 어댑터가 없습니다. 프로그램을 종료합니다."), TEXT("프로그램 구동 실패"), MB_OK);
-	}
-
-	pAdapter->GetDesc(&adapterDesc);
-	ui64VideoMemory = (std::size_t)(adapterDesc.DedicatedVideoMemory + adapterDesc.SharedSystemMemory);
-
-		
-	//비디오 메모리 비교해서 더 좋은 GPU 찾기
-	int gpu_idx = 0;
-	int select = 0;
-	std::size_t comparison_videoMemory;
-	while (pdxgiFactory->EnumAdapters(gpu_idx, &pAdapter) != DXGI_ERROR_NOT_FOUND)
-	{
-		pAdapter->GetDesc(&adapterDesc);
-		comparison_videoMemory = (std::size_t)(adapterDesc.DedicatedVideoMemory + adapterDesc.SharedSystemMemory);
-
-		auto memory = comparison_videoMemory / 1024 / 1024;
-		wcout << L"GPU " << adapterDesc.Description << L" - [" << gpu_idx << L"] : " << memory << L"Mb" << std::endl;
-
-		if (comparison_videoMemory > ui64VideoMemory)
+		if (FAILED(pdxgiFactory->EnumAdapters(0, (IDXGIAdapter**)&pAdapter)))
 		{
-			ui64VideoMemory = comparison_videoMemory;
-			select = gpu_idx;
+			MessageBox(m_hWnd, TEXT("요청한 그래픽 카드 인터페이스에 대한 어댑터가 없습니다. 프로그램을 종료합니다."), TEXT("프로그램 구동 실패"), MB_OK);
 		}
-		++gpu_idx;
-	}
-	cout << "bye" << endl;
-		
-	pdxgiFactory->EnumAdapters(select, &pAdapter);
-		
-	for (UINT i = 0; i < nDriverTypes; i++)
-	{
-		nd3dDriverType = d3dDriverTypes[i];
-		if (SUCCEEDED(hResult =
-			D3D11CreateDevice
-			(
-					pAdapter
-				, nd3dDriverType
-				, nullptr
-				, dwCreateDeviceFlags
-				, pd3dFeatureLevels
-				, nFeatureLevels
-				, D3D11_SDK_VERSION
-				, &m_pd3dDevice
-				, &nd3dFeatureLevel
-				, &m_pd3dDeviceContext
-			)
-		)) break;
-	}
-	if (!m_pd3dDevice) return false;
-	Radar::DXUT_SetDebugName(m_pd3dDevice, ("FrameWork Device"));
 
-	if (FAILED(hResult = m_pd3dDevice->CheckMultisampleQualityLevels(DXGI_FORMAT_R8G8B8A8_UNORM, 4, &m_n4xMSAAQualities))) 
+		pAdapter->GetDesc(&adapterDesc);
+		ui64VideoMemory = (std::size_t)(adapterDesc.DedicatedVideoMemory + adapterDesc.SharedSystemMemory);
+
+		//비디오 메모리 비교해서 더 좋은 GPU 찾기
+		int gpu_idx = 0;
+		int select = 0;
+		std::size_t comparison_videoMemory;
+		while (pdxgiFactory->EnumAdapters(gpu_idx, &pAdapter) != DXGI_ERROR_NOT_FOUND)
+		{
+			pAdapter->GetDesc(&adapterDesc);
+			comparison_videoMemory = (std::size_t)(adapterDesc.DedicatedVideoMemory + adapterDesc.SharedSystemMemory);
+
+			auto memory = comparison_videoMemory / 1024 / 1024;
+			wcout << L"GPU " << adapterDesc.Description << L" - [" << gpu_idx << L"] : " << memory << L"Mb" << std::endl;
+
+			if (comparison_videoMemory > ui64VideoMemory)
+			{
+				ui64VideoMemory = comparison_videoMemory;
+				select = gpu_idx;
+			}
+			++gpu_idx;
+		}
+		cout << "bye" << endl;
+		
+		pdxgiFactory->EnumAdapters(select, &pAdapter);
+#endif // _SELECT_GPU_DRIVE_170904
+
+		for (UINT i = 0; i < nDriverTypes; i++)
+		{
+			hResult = D3D11CreateDevice(pAdapter
+					, d3dDriverTypes[i]
+					, nullptr
+					, dwCreateDeviceFlags
+					, pd3dFeatureLevels
+					, nFeatureLevels
+					, D3D11_SDK_VERSION
+					, &m_pd3dDevice
+					, &nd3dFeatureLevel
+				    , &m_pd3dDeviceContext);
+				
+				if (SUCCEEDED(hResult))
+					break;
+		}
+		if (m_pd3dDevice == nullptr)
+			return false;
+
+		Radar::DXUT_SetDebugName(m_pd3dDevice, ("FrameWork Device"));
+
+		if (FAILED(hResult = m_pd3dDevice->CheckMultisampleQualityLevels(DXGI_FORMAT_R8G8B8A8_UNORM, 4, &m_n4xMSAAQualities))) return(false);
+
+
+		if (FAILED(hResult = m_pd3dDevice->QueryInterface(__uuidof(IDXGIDevice), (void **)&pdxgiDevice))) return(false);
+		if (FAILED(hResult = pdxgiFactory->CreateSwapChain(pdxgiDevice, &dxgiSwapChainDesc, &m_pDXGISwapChain))) return(false);
+		if (pdxgiDevice) pdxgiDevice->Release();
+		if (pdxgiFactory) pdxgiFactory->Release();
+		if (pAdapter) pAdapter->Release();
+
+
+	if (!CreateRenderTargetDepthStencilView())
 		return false;
 
-
-	if (FAILED(hResult = m_pd3dDevice->QueryInterface(__uuidof(IDXGIDevice), (void **)&pdxgiDevice))) return false;
-	if (FAILED(hResult = pdxgiFactory->CreateSwapChain(pdxgiDevice, &dxgiSwapChainDesc, &m_pDXGISwapChain))) return false;
-	if (pdxgiDevice) pdxgiDevice->Release();
-	if (pdxgiFactory) pdxgiFactory->Release();
-	if (pAdapter) pAdapter->Release();
-
-	return true;
+	return(true);
 }
 
 bool CGameFramework::CreateRenderTargetDepthStencilView()
@@ -529,10 +534,10 @@ bool CGameFramework::CreateRenderTargetDepthStencilView()
 
 	//ID3D11Texture2D *pd3dBackBuffer;
 	//벡버퍼 얻음
-	if (FAILED(hResult = m_pDXGISwapChain->GetBuffer(0, __uuidof(ID3D11Texture2D), (LPVOID *)&m_pd3dMainBackBufferTextrue))) return false;
+	if (FAILED(hResult = m_pDXGISwapChain->GetBuffer(0, __uuidof(ID3D11Texture2D), (LPVOID *)&m_pd3dMainBackBufferTextrue))) return(false);
 
 	//랜더타겟뷰를 생성함
-	if (FAILED(hResult = m_pd3dDevice->CreateRenderTargetView(m_pd3dMainBackBufferTextrue, nullptr, &m_pd3dRenderTargetView))) return false;
+	if (FAILED(hResult = m_pd3dDevice->CreateRenderTargetView(m_pd3dMainBackBufferTextrue, nullptr, &m_pd3dRenderTargetView))) return(false);
 	Radar::DXUT_SetDebugName(m_pd3dRenderTargetView, ("FrameWork Device m_pd3dRenderTargetView"));
 
 	m_pd3dDevice->CreateShaderResourceView(m_pd3dMainBackBufferTextrue, nullptr, &m_pd3dMainShaderResourceView);
@@ -553,27 +558,35 @@ bool CGameFramework::CreateRenderTargetDepthStencilView()
 	d3dDepthStencilBufferDesc.MipLevels = 1;
 	d3dDepthStencilBufferDesc.ArraySize = 1;
 	d3dDepthStencilBufferDesc.Format = DXGI_FORMAT_D24_UNORM_S8_UINT;
+#ifdef _WITH_MSAA4_MULTISAMPLING
+	d3dDepthStencilBufferDesc.SampleDesc.Count = 4;
+	d3dDepthStencilBufferDesc.SampleDesc.Quality = m_n4xMSAAQualities - 1;
+#else
 	d3dDepthStencilBufferDesc.SampleDesc.Count = 1;
 	d3dDepthStencilBufferDesc.SampleDesc.Quality = 0;
+#endif
 	d3dDepthStencilBufferDesc.Usage = D3D11_USAGE_DEFAULT;
 	d3dDepthStencilBufferDesc.BindFlags = D3D11_BIND_DEPTH_STENCIL;
 	d3dDepthStencilBufferDesc.CPUAccessFlags = 0;
 	d3dDepthStencilBufferDesc.MiscFlags = 0;
-	if (FAILED(hResult = m_pd3dDevice->CreateTexture2D(&d3dDepthStencilBufferDesc, nullptr, &m_pd3dDepthStencilBuffer))) return false;
+	if (FAILED(hResult = m_pd3dDevice->CreateTexture2D(&d3dDepthStencilBufferDesc, nullptr, &m_pd3dDepthStencilBuffer))) return(false);
 
 	// Create the depth stencil view
 	D3D11_DEPTH_STENCIL_VIEW_DESC d3dDepthStencilViewDesc;
 	ZeroMemory(&d3dDepthStencilViewDesc, sizeof(D3D11_DEPTH_STENCIL_VIEW_DESC));
 	d3dDepthStencilViewDesc.Format = d3dDepthStencilBufferDesc.Format;
+#ifdef _WITH_MSAA4_MULTISAMPLING
+	d3dDepthStencilViewDesc.ViewDimension = D3D11_DSV_DIMENSION_TEXTURE2DMS;
+#else
 	d3dDepthStencilViewDesc.ViewDimension = D3D11_DSV_DIMENSION_TEXTURE2D;
+#endif
 	d3dDepthStencilViewDesc.Texture2D.MipSlice = 0;
-	if (FAILED(hResult = m_pd3dDevice->CreateDepthStencilView(m_pd3dDepthStencilBuffer, &d3dDepthStencilViewDesc, &m_pd3dDepthStencilView))) 
-		return false;
+	if (FAILED(hResult = m_pd3dDevice->CreateDepthStencilView(m_pd3dDepthStencilBuffer, &d3dDepthStencilViewDesc, &m_pd3dDepthStencilView))) return(false);
 
 	//렌더 타겟을 설정 나중에 바꿔야 할 듯 5개 set 해야함
 
 
-	return true;
+	return(true);
 }
 
 #ifdef _MULIT_RENDER_TARGET_
@@ -755,7 +768,7 @@ bool CGameFramework::CreateRenderTargetDepthStencilViewMRT()
 	return true;
 }
 
-void CGameFramework::LoadScreenShader(ID3D11Device * pd3dDevice)
+void CGameFramework::LoadScreenShader(ID3D11Device*  pd3dDevice)
 {
 	m_pTextureToScreenShader = std::make_shared<CScreenShader>(MULITE_RENDER_NUMBER, 1, 0, 0);
 	::GTimeRecord();
@@ -1675,7 +1688,7 @@ void CGameFramework::InitializeWorkerThreads()
 		::ResumeThread(pNowSelectInfo->m_hRenderingThread);
 	}
 }
-#endif // _MULIT_THREAD_RENDER_
+#endif
 
 #ifdef DX12_MIGRATION
 WARP_RESULT_ENUM CGameFramework::CreateDeivce()

@@ -22,7 +22,7 @@ CParticleShader::~CParticleShader()
 
 }
 
-void CParticleShader::CreateShader(ID3D11Device *pd3dDevice)
+void CParticleShader::CreateShader(ID3D11Device* pd3dDevice)
 {
 }
 

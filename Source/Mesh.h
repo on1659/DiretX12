@@ -69,7 +69,7 @@ public:
 class CMesh : public Object
 {
 public:
-	CMesh(ID3D11Device *pd3dDevice);
+	CMesh(ID3D11Device* pd3dDevice);
 	virtual ~CMesh();
 
 	void Release();
@@ -148,7 +148,7 @@ public:
 	//둘다 공용으로 쓰임
 	void CalculateBoundingCube();
 
-	ID3D11Buffer *CreateBuffer(ID3D11Device *pd3dDevice, UINT nStride, int nElements, void *pBufferData, UINT nBindFlags, D3D11_USAGE d3dUsage, UINT nCPUAccessFlags);
+	ID3D11Buffer *CreateBuffer(ID3D11Device* pd3dDevice, UINT nStride, int nElements, void *pBufferData, UINT nBindFlags, D3D11_USAGE d3dUsage, UINT nCPUAccessFlags);
 	void AssembleToVertexBuffer(int nBuffers = 0, ID3D11Buffer **m_pd3dBuffers = nullptr, UINT *pnBufferStrides = nullptr, UINT *pnBufferOffsets = nullptr);
 
 	virtual void OnPrepareRender(ID3D11DeviceContext *pd3dDeviceContext);
@@ -172,7 +172,7 @@ public:
 class CMeshDiffused : public CMesh
 {
 public:
-	CMeshDiffused(ID3D11Device *pd3dDevice);
+	CMeshDiffused(ID3D11Device* pd3dDevice);
 	virtual ~CMeshDiffused();
 
 protected:
@@ -212,7 +212,7 @@ protected:
 class CMeshIlluminated : public CNormalMesh
 {
 public:
-	CMeshIlluminated(ID3D11Device *pd3dDevice);
+	CMeshIlluminated(ID3D11Device* pd3dDevice);
 	virtual ~CMeshIlluminated();
 
 protected:
@@ -229,7 +229,7 @@ public:
 class CMeshTextured : public CMesh
 {
 public:
-	CMeshTextured(ID3D11Device *pd3dDevice);
+	CMeshTextured(ID3D11Device* pd3dDevice);
 	virtual ~CMeshTextured();
 
 protected:
@@ -240,7 +240,7 @@ protected:
 class CMeshDetailTextured : public CMeshTextured
 {
 public:
-	CMeshDetailTextured(ID3D11Device *pd3dDevice);
+	CMeshDetailTextured(ID3D11Device* pd3dDevice);
 	virtual ~CMeshDetailTextured();
 
 protected:
@@ -251,7 +251,7 @@ protected:
 class CMeshTexturedIlluminated : public CMeshIlluminated
 {
 public:
-	CMeshTexturedIlluminated(ID3D11Device *pd3dDevice);
+	CMeshTexturedIlluminated(ID3D11Device* pd3dDevice);
 	virtual ~CMeshTexturedIlluminated();
 
 protected:
@@ -262,7 +262,7 @@ protected:
 class CMeshDetailTexturedIlluminated : public CMeshIlluminated
 {
 public:
-	CMeshDetailTexturedIlluminated(ID3D11Device *pd3dDevice);
+	CMeshDetailTexturedIlluminated(ID3D11Device* pd3dDevice);
 	virtual ~CMeshDetailTexturedIlluminated();
 
 protected:
@@ -274,7 +274,7 @@ protected:
 class CAirplaneMeshDiffused : public CMeshDiffused
 {
 public:
-	CAirplaneMeshDiffused(ID3D11Device *pd3dDevice, float fWidth = 20.0f, float fHeight = 4.0f, float fDepth = 20.0f, XMVECTOR d3dxColor = XMVectorSet(1.0f, 1.0f, 0.0f, 0.0f));
+	CAirplaneMeshDiffused(ID3D11Device* pd3dDevice, float fWidth = 20.0f, float fHeight = 4.0f, float fDepth = 20.0f, XMVECTOR d3dxColor = XMVectorSet(1.0f, 1.0f, 0.0f, 0.0f));
 	virtual ~CAirplaneMeshDiffused();
 };
 
@@ -282,7 +282,7 @@ public:
 class CCubeMeshDiffused : public CMeshDiffused
 {
 public:
-	CCubeMeshDiffused(ID3D11Device *pd3dDevice, float fWidth = 2.0f, float fHeight = 2.0f, float fDepth = 2.0f, XMVECTOR d3dxColor = XMVectorSet(1.0f, 1.0f, 0.0f, 0.0f));
+	CCubeMeshDiffused(ID3D11Device* pd3dDevice, float fWidth = 2.0f, float fHeight = 2.0f, float fDepth = 2.0f, XMVECTOR d3dxColor = XMVectorSet(1.0f, 1.0f, 0.0f, 0.0f));
 	virtual ~CCubeMeshDiffused();
 };
 
@@ -290,7 +290,7 @@ public:
 class CSphereMeshDiffused : public CMeshDiffused
 {
 public:
-	CSphereMeshDiffused(ID3D11Device *pd3dDevice, float fRadius = 2.0f, int nSlices = 20, int nStacks = 20, XMVECTOR d3dxColor = XMVectorSet(1.0f, 1.0f, 0.0f, 0.0f));
+	CSphereMeshDiffused(ID3D11Device* pd3dDevice, float fRadius = 2.0f, int nSlices = 20, int nStacks = 20, XMVECTOR d3dxColor = XMVectorSet(1.0f, 1.0f, 0.0f, 0.0f));
 	virtual ~CSphereMeshDiffused();
 };
 
@@ -298,42 +298,42 @@ public:
 class CCubeMeshIlluminated : public CMeshIlluminated
 {
 public:
-	CCubeMeshIlluminated(ID3D11Device *pd3dDevice, float fWidth = 2.0f, float fHeight = 2.0f, float fDepth = 2.0f);
+	CCubeMeshIlluminated(ID3D11Device* pd3dDevice, float fWidth = 2.0f, float fHeight = 2.0f, float fDepth = 2.0f);
 	virtual ~CCubeMeshIlluminated();
 };
 
 class CSphereMeshIlluminated : public CMeshIlluminated
 {
 public:
-	CSphereMeshIlluminated(ID3D11Device *pd3dDevice, float fRadius = 2.0f, int nSlices = 20, int nStacks = 20);
+	CSphereMeshIlluminated(ID3D11Device* pd3dDevice, float fRadius = 2.0f, int nSlices = 20, int nStacks = 20);
 	virtual ~CSphereMeshIlluminated();
 };
 
 class CCubeMeshTextured : public CMeshTextured
 {
 public:
-	CCubeMeshTextured(ID3D11Device *pd3dDevice, float fWidth = 2.0f, float fHeight = 2.0f, float fDepth = 2.0f);
+	CCubeMeshTextured(ID3D11Device* pd3dDevice, float fWidth = 2.0f, float fHeight = 2.0f, float fDepth = 2.0f);
 	virtual ~CCubeMeshTextured();
 };
 
 class CSphereMeshTextured : public CMeshTextured
 {
 public:
-	CSphereMeshTextured(ID3D11Device *pd3dDevice, float fRadius = 2.0f, int nSlices = 20, int nStacks = 20);
+	CSphereMeshTextured(ID3D11Device* pd3dDevice, float fRadius = 2.0f, int nSlices = 20, int nStacks = 20);
 	virtual ~CSphereMeshTextured();
 };
 
 class CCubeMeshTexturedIlluminated : public CMeshTexturedIlluminated
 {
 public:
-	CCubeMeshTexturedIlluminated(ID3D11Device *pd3dDevice, float fWidth = 2.0f, float fHeight = 2.0f, float fDepth = 2.0f);
+	CCubeMeshTexturedIlluminated(ID3D11Device* pd3dDevice, float fWidth = 2.0f, float fHeight = 2.0f, float fDepth = 2.0f);
 	virtual ~CCubeMeshTexturedIlluminated();
 };
 
 class CSphereMeshTexturedIlluminated : public CMeshTexturedIlluminated
 {
 public:
-	CSphereMeshTexturedIlluminated(ID3D11Device *pd3dDevice, float fRadius = 2.0f, int nSlices = 20, int nStacks = 20);
+	CSphereMeshTexturedIlluminated(ID3D11Device* pd3dDevice, float fRadius = 2.0f, int nSlices = 20, int nStacks = 20);
 	virtual ~CSphereMeshTexturedIlluminated();
 };
 
@@ -346,7 +346,7 @@ protected:
 	XMFLOAT3					m_d3dxvScale;
 
 public:
-	CHeightMapGridMesh(ID3D11Device *pd3dDevice, int xStart, int zStart, int nWidth, int nLength, XMVECTOR d3dxvScale = XMVectorSet(1.0f, 1.0f, 1.0f, 0.0f), void *pContext = nullptr, D3D11_USAGE d3dUsage = D3D11_USAGE_DEFAULT);
+	CHeightMapGridMesh(ID3D11Device* pd3dDevice, int xStart, int zStart, int nWidth, int nLength, XMVECTOR d3dxvScale = XMVectorSet(1.0f, 1.0f, 1.0f, 0.0f), void *pContext = nullptr, D3D11_USAGE d3dUsage = D3D11_USAGE_DEFAULT);
 	virtual ~CHeightMapGridMesh();
 
 	XMVECTOR& GetScale() { return(XMLoadFloat3(&m_d3dxvScale)); }
@@ -360,7 +360,7 @@ public:
 class CSkyBoxMesh : public CMeshTextured
 {
 public:
-	CSkyBoxMesh(ID3D11Device *pd3dDevice, float fWidth = 20.0f, float fHeight = 20.0f, float fDepth = 20.0f);
+	CSkyBoxMesh(ID3D11Device* pd3dDevice, float fWidth = 20.0f, float fHeight = 20.0f, float fDepth = 20.0f);
 	virtual ~CSkyBoxMesh();
 };
 
@@ -384,7 +384,7 @@ private:
 	XMFLOAT3					*m_pd3dxvNormalVectors;
 
 public:
-	CWaterGridMesh(ID3D11Device *pd3dDevice, int xStart, int zStart, int nWidth, int nLength, XMVECTOR d3dxvScale = XMVectorSet(1.0f, 1.0f, 1.0f, 0.0f), void *pContext = nullptr, D3D11_USAGE d3dUsage = D3D11_USAGE_DYNAMIC);
+	CWaterGridMesh(ID3D11Device* pd3dDevice, int xStart, int zStart, int nWidth, int nLength, XMVECTOR d3dxvScale = XMVectorSet(1.0f, 1.0f, 1.0f, 0.0f), void *pContext = nullptr, D3D11_USAGE d3dUsage = D3D11_USAGE_DYNAMIC);
 	virtual ~CWaterGridMesh();
 
 	virtual float OnGetHeight(int x, int z, void *pContext);
@@ -400,7 +400,7 @@ public:
 class CTextureToScreenRectMesh : public CMeshTextured
 {
 public:
-	CTextureToScreenRectMesh(ID3D11Device *pd3dDevice, float fWidth = 2.0f, float fHeight = 2.0f);
+	CTextureToScreenRectMesh(ID3D11Device* pd3dDevice, float fWidth = 2.0f, float fHeight = 2.0f);
 	virtual ~CTextureToScreenRectMesh();
 };
 
@@ -408,7 +408,7 @@ public:
 class CTexturedRectMesh : public CMeshTextured
 {
 public:
-	CTexturedRectMesh(ID3D11Device *pd3dDevice, float fWidth = 2.0f, float fHeight = 2.0f, float fLength = 2.0f);
+	CTexturedRectMesh(ID3D11Device* pd3dDevice, float fWidth = 2.0f, float fHeight = 2.0f, float fLength = 2.0f);
 	virtual ~CTexturedRectMesh();
 };
 
@@ -425,7 +425,7 @@ private:
 
 
 public:
-	C3DFrustumMeshDiffused(ID3D11Device *pd3dDevice, float fFar, float fFov);
+	C3DFrustumMeshDiffused(ID3D11Device* pd3dDevice, float fFar, float fFov);
 
 	virtual ~C3DFrustumMeshDiffused();
 

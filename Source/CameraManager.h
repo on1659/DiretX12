@@ -17,7 +17,7 @@ public:
 
 	~CCameraManager();
 	
-	void Load(ID3D11Device *pd3dDevice);
+	void Load(ID3D11Device* pd3dDevice);
 
 	std::shared_ptr<CCamera> GetCameara(int index = 0) const { return m_vCamera[index]; }
 
@@ -25,13 +25,13 @@ public:
 
 	void SetData(CPlayer* pPlayer);
 
-	void CreateCamera(ID3D11Device *pd3dDevice, DWORD nCameraMode = THIRD_PERSON_CAMERA);
+	void CreateCamera(ID3D11Device* pd3dDevice, DWORD nCameraMode = THIRD_PERSON_CAMERA);
 
 	std::shared_ptr<CCamera> ChnageCamera(DWORD nCameraMode, int index = 0);
 
 	std::shared_ptr<CCamera> CreateCamera
 	(
-		ID3D11Device *pd3dDevice,
+		ID3D11Device* pd3dDevice,
 		DWORD nNewCameraMode, 
 		DWORD nCurrentCameraMode,
 		XMFLOAT3 vRight,

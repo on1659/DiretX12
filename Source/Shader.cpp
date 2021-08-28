@@ -63,7 +63,7 @@ CShader::~CShader()
 	m_pd3dInputElementDescs = nullptr;
 }
 
-void CShader::CreateVertexShaderFromFile(ID3D11Device *pd3dDevice, WCHAR *pszFileName, LPCSTR pszShaderName, LPCSTR pszShaderModel, ID3D11VertexShader **ppd3dVertexShader, D3D11_INPUT_ELEMENT_DESC *pd3dInputElements, UINT nElements, ID3D11InputLayout **ppd3dInputLayout)
+void CShader::CreateVertexShaderFromFile(ID3D11Device* pd3dDevice, WCHAR *pszFileName, LPCSTR pszShaderName, LPCSTR pszShaderModel, ID3D11VertexShader **ppd3dVertexShader, D3D11_INPUT_ELEMENT_DESC *pd3dInputElements, UINT nElements, ID3D11InputLayout **ppd3dInputLayout)
 {
 	HRESULT hResult;
 
@@ -93,7 +93,7 @@ void CShader::CreateVertexShaderFromFile(ID3D11Device *pd3dDevice, WCHAR *pszFil
 			MessageBox(NULL, L"쉐이더 이름이 안들어왔어용", pszFileName, MB_OK);
 	}
 }
-void CShader::CreatePixelShaderFromFile(ID3D11Device *pd3dDevice, WCHAR *pszFileName, LPCSTR pszShaderName, LPCSTR pszShaderModel, ID3D11PixelShader **ppd3dPixelShader)
+void CShader::CreatePixelShaderFromFile(ID3D11Device* pd3dDevice, WCHAR *pszFileName, LPCSTR pszShaderName, LPCSTR pszShaderModel, ID3D11PixelShader **ppd3dPixelShader)
 {
 	HRESULT hResult;
 
@@ -123,7 +123,7 @@ void CShader::CreatePixelShaderFromFile(ID3D11Device *pd3dDevice, WCHAR *pszFile
 	}
 
 }
-void CShader::CreateGeometryShaderFromFile(ID3D11Device *pd3dDevice, WCHAR *pszFileName, LPCSTR pszShaderName, LPCSTR pszShaderModel, ID3D11GeometryShader **ppd3dGeometryShader)
+void CShader::CreateGeometryShaderFromFile(ID3D11Device* pd3dDevice, WCHAR *pszFileName, LPCSTR pszShaderName, LPCSTR pszShaderModel, ID3D11GeometryShader **ppd3dGeometryShader)
 {
 	HRESULT hResult;
 
@@ -152,7 +152,7 @@ void CShader::CreateGeometryShaderFromFile(ID3D11Device *pd3dDevice, WCHAR *pszF
 			MessageBox(NULL, L"쉐이더 이름이 안들어왔어용", pszFileName, MB_OK);
 	}
 }
-void CShader::CreateSOGeometryShaderFromFile(ID3D11Device *pd3dDevice, WCHAR *pszFileName, LPCSTR pszShaderName, LPCSTR pszShaderModel, ID3D11GeometryShader **ppd3dGeometryShader)
+void CShader::CreateSOGeometryShaderFromFile(ID3D11Device* pd3dDevice, WCHAR *pszFileName, LPCSTR pszShaderName, LPCSTR pszShaderModel, ID3D11GeometryShader **ppd3dGeometryShader)
 {
 	HRESULT hResult;
 
@@ -181,7 +181,7 @@ void CShader::CreateSOGeometryShaderFromFile(ID3D11Device *pd3dDevice, WCHAR *ps
 			MessageBox(NULL, L"쉐이더 이름이 안들어왔어용", pszFileName, MB_OK);
 	}
 }
-void CShader::CreateSOGeometryShaderFromFile(ID3D11Device *pd3dDevice, WCHAR *pszFileName, LPCSTR pszShaderName, LPCSTR pszShaderModel, ID3D11GeometryShader **ppd3dGeometryShader, SO_Geometry_INFO so)
+void CShader::CreateSOGeometryShaderFromFile(ID3D11Device* pd3dDevice, WCHAR *pszFileName, LPCSTR pszShaderName, LPCSTR pszShaderModel, ID3D11GeometryShader **ppd3dGeometryShader, SO_Geometry_INFO so)
 {
 	HRESULT hResult;
 
@@ -206,7 +206,7 @@ void CShader::CreateSOGeometryShaderFromFile(ID3D11Device *pd3dDevice, WCHAR *ps
 			MessageBox(NULL, L"쉐이더 이름이 안들어왔어용", pszFileName, MB_OK);
 	}
 }
-void CShader::CreateHullShaderFromFile(ID3D11Device *pd3dDevice, WCHAR *pszFileName, LPCSTR pszShaderName, LPCSTR pszShaderModel, ID3D11HullShader **ppd3dHullShader)
+void CShader::CreateHullShaderFromFile(ID3D11Device* pd3dDevice, WCHAR *pszFileName, LPCSTR pszShaderName, LPCSTR pszShaderModel, ID3D11HullShader **ppd3dHullShader)
 {
 	HRESULT hResult;
 
@@ -235,7 +235,7 @@ void CShader::CreateHullShaderFromFile(ID3D11Device *pd3dDevice, WCHAR *pszFileN
 			MessageBox(NULL, L"쉐이더 이름이 안들어왔어용", pszFileName, MB_OK);
 	}
 }
-void CShader::CreateDomainShaderFromFile(ID3D11Device *pd3dDevice, WCHAR *pszFileName, LPCSTR pszShaderName, LPCSTR pszShaderModel, ID3D11DomainShader **ppd3dDomainShader)
+void CShader::CreateDomainShaderFromFile(ID3D11Device* pd3dDevice, WCHAR *pszFileName, LPCSTR pszShaderName, LPCSTR pszShaderModel, ID3D11DomainShader **ppd3dDomainShader)
 {
 	HRESULT hResult;
 
@@ -264,7 +264,7 @@ void CShader::CreateDomainShaderFromFile(ID3D11Device *pd3dDevice, WCHAR *pszFil
 			MessageBox(NULL, L"쉐이더 이름이 안들어왔어용", pszFileName, MB_OK);
 	}
 }
-void CShader::CreateComputeShaderFromFile(ID3D11Device *pd3dDevice, WCHAR *pszFileName, LPCSTR pszShaderName, LPCSTR pszShaderModel, ID3D11ComputeShader **ppd3dComputehader)
+void CShader::CreateComputeShaderFromFile(ID3D11Device* pd3dDevice, WCHAR *pszFileName, LPCSTR pszShaderName, LPCSTR pszShaderModel, ID3D11ComputeShader **ppd3dComputehader)
 {
 	HRESULT hResult;
 
@@ -292,7 +292,7 @@ void CShader::CreateComputeShaderFromFile(ID3D11Device *pd3dDevice, WCHAR *pszFi
 
 //Prepare ShaderCompile
 
-void CShader::CreateVertexShaderFromCompiledFile(ID3D11Device *pd3dDevice, WCHAR *pszFileName, D3D11_INPUT_ELEMENT_DESC *pd3dInputLayout, UINT nElements, ID3D11VertexShader **ppd3dVertexShader)
+void CShader::CreateVertexShaderFromCompiledFile(ID3D11Device* pd3dDevice, WCHAR *pszFileName, D3D11_INPUT_ELEMENT_DESC *pd3dInputLayout, UINT nElements, ID3D11VertexShader **ppd3dVertexShader)
 {
 	int nReadBytes = 0;
 	BYTE *pByteCode = Helper::ReadCompiledEffectFile(pszFileName, &nReadBytes);
@@ -309,7 +309,7 @@ void CShader::CreateVertexShaderFromCompiledFile(ID3D11Device *pd3dDevice, WCHAR
 	}
 	if (pByteCode) delete[] pByteCode;
 }
-void CShader::CreateSOVertexShaderFromCompiledFile(ID3D11Device *pd3dDevice, WCHAR *pszFileName, D3D11_INPUT_ELEMENT_DESC *pd3dInputLayout, UINT nElements, ID3D11VertexShader **ppd3dVertexShader, ID3D11InputLayout *ppInputLayout)
+void CShader::CreateSOVertexShaderFromCompiledFile(ID3D11Device* pd3dDevice, WCHAR *pszFileName, D3D11_INPUT_ELEMENT_DESC *pd3dInputLayout, UINT nElements, ID3D11VertexShader **ppd3dVertexShader, ID3D11InputLayout *ppInputLayout)
 {
 	int nReadBytes = 0;
 	BYTE *pByteCode = Helper::ReadCompiledEffectFile(pszFileName, &nReadBytes);
@@ -326,7 +326,7 @@ void CShader::CreateSOVertexShaderFromCompiledFile(ID3D11Device *pd3dDevice, WCH
 	}
 	if (pByteCode) delete[] pByteCode;
 }
-void CShader::CreateGeoMoetryShaderFromCompiledFile(ID3D11Device *pd3dDevice, WCHAR *pszFileName, ID3D11GeometryShader **ppd3dGeomeotryShader)
+void CShader::CreateGeoMoetryShaderFromCompiledFile(ID3D11Device* pd3dDevice, WCHAR *pszFileName, ID3D11GeometryShader **ppd3dGeomeotryShader)
 {
 	int nReadBytes = 0;
 	BYTE *pByteCode = Helper::ReadCompiledEffectFile(pszFileName, &nReadBytes);
@@ -342,7 +342,7 @@ void CShader::CreateGeoMoetryShaderFromCompiledFile(ID3D11Device *pd3dDevice, WC
 	}
 	if (pByteCode) delete[] pByteCode;
 }
-void CShader::CreatePixelShaderFromCompiledFile(ID3D11Device *pd3dDevice, WCHAR *pszFileName, ID3D11PixelShader **ppd3dPixelShader)
+void CShader::CreatePixelShaderFromCompiledFile(ID3D11Device* pd3dDevice, WCHAR *pszFileName, ID3D11PixelShader **ppd3dPixelShader)
 {
 	int nReadBytes = 0;
 	BYTE *pByteCode = Helper::ReadCompiledEffectFile(pszFileName, &nReadBytes);
@@ -358,7 +358,7 @@ void CShader::CreatePixelShaderFromCompiledFile(ID3D11Device *pd3dDevice, WCHAR 
 	}
 	if (pByteCode) delete[] pByteCode;
 }
-void CShader::CreateComputeShaderFromCompiledFile(ID3D11Device * pd3dDevice, WCHAR * pszFileName, ID3D11ComputeShader ** ppd33dComputeShader)
+void CShader::CreateComputeShaderFromCompiledFile(ID3D11Device*  pd3dDevice, WCHAR * pszFileName, ID3D11ComputeShader ** ppd33dComputeShader)
 {
 	int nReadBytes = 0;
 	BYTE *pByteCode = Helper::ReadCompiledEffectFile(pszFileName, &nReadBytes);
@@ -374,7 +374,7 @@ void CShader::CreateComputeShaderFromCompiledFile(ID3D11Device * pd3dDevice, WCH
 	}
 	if (pByteCode) delete[] pByteCode;
 }
-void CShader::CreateDomainShaderFromCompiledFile(ID3D11Device * pd3dDevice, WCHAR * pszFileName, ID3D11DomainShader** ppd33dDomainShader)
+void CShader::CreateDomainShaderFromCompiledFile(ID3D11Device*  pd3dDevice, WCHAR * pszFileName, ID3D11DomainShader** ppd33dDomainShader)
 {
 	int nReadBytes = 0;
 	BYTE *pByteCode = Helper::ReadCompiledEffectFile(pszFileName, &nReadBytes);
@@ -390,7 +390,7 @@ void CShader::CreateDomainShaderFromCompiledFile(ID3D11Device * pd3dDevice, WCHA
 	}
 	if (pByteCode) delete[] pByteCode;
 }
-void CShader::CreateHullShaderFromCompiledFile(ID3D11Device * pd3dDevice, WCHAR * pszFileName, ID3D11HullShader ** ppd33dHullShader)
+void CShader::CreateHullShaderFromCompiledFile(ID3D11Device*  pd3dDevice, WCHAR * pszFileName, ID3D11HullShader ** ppd33dHullShader)
 {
 	int nReadBytes = 0;
 	BYTE *pByteCode = Helper::ReadCompiledEffectFile(pszFileName, &nReadBytes);
@@ -409,7 +409,7 @@ void CShader::CreateHullShaderFromCompiledFile(ID3D11Device * pd3dDevice, WCHAR 
 
 
 
-void CShader::CreateShader(ID3D11Device *pd3dDevice, UINT nType)
+void CShader::CreateShader(ID3D11Device* pd3dDevice, UINT nType)
 {
 	m_nType |= nType;
 	GetInputElementDesc(m_nType);
@@ -418,13 +418,13 @@ void CShader::CreateShader(ID3D11Device *pd3dDevice, UINT nType)
 	CreateShader(pd3dDevice, nullptr, 0, L"Effect.fx", pszVSShaderName, pszVSShaderModel, pszPSShaderName, pszPSShaderModel);
 }
 
-void CShader::CreateShader(ID3D11Device *pd3dDevice, D3D11_INPUT_ELEMENT_DESC *pd3dInputElementDesc, int nInputElements, WCHAR *pszFileName, LPCSTR pszVSShaderName, LPCSTR pszVSShaderModel, LPCSTR pszPSShaderName, LPCSTR pszPSShaderModel)
+void CShader::CreateShader(ID3D11Device* pd3dDevice, D3D11_INPUT_ELEMENT_DESC *pd3dInputElementDesc, int nInputElements, WCHAR *pszFileName, LPCSTR pszVSShaderName, LPCSTR pszVSShaderModel, LPCSTR pszPSShaderName, LPCSTR pszPSShaderModel)
 {
 	CreateVertexShaderFromFile(pd3dDevice, pszFileName, pszVSShaderName, pszVSShaderModel, &m_pd3dVertexShader, (pd3dInputElementDesc) ? pd3dInputElementDesc : m_pd3dInputElementDescs, (pd3dInputElementDesc) ? nInputElements : m_nInputElements, &m_pd3dVertexLayout);
 	CreatePixelShaderFromFile(pd3dDevice, pszFileName, pszPSShaderName, pszPSShaderModel, &m_pd3dPixelShader);
 }
 
-void CShader::CreateConstBuffers(ID3D11Device *pd3dDevice)
+void CShader::CreateConstBuffers(ID3D11Device* pd3dDevice)
 {
 }
 
@@ -492,7 +492,7 @@ void CShader::Render(ID3D11DeviceContext *pd3dDeviceContext, std::shared_ptr<CCa
 	OnPrepareRender(pd3dDeviceContext);
 }
 
-ID3D11Buffer *CShader::CreateBuffer(ID3D11Device *pd3dDevice, UINT nStride, int nElements, void *pBufferData, UINT nBindFlags, D3D11_USAGE d3dUsage, UINT nCPUAccessFlags)
+ID3D11Buffer *CShader::CreateBuffer(ID3D11Device* pd3dDevice, UINT nStride, int nElements, void *pBufferData, UINT nBindFlags, D3D11_USAGE d3dUsage, UINT nCPUAccessFlags)
 {
 	D3D11_BUFFER_DESC d3dBufferDesc;
 	ZeroMemory(&d3dBufferDesc, sizeof(D3D11_BUFFER_DESC));
@@ -616,22 +616,22 @@ void CObjectsShader::SetMaterial(std::shared_ptr<CMaterial> pMaterial)
 	m_sMaterial = pMaterial;
 }
 
-void CObjectsShader::SetMaterial(ID3D11Device *pd3dDevice, std::string path, int nStartSampler, int nCountSampler, YT_SAMPLER eSampler)
+void CObjectsShader::SetMaterial(ID3D11Device* pd3dDevice, std::string path, int nStartSampler, int nCountSampler, YT_SAMPLER eSampler)
 {
 	m_sMaterial = CONTENTMGR->GetMaterial(pd3dDevice, path, nStartSampler, nCountSampler, eSampler);
 }
 
-void CObjectsShader::SetMaterial(ID3D11Device *pd3dDevice, std::vector<std::string> vPath, int nStartSampler, int nCountSampler, YT_SAMPLER eSampler)
+void CObjectsShader::SetMaterial(ID3D11Device* pd3dDevice, std::vector<std::string> vPath, int nStartSampler, int nCountSampler, YT_SAMPLER eSampler)
 {
 	m_sMaterial = CONTENTMGR->GetMaterial(pd3dDevice, vPath, nStartSampler, nCountSampler, eSampler);
 }
 
-void CObjectsShader::SetUIMaterial(ID3D11Device * pd3dDevice, std::string path, int nStartSampler, int nCountSampler, YT_SAMPLER eSampler)
+void CObjectsShader::SetUIMaterial(ID3D11Device*  pd3dDevice, std::string path, int nStartSampler, int nCountSampler, YT_SAMPLER eSampler)
 {
 	m_sMaterial = CONTENTMGR->GetUIMaterial(pd3dDevice, path, nStartSampler, nCountSampler, eSampler);
 }
 
-void CObjectsShader::SetMaterial_NormalNBump(ID3D11Device *pd3dDevice, std::string texture, std::string normal, std::string bump)
+void CObjectsShader::SetMaterial_NormalNBump(ID3D11Device* pd3dDevice, std::string texture, std::string normal, std::string bump)
 {
 	std::vector<std::string> vPath;
 	vPath.push_back(texture);
@@ -640,7 +640,7 @@ void CObjectsShader::SetMaterial_NormalNBump(ID3D11Device *pd3dDevice, std::stri
 	m_sMaterial = CONTENTMGR->GetMaterial(pd3dDevice, vPath);
 }
  
-void CObjectsShader::BuildObjects(ID3D11Device *pd3dDevice, void *pContext)
+void CObjectsShader::BuildObjects(ID3D11Device* pd3dDevice, void *pContext)
 {
 	m_pContext = pContext;
 }

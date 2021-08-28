@@ -1,7 +1,7 @@
 #include "stdafx.h"
 #include "GeoAABBMesh.h"
 
-CGeoAABBMesh::CGeoAABBMesh(ID3D11Device *pd3dDevice) : CGeoMetryMesh(pd3dDevice)
+CGeoAABBMesh::CGeoAABBMesh(ID3D11Device* pd3dDevice) : CGeoMetryMesh(pd3dDevice)
 {
 	m_nVertices = 1;
 	m_d3dPrimitiveTopology = D3D11_PRIMITIVE_TOPOLOGY_POINTLIST;

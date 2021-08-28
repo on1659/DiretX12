@@ -4,7 +4,7 @@
 #include "Warp3DModelManager.h"
 
 
-CWarp3D_PlayerMesh::CWarp3D_PlayerMesh(ID3D11Device *pd3dDevice, std::string path)
+CWarp3D_PlayerMesh::CWarp3D_PlayerMesh(ID3D11Device* pd3dDevice, std::string path)
 	: CMeshTexturedIlluminated(pd3dDevice)
 {
 	if (!MODELMGR->SearchModelData(path)) return;

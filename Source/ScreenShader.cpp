@@ -70,7 +70,7 @@ void CScreenShader::SetTexture(int nIndex, ID3D11ShaderResourceView *pd3dsrvText
 	if (pd3dsrvTexture) pd3dsrvTexture->AddRef();
 }
 
-void CScreenShader::CreateShader(ID3D11Device *pd3dDevice)
+void CScreenShader::CreateShader(ID3D11Device* pd3dDevice)
 {
 	m_fFlashSpeed		 =  0.05f;
 	m_fRespawnStartTime  =  0.0f;
@@ -171,14 +171,14 @@ void CScreenShader::CreateShader(ID3D11Device *pd3dDevice)
 
 }
 
-void CScreenShader::CreateComputeShader(ID3D11Device * pd3dDevice)
+void CScreenShader::CreateComputeShader(ID3D11Device*  pd3dDevice)
 {
 	CreateComputeShaderFromFile(pd3dDevice, L"ScreenShader.fx", "CSMain", "cs_5_0", &m_pHorizontalBlurShader);
 	//CreateComputeShaderFromFile(pd3dDevice, L"ScreenShader.fx", "VerBlurCS", "cs_5_0", &m_pVerticalBlurShader);
 	//CreateComputeShaderFromFile(pd3dDevice, L"ComputeShader.fx", "CS", "cs_5_0", &m_pd3dComputeShader);
 }
 
-void CScreenShader::BuildObjects(ID3D11Device *pd3dDevice, void *pContext)
+void CScreenShader::BuildObjects(ID3D11Device* pd3dDevice, void *pContext)
 {
 	D3D11_SAMPLER_DESC d3dSamplerDesc;
 	ZeroMemory(&d3dSamplerDesc, sizeof(D3D11_SAMPLER_DESC));
@@ -261,7 +261,7 @@ void CScreenShader::UpdateConstBuffer(ID3D11DeviceContext *pd3dDeviceContext)
 	pd3dDeviceContext->PSSetConstantBuffers(PS_CB_SLOT_BLUR_MODE, 1, &m_pd3dBlurConstBuffer);
 }
 
-void CScreenShader::ComputeLoad(ID3D11Device *pd3dDevice)
+void CScreenShader::ComputeLoad(ID3D11Device* pd3dDevice)
 {
 	//
 	//KYT '16.03.08
@@ -334,7 +334,7 @@ void CScreenShader::ComputeLoad(ID3D11Device *pd3dDevice)
 	CreateComputeShader(pd3dDevice);
 }
 
-void CScreenShader::ReSetShader(ID3D11Device * pd3dDevice)
+void CScreenShader::ReSetShader(ID3D11Device*  pd3dDevice)
 {
 	if (m_pd3dPixelShader)m_pd3dPixelShader->Release();
 	m_pd3dPixelShader = nullptr;

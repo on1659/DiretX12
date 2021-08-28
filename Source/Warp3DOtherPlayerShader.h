@@ -19,9 +19,9 @@ public:
 	CWarp3DOtherPlayerShader(int nObjects = 1);
 	~CWarp3DOtherPlayerShader();
 
-	virtual void CreateShader(ID3D11Device *pd3dDevice);
+	virtual void CreateShader(ID3D11Device* pd3dDevice);
 
-	virtual void BuildObjects(ID3D11Device *pd3dDevice, void *pContext = nullptr);
+	virtual void BuildObjects(ID3D11Device* pd3dDevice, void *pContext = nullptr);
 	virtual void RenderPlayer(ID3D11DeviceContext *pd3dDeviceContext, std::shared_ptr<CCamera> pCamera);
 
 	virtual void AnimateObjects(float fTimeElapsed);

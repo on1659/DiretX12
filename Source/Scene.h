@@ -46,13 +46,13 @@ public:
 	virtual bool ProcessInput(POINT ptOldCursorPos);
 
 	//Create
-	virtual void BuildObjects(ID3D11Device *pd3dDevice);
+	virtual void BuildObjects(ID3D11Device* pd3dDevice);
 
-	virtual void Load(ID3D11Device *pd3dDevice);
+	virtual void Load(ID3D11Device* pd3dDevice);
 
-	virtual void LoadStaticFBX(ID3D11Device *pd3dDevice);
+	virtual void LoadStaticFBX(ID3D11Device* pd3dDevice);
 
-	virtual void LoadDynamicFBX(ID3D11Device *pd3dDevice);
+	virtual void LoadDynamicFBX(ID3D11Device* pd3dDevice);
 
 
 	//Relase
@@ -92,7 +92,7 @@ public:
 	CGameObject *PickObjectPointedByCursor(int xClient, int yClient);
 
 	//SkyBox
-	void OnChangeSkyBoxTextures(ID3D11Device *pd3dDevice, CMaterial *pMaterial, int nIndex = 0);
+	void OnChangeSkyBoxTextures(ID3D11Device* pd3dDevice, CMaterial *pMaterial, int nIndex = 0);
 
 	//GetTerrain
 	//CHeightMapTerrain *GetTerrain();

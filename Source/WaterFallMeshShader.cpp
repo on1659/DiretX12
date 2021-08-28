@@ -17,7 +17,7 @@ CWaterFallMeshShader::~CWaterFallMeshShader()
 {
 }
 
-void CWaterFallMeshShader::CreateShader(ID3D11Device *pd3dDevice)
+void CWaterFallMeshShader::CreateShader(ID3D11Device* pd3dDevice)
 {
 	UINT nSlot = 0;
 	D3D11_INPUT_ELEMENT_DESC d3dInputElements[] =

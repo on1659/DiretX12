@@ -26,8 +26,8 @@ public:
 
 	virtual ~CWarp3DPlayerShader();
 
-	virtual void BuildObjects(ID3D11Device *pd3dDevice, void *pContext = nullptr);
-	virtual void CreateShader(ID3D11Device *pd3dDevice);
+	virtual void BuildObjects(ID3D11Device* pd3dDevice, void *pContext = nullptr);
+	virtual void CreateShader(ID3D11Device* pd3dDevice);
 	virtual void AnimateObjects(float fTimeElapsed);
 	void UpdateConstBuffer(ID3D11DeviceContext *pd3dDeviceContext);
 

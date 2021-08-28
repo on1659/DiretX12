@@ -20,7 +20,7 @@ CAABBRenderShader ::~CAABBRenderShader()
 {
 }
 
-void CAABBRenderShader::CreateShader(ID3D11Device *pd3dDevice)
+void CAABBRenderShader::CreateShader(ID3D11Device* pd3dDevice)
 {
 	//WireFrame
 	Object::CreateRasterizerState(pd3dDevice, D3D11_CULL_NONE, D3D11_FILL_WIREFRAME);

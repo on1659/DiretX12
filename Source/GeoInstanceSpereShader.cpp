@@ -20,7 +20,7 @@ CGeoInstanceSphereShader ::~CGeoInstanceSphereShader()
 {
 }
 
-void CGeoInstanceSphereShader::CreateShader(ID3D11Device *pd3dDevice)
+void CGeoInstanceSphereShader::CreateShader(ID3D11Device* pd3dDevice)
 {
 	//GS를 사용하는 큐브는 size와 디폴트 색상을 가진다.
 	D3D11_INPUT_ELEMENT_DESC d3dInputElements[] =

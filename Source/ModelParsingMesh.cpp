@@ -3,7 +3,7 @@
 
 
 
-CModelParsingMesh::CModelParsingMesh(ID3D11Device *pd3dDevice, float size) : CMeshTexturedIlluminated(pd3dDevice)
+CModelParsingMesh::CModelParsingMesh(ID3D11Device* pd3dDevice, float size) : CMeshTexturedIlluminated(pd3dDevice)
 {
 
 }
@@ -135,7 +135,7 @@ void CModelParsingMesh::ReadFile_Text(char* _Filename){
 /////////////////////////////////////////////////////////////////////////////
 
 /////////////////////////////////////////////////모델 읽기1
-CBinaryFileMeshIlluminated::CBinaryFileMeshIlluminated(ID3D11Device *pd3dDevice, float size) : CModelParsingMesh(pd3dDevice)
+CBinaryFileMeshIlluminated::CBinaryFileMeshIlluminated(ID3D11Device* pd3dDevice, float size) : CModelParsingMesh(pd3dDevice)
 {
 	//바이너리 데이터
 	CModelParsingMesh::ReadFile_Binaray(L"../Assets/02_ModelData/SciFi_Fighter_AK5.txt", L"rb, ccs=UNICODE");
@@ -219,7 +219,7 @@ CBinaryFileMeshIlluminated::~CBinaryFileMeshIlluminated()
 /////////////////////////////////////////////////모델 읽기1
 
 /////////////////////////////////////////////////모델 읽기2
-CTextFileMeshIlluminated::CTextFileMeshIlluminated(ID3D11Device *pd3dDevice, float size) : CModelParsingMesh(pd3dDevice)
+CTextFileMeshIlluminated::CTextFileMeshIlluminated(ID3D11Device* pd3dDevice, float size) : CModelParsingMesh(pd3dDevice)
 {
 	//텍스트 데이터
 	CModelParsingMesh::ReadFile_Text("../Assets/02_ModelData/skull.txt");

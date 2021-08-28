@@ -36,9 +36,9 @@ public:
 
 	void ReleseInstance();
 
-	virtual void CreateShader(ID3D11Device *pd3dDevice);
+	virtual void CreateShader(ID3D11Device* pd3dDevice);
 
-	virtual void CreateAfterShader(ID3D11Device *pd3dDevice, bool isGaugeBar);
+	virtual void CreateAfterShader(ID3D11Device* pd3dDevice, bool isGaugeBar);
 
 	virtual void Render(ID3D11DeviceContext *pd3dDeviceContext, std::shared_ptr<CCamera> pCamera = nullptr);
 

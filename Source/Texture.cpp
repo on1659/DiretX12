@@ -71,7 +71,7 @@ void CTexture::UpdateSamplerBuffer(ID3D11DeviceContext *pd3dDeviceContext, int n
 	pd3dDeviceContext->PSSetSamplers(nSlot, 1, &m_ppd3dSamplerStates[nIndex]);
 }
 
-void CTexture::CreateConstBuffers(ID3D11Device *pd3dDevice)
+void CTexture::CreateConstBuffers(ID3D11Device* pd3dDevice)
 {
 	D3D11_BUFFER_DESC d3dBufferDesc;
 	ZeroMemory(&d3dBufferDesc, sizeof(D3D11_BUFFER_DESC));
@@ -134,7 +134,7 @@ void CTexture::UpdateDomainConstBuffer(ID3D11DeviceContext *pd3dDeviceContext, X
 }
 
 
-ID3D11ShaderResourceView *CTexture::CreateTexture2DArraySRV(ID3D11Device *pd3dDevice, _TCHAR(*ppstrFilePaths)[128], UINT nTextures)
+ID3D11ShaderResourceView *CTexture::CreateTexture2DArraySRV(ID3D11Device* pd3dDevice, _TCHAR(*ppstrFilePaths)[128], UINT nTextures)
 {
 	D3DX11_IMAGE_LOAD_INFO d3dxImageLoadInfo;
 	d3dxImageLoadInfo.Width = D3DX11_FROM_FILE;

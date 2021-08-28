@@ -109,7 +109,7 @@ public:
 
 	void GenerateProjectionMatrix(float fNearPlaneDistance, float fFarPlaneDistance, float fAspectRatio, float fFOVAngle);
 
-	static void CreateConstBuffers(ID3D11Device *pd3dDevice);
+	static void CreateConstBuffers(ID3D11Device* pd3dDevice);
 	static void ReleaseConstBuffers();
 
 	void UpdateConstBuffer(ID3D11DeviceContext *pd3dDeviceContext, XMMATRIX& pd3dxmtxView, XMMATRIX& pd3dxmtxProjection);
@@ -224,9 +224,9 @@ protected:
 	//--------------------------------------직교 투영 JJY
 
 public:
-	static void OrthoCreateConstBuffer(ID3D11Device *pd3dDevice);
+	static void OrthoCreateConstBuffer(ID3D11Device* pd3dDevice);
 
-	void OrthoCameraLoad(ID3D11Device *pd3dDevice, ID3D11DeviceContext *pd3dDeviceContext = nullptr);
+	void OrthoCameraLoad(ID3D11Device* pd3dDevice, ID3D11DeviceContext *pd3dDeviceContext = nullptr);
 
 private:
 	void OrthoGenerateProjectionMatrix();

@@ -23,7 +23,7 @@ CFireParticleShader::~CFireParticleShader()
 
 }
 
-void CFireParticleShader::CreateShader(ID3D11Device *pd3dDevice)
+void CFireParticleShader::CreateShader(ID3D11Device* pd3dDevice)
 {
 
 	int nSlot = 0;
@@ -51,7 +51,7 @@ void CFireParticleShader::CreateShader(ID3D11Device *pd3dDevice)
 	//#endif
 }
 
-void CFireParticleShader::BuildObjects(ID3D11Device *pd3dDevice, void *pContext)
+void CFireParticleShader::BuildObjects(ID3D11Device* pd3dDevice, void *pContext)
 {
 	CParticleShader::BuildObjects(pd3dDevice);
 

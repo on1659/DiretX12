@@ -28,7 +28,7 @@ int APIENTRY _tWinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPTSTR lpCm
 	LoadString(hInstance, IDC_LABPROJECT14, szWindowClass, MAX_LOADSTRING);
 	HACCEL hAccelTable = LoadAccelerators(hInstance, MAKEINTRESOURCE(IDC_LABPROJECT14));
 
-	if (!InitInstance(hInstance, nCmdShow)) return false;
+	if (!InitInstance(hInstance, nCmdShow)) return(FALSE);
 
 	#ifdef _CONNECT_SERVER_
 
@@ -113,7 +113,7 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
 	wcex.lpszMenuName = nullptr/*MAKEINTRESOURCE(IDC_LABPROJECT14)*/;
 	wcex.lpszClassName = szWindowClass;
 	wcex.hIconSm = LoadIcon(wcex.hInstance, MAKEINTRESOURCE(IDI_SMALL));
-	if (!RegisterClassEx(&wcex)) return false;
+	if (!RegisterClassEx(&wcex)) return(FALSE);
 
 	RECT rc = { 0, 0, FRAME_BUFFER_WIDTH, FRAME_BUFFER_HEIGHT };
 
@@ -137,13 +137,13 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
 	//global
 	g_hWnd = hMainWnd;
 	ghInstance = hInstance;
-	if (!hMainWnd) return false;
+	if (!hMainWnd) return(FALSE);
 
 	ShowWindow(hMainWnd, nCmdShow);
 
 	FRAMEWORK_2D->OnCreate(hInstance, hMainWnd);
 	FRAMEWORK_2D->OnDraw();
-	if (!FRAMEWORK->OnCreate(hInstance, hMainWnd)) return false;
+	if (!FRAMEWORK->OnCreate(hInstance, hMainWnd)) return(false);
 
 
 	//KYT '16.04.14 
@@ -156,7 +156,7 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
 
 	//LoadingThreadLoad(FRAMEWORK->GetDevice());
 	::GTimeRecord();
-	return true;
+	return(true);
 }
 
 LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)

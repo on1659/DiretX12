@@ -3,7 +3,7 @@
 #include "Mesh.h"
 #include "FBXLoader.h"
  
-CFBXSingleMeshTexturedIlluminated::CFBXSingleMeshTexturedIlluminated(ID3D11Device *pd3dDevice, std::string path, float modelscale, bool isVoxel)
+CFBXSingleMeshTexturedIlluminated::CFBXSingleMeshTexturedIlluminated(ID3D11Device* pd3dDevice, std::string path, float modelscale, bool isVoxel)
 	: CMeshTexturedIlluminated(pd3dDevice)
 {
 

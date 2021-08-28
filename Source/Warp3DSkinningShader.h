@@ -12,10 +12,10 @@ public:
 	CWarp3DSkinningShader(int nObjects = 1);
 	~CWarp3DSkinningShader();
 
-	virtual void CreateShader(ID3D11Device *pd3dDevice);
+	virtual void CreateShader(ID3D11Device* pd3dDevice);
 	void UpdateConstBuffer(ID3D11DeviceContext *pd3dDeviceContext);
 
-	virtual void BuildObjects(ID3D11Device *pd3dDevice, void *pContext = nullptr);
+	virtual void BuildObjects(ID3D11Device* pd3dDevice, void *pContext = nullptr);
 	virtual void ReleaseObjects();
 	virtual void Render(ID3D11DeviceContext *pd3dDeviceContext, std::shared_ptr<CCamera> pCamera);
 

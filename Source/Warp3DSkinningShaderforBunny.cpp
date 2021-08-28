@@ -44,7 +44,7 @@ void CWarp3DSkinningShaderforBunny::AnimateObjects(float fTimeElapsed)
 }
 
 #ifdef BUNNY_SKINNEDINSTANCING
-void CWarp3DSkinningShaderforBunny::BuildObjects(ID3D11Device *pd3dDevice, void *pContext)
+void CWarp3DSkinningShaderforBunny::BuildObjects(ID3D11Device* pd3dDevice, void *pContext)
 {
 #pragma region[Vertex Texxture Fetch: 애니메이션 변환행렬을 담은 2D텍스쳐 구성]
 
@@ -164,7 +164,7 @@ void CWarp3DSkinningShaderforBunny::BuildObjects(ID3D11Device *pd3dDevice, void 
 	CWarp3DSkinningShader::BuildObjects(pd3dDevice, pContext);
 }
 
-void CWarp3DSkinningShaderforBunny::CreateShader(ID3D11Device *pd3dDevice)
+void CWarp3DSkinningShaderforBunny::CreateShader(ID3D11Device* pd3dDevice)
 {
 
 	int nSlot = 0;

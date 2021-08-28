@@ -53,9 +53,9 @@ public:
 
 	virtual ~CFireParticleShader();
 
-	void CreateShader(ID3D11Device *pd3dDevice);
+	void CreateShader(ID3D11Device* pd3dDevice);
 
-	void BuildObjects(ID3D11Device *pd3dDevice, void *pContext = nullptr) override;
+	void BuildObjects(ID3D11Device* pd3dDevice, void *pContext = nullptr) override;
 
 	void CreateConstBuffer(ID3D11DeviceContext *pd3dDeviceContext);
 

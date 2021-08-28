@@ -1,7 +1,7 @@
 #include "stdafx.h"
 #include "GeoSphereMesh.h"
 
-CGeoSphereMesh::CGeoSphereMesh(ID3D11Device *pd3dDevice, float fRadius, int nSlices, int nStacks) : CGeoMetryMesh(pd3dDevice)
+CGeoSphereMesh::CGeoSphereMesh(ID3D11Device* pd3dDevice, float fRadius, int nSlices, int nStacks) : CGeoMetryMesh(pd3dDevice)
 {
 	m_nVertices = nStacks;//정점의 개수는 스텍이다. 
 	m_d3dPrimitiveTopology = D3D11_PRIMITIVE_TOPOLOGY_POINTLIST;

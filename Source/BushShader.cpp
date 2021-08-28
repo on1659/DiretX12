@@ -19,7 +19,7 @@ CBushShader::~CBushShader()
 
 //KYT '16.01.20 plus
 /*가상함수로 모든 쉐이더마다 써줄지, 경배처럼 Type으로 하나의 Create에서 해줄지 결정*/
-void CBushShader::CreateShader(ID3D11Device *pd3dDevice)
+void CBushShader::CreateShader(ID3D11Device* pd3dDevice)
 {
 	CInstancedObjectsShader::CreateShader(pd3dDevice);
 	return;

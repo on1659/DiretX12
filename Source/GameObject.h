@@ -118,7 +118,7 @@ public:
 	//Create
 	void Initialize();
 
-	static void CreateConstBuffers(ID3D11Device *pd3dDevice);
+	static void CreateConstBuffers(ID3D11Device* pd3dDevice);
 
 	//Release
 	static void ReleaseConstBuffers();

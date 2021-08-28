@@ -1,7 +1,7 @@
 #include "stdafx.h"
 #include "TextMesh.h"
 
-CTextMesh::CTextMesh(ID3D11Device *pd3dDevice, float fWidth, float fHeight) : CMeshTexturedIlluminated(pd3dDevice)
+CTextMesh::CTextMesh(ID3D11Device* pd3dDevice, float fWidth, float fHeight) : CMeshTexturedIlluminated(pd3dDevice)
 {
 	m_nVertices = 6;
 	m_d3dPrimitiveTopology = D3D11_PRIMITIVE_TOPOLOGY_TRIANGLELIST;

@@ -5,7 +5,7 @@
 class CModelParsingMesh : public CMeshTexturedIlluminated
 {
 public:
-	CModelParsingMesh(ID3D11Device *pd3dDevice, float size = 50.0f);
+	CModelParsingMesh(ID3D11Device* pd3dDevice, float size = 50.0f);
 	virtual ~CModelParsingMesh(); 
 
 public:
@@ -26,7 +26,7 @@ public:
 class CBinaryFileMeshIlluminated : public CModelParsingMesh
 {
 public:
-	CBinaryFileMeshIlluminated(ID3D11Device *pd3dDevice, float size = 50.0f);
+	CBinaryFileMeshIlluminated(ID3D11Device* pd3dDevice, float size = 50.0f);
 	virtual ~CBinaryFileMeshIlluminated();
 };
 /////////////////////////////////////////////////¸ðµ¨ ÀÐ±â1
@@ -35,7 +35,7 @@ public:
 class CTextFileMeshIlluminated : public CModelParsingMesh
 {
 public:
-	CTextFileMeshIlluminated(ID3D11Device *pd3dDevice, float size = 50.0f);
+	CTextFileMeshIlluminated(ID3D11Device* pd3dDevice, float size = 50.0f);
 	virtual ~CTextFileMeshIlluminated();
 };
 /////////////////////////////////////////////////¸ðµ¨ ÀÐ±â2

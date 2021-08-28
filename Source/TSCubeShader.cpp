@@ -19,7 +19,7 @@ CTSCubeShader::~CTSCubeShader()
 {
 }
 
-void CTSCubeShader::CreateShader(ID3D11Device *pd3dDevice)
+void CTSCubeShader::CreateShader(ID3D11Device* pd3dDevice)
 {
 	XMStoreFloat4x4(&m_d3dxmtxTexture, XMMatrixIdentity());
 

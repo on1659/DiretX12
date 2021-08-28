@@ -149,7 +149,7 @@ bool CScene::OnProcessingMouseMessage(HWND hWnd, UINT nMessageID, WPARAM wParam,
 	default:
 		break;
 	}
-	return false;
+	return(false);
 }
 
 bool CScene::OnProcessingKeyboardMessage(HWND hWnd, UINT nMessageID, WPARAM wParam, LPARAM lParam)
@@ -193,11 +193,11 @@ bool CScene::OnProcessingKeyboardMessage(HWND hWnd, UINT nMessageID, WPARAM wPar
 
 bool CScene::ProcessInput(POINT ptOldCursorPos)
 {
-	return false;
+	return(false);
 }
 
 //Create
-void CScene::BuildObjects(ID3D11Device *pd3dDevice)
+void CScene::BuildObjects(ID3D11Device* pd3dDevice)
 {
 	m_pd3dDevice = pd3dDevice;
 
@@ -313,7 +313,7 @@ void CScene::ReleaseObjects()
 
 }
 
-void CScene::Load(ID3D11Device *pd3dDevice)
+void CScene::Load(ID3D11Device* pd3dDevice)
 {
 	std::shared_ptr<CInstancedObjectsShader> pShader;
 
@@ -420,7 +420,7 @@ void CScene::Load(ID3D11Device *pd3dDevice)
 
 }
 
-void CScene::LoadStaticFBX(ID3D11Device *pd3dDevice)
+void CScene::LoadStaticFBX(ID3D11Device* pd3dDevice)
 {
 	auto vTwPath = WORLDMAP->GetMapPath();
 
@@ -725,7 +725,7 @@ void CScene::LoadStaticFBX(ID3D11Device *pd3dDevice)
 	}
 }
 
-void CScene::LoadDynamicFBX(ID3D11Device *pd3dDevice)
+void CScene::LoadDynamicFBX(ID3D11Device* pd3dDevice)
 {
 	return;
 	std::shared_ptr<CInstancedObjectsShader> pShader;
@@ -1317,7 +1317,7 @@ CGameObject *CScene::PickObjectPointedByCursor(int xClient, int yClient)
 }
 
 //SykBox
-void CScene::OnChangeSkyBoxTextures(ID3D11Device *pd3dDevice, CMaterial *pMaterial, int nIndex)
+void CScene::OnChangeSkyBoxTextures(ID3D11Device* pd3dDevice, CMaterial *pMaterial, int nIndex)
 {
 	_TCHAR pstrTextureNames[128];
 	_stprintf_s(pstrTextureNames, _T("../Assets/03_Image/SkyBox/SkyBox_add.dds"), nIndex, 128);

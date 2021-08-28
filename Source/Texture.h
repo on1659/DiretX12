@@ -28,11 +28,11 @@ public:
 
 	static ID3D11Buffer				*m_pd3dcbTextureMatrix;
 
-	static void CreateConstBuffers(ID3D11Device *pd3dDevice);
+	static void CreateConstBuffers(ID3D11Device* pd3dDevice);
 	static void ReleaseConstBuffers();
 	static void UpdateConstBuffer(ID3D11DeviceContext *pd3dDeviceContext, XMMATRIX *pd3dxmtxTexture);
 	static void UpdateDomainConstBuffer(ID3D11DeviceContext *pd3dDeviceContext, XMMATRIX *pd3dxmtxTexture);
-	static ID3D11ShaderResourceView *CreateTexture2DArraySRV(ID3D11Device *pd3dDevice, _TCHAR(*ppstrFilePaths)[128], UINT nTextures);
+	static ID3D11ShaderResourceView *CreateTexture2DArraySRV(ID3D11Device* pd3dDevice, _TCHAR(*ppstrFilePaths)[128], UINT nTextures);
 };
 
 

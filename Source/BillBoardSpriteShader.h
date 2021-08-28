@@ -49,11 +49,11 @@ public:
 
 	virtual ~CBillBoardSpriteShader();
 
-	void BuildObjects(ID3D11Device *pd3dDevice, void *pContext = nullptr) override;
+	void BuildObjects(ID3D11Device* pd3dDevice, void *pContext = nullptr) override;
 
-	void CreateShader(ID3D11Device *pd3dDevice) override;
+	void CreateShader(ID3D11Device* pd3dDevice) override;
 
-	virtual void Initialize(ID3D11Device *pd3dDevice, std::string path,  XMFLOAT3 position, XMFLOAT2 fSize, float frameFPS, int frameCount,int loop = -999);
+	virtual void Initialize(ID3D11Device* pd3dDevice, std::string path,  XMFLOAT3 position, XMFLOAT2 fSize, float frameFPS, int frameCount,int loop = -999);
 
 	virtual void CreateConstBuffer(ID3D11Device* pd3dDevice);
 

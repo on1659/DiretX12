@@ -98,7 +98,7 @@ void AABB::Merge(XMFLOAT3 d3dxvMinimum, XMFLOAT3 d3dxvMaximum)
 #endif
 
 //------------------------------------------------------------------------------------------------
-	CMesh::CMesh(ID3D11Device *pd3dDevice) : Object()
+	CMesh::CMesh(ID3D11Device* pd3dDevice) : Object()
 {
 	m_nType = VERTEX_POSITION_ELEMENT;
 
@@ -169,7 +169,7 @@ void CMesh::Release()
 	m_pnIndices = nullptr;
 }
 
-ID3D11Buffer *CMesh::CreateBuffer(ID3D11Device *pd3dDevice, UINT nStride, int nElements, void *pBufferData, UINT nBindFlags, D3D11_USAGE d3dUsage, UINT nCPUAccessFlags)
+ID3D11Buffer *CMesh::CreateBuffer(ID3D11Device* pd3dDevice, UINT nStride, int nElements, void *pBufferData, UINT nBindFlags, D3D11_USAGE d3dUsage, UINT nCPUAccessFlags)
 {
 	D3D11_BUFFER_DESC d3dBufferDesc;
 	ZeroMemory(&d3dBufferDesc, sizeof(D3D11_BUFFER_DESC));
@@ -274,14 +274,14 @@ bool RayIntersectTriangle(XMVECTOR *pd3dxvOrigin, XMVECTOR *pd3dxvDirection, XMV
 	D3DXVECTOR3 v3xvP = XMLoadD3DXVECTOR3(d3dxvP);
 	float a = D3DXVec3Dot(&v3Edge1, &v3xvP);
 	//float a = XMVectorGetX(XMVector3Dot(d3dxvEdge1, d3dxvP));
-	if (::IsZero(a)) return false;
+	if (::IsZero(a)) return(false);
 	float f = 1.0f / a;
 	XMVECTOR d3dxvP0ToOrigin = *pd3dxvOrigin - *pd3dxvP0;
 	*pfU = f * XMVectorGetX(XMVector3Dot(d3dxvP0ToOrigin, d3dxvP));
-	if ((*pfU < 0.0f) || (*pfU > 1.0f)) return false;
+	if ((*pfU < 0.0f) || (*pfU > 1.0f)) return(false);
 	d3dxvQ = XMVector3Cross(d3dxvP0ToOrigin, d3dxvEdge1);
 	*pfV = f * XMVectorGetX(XMVector3Dot(*pd3dxvDirection, d3dxvQ));
-	if ((*pfV < 0.0f) || ((*pfU + *pfV) > 1.0f)) return false;
+	if ((*pfV < 0.0f) || ((*pfU + *pfV) > 1.0f)) return(false);
 	*pfRayToTriangle = f * XMVectorGetX(XMVector3Dot(d3dxvEdge2, d3dxvQ));
 	return(*pfRayToTriangle >= 0.0f);
 }
@@ -374,7 +374,7 @@ void CMesh::CalculateBoundingCube()
 
 #endif
 //------------------------------------------------------------------------------------------------
-CMeshDiffused::CMeshDiffused(ID3D11Device *pd3dDevice) : CMesh(pd3dDevice)
+CMeshDiffused::CMeshDiffused(ID3D11Device* pd3dDevice) : CMesh(pd3dDevice)
 {
 	m_nType |= VERTEX_COLOR_ELEMENT;
 	m_pd3dColorBuffer = nullptr;
@@ -387,7 +387,7 @@ CMeshDiffused::~CMeshDiffused()
 
 
 
-CNormalMesh::CNormalMesh(ID3D11Device * pd3dDevice) : CMesh(pd3dDevice)
+CNormalMesh::CNormalMesh(ID3D11Device*  pd3dDevice) : CMesh(pd3dDevice)
 {
 }
 
@@ -570,7 +570,7 @@ void CNormalMesh::CalculateVertexTangent(XMVECTOR *pd3dxvTangents)
 
 
 //------------------------------------------------------------------------------------------------
-CMeshIlluminated::CMeshIlluminated(ID3D11Device *pd3dDevice) : CNormalMesh(pd3dDevice)
+CMeshIlluminated::CMeshIlluminated(ID3D11Device* pd3dDevice) : CNormalMesh(pd3dDevice)
 {
 	m_nType |= VERTEX_NORMAL_ELEMENT;
 	m_pd3dNormalBuffer = nullptr;
@@ -656,7 +656,7 @@ void CMeshIlluminated::CalculateVertexNormal(XMVECTOR *pd3dxvNormals)
 }
 
 //------------------------------------------------------------------------------------------------
-CMeshTextured::CMeshTextured(ID3D11Device *pd3dDevice) : CMesh(pd3dDevice)
+CMeshTextured::CMeshTextured(ID3D11Device* pd3dDevice) : CMesh(pd3dDevice)
 {
 	m_nType |= VERTEX_TEXTURE_ELEMENT_0;
 	m_pd3dTexCoordBuffer = nullptr;
@@ -668,7 +668,7 @@ CMeshTextured::~CMeshTextured()
 }
 
 //------------------------------------------------------------------------------------------------
-CMeshDetailTextured::CMeshDetailTextured(ID3D11Device *pd3dDevice) : CMeshTextured(pd3dDevice)
+CMeshDetailTextured::CMeshDetailTextured(ID3D11Device* pd3dDevice) : CMeshTextured(pd3dDevice)
 {
 	m_nType |= VERTEX_TEXTURE_ELEMENT_1;
 	m_pd3dDetailTexCoordBuffer = nullptr;
@@ -680,7 +680,7 @@ CMeshDetailTextured::~CMeshDetailTextured()
 }
 
 //------------------------------------------------------------------------------------------------
-CMeshTexturedIlluminated::CMeshTexturedIlluminated(ID3D11Device *pd3dDevice) : CMeshIlluminated(pd3dDevice)
+CMeshTexturedIlluminated::CMeshTexturedIlluminated(ID3D11Device* pd3dDevice) : CMeshIlluminated(pd3dDevice)
 {
 	m_nType |= VERTEX_TEXTURE_ELEMENT_0;
 	m_pd3dTexCoordBuffer = nullptr;
@@ -692,7 +692,7 @@ CMeshTexturedIlluminated::~CMeshTexturedIlluminated()
 }
 
 //------------------------------------------------------------------------------------------------
-CMeshDetailTexturedIlluminated::CMeshDetailTexturedIlluminated(ID3D11Device *pd3dDevice) : CMeshIlluminated(pd3dDevice)
+CMeshDetailTexturedIlluminated::CMeshDetailTexturedIlluminated(ID3D11Device* pd3dDevice) : CMeshIlluminated(pd3dDevice)
 {
 	m_nType |= (VERTEX_TEXTURE_ELEMENT_0 | VERTEX_TEXTURE_ELEMENT_1);
 	m_pd3dTexCoordBuffer = nullptr;
@@ -707,7 +707,7 @@ CMeshDetailTexturedIlluminated::~CMeshDetailTexturedIlluminated()
 
 
 //------------------------------------------------------------------------------------------------
-CAirplaneMeshDiffused::CAirplaneMeshDiffused(ID3D11Device *pd3dDevice, float fWidth, float fHeight, float fDepth, XMVECTOR d3dxColor) : CMeshDiffused(pd3dDevice)
+CAirplaneMeshDiffused::CAirplaneMeshDiffused(ID3D11Device* pd3dDevice, float fWidth, float fHeight, float fDepth, XMVECTOR d3dxColor) : CMeshDiffused(pd3dDevice)
 {
 	m_nVertices = 24 * 3;
 	m_d3dPrimitiveTopology = D3D11_PRIMITIVE_TOPOLOGY_TRIANGLELIST;
@@ -854,7 +854,7 @@ CAirplaneMeshDiffused::~CAirplaneMeshDiffused()
 }
 
 //------------------------------------------------------------------------------------------------
-CCubeMeshDiffused::CCubeMeshDiffused(ID3D11Device *pd3dDevice, float fWidth, float fHeight, float fDepth, XMVECTOR d3dxColor) : CMeshDiffused(pd3dDevice)
+CCubeMeshDiffused::CCubeMeshDiffused(ID3D11Device* pd3dDevice, float fWidth, float fHeight, float fDepth, XMVECTOR d3dxColor) : CMeshDiffused(pd3dDevice)
 {
 	m_nVertices = 8;
 	m_d3dPrimitiveTopology = D3D11_PRIMITIVE_TOPOLOGY_TRIANGLESTRIP;
@@ -942,7 +942,7 @@ CCubeMeshDiffused::~CCubeMeshDiffused()
 }
 
 //------------------------------------------------------------------------------------------------
-CSphereMeshDiffused::CSphereMeshDiffused(ID3D11Device *pd3dDevice, float fRadius, int nSlices, int nStacks, XMVECTOR d3dxColor) : CMeshDiffused(pd3dDevice)
+CSphereMeshDiffused::CSphereMeshDiffused(ID3D11Device* pd3dDevice, float fRadius, int nSlices, int nStacks, XMVECTOR d3dxColor) : CMeshDiffused(pd3dDevice)
 {
 	m_nVertices = (nSlices * nStacks) * 3 * 2;
 	m_d3dPrimitiveTopology = D3D11_PRIMITIVE_TOPOLOGY_TRIANGLELIST;
@@ -996,7 +996,7 @@ CSphereMeshDiffused::~CSphereMeshDiffused()
 }
 
 //------------------------------------------------------------------------------------------------
-CCubeMeshIlluminated::CCubeMeshIlluminated(ID3D11Device *pd3dDevice, float fWidth, float fHeight, float fDepth) : CMeshIlluminated(pd3dDevice)
+CCubeMeshIlluminated::CCubeMeshIlluminated(ID3D11Device* pd3dDevice, float fWidth, float fHeight, float fDepth) : CMeshIlluminated(pd3dDevice)
 {
 	m_nVertices = 8;
 	m_d3dPrimitiveTopology = D3D11_PRIMITIVE_TOPOLOGY_TRIANGLELIST;
@@ -1060,7 +1060,7 @@ CCubeMeshIlluminated::~CCubeMeshIlluminated()
 #define _WITH_INDEX_BUFFER
 
 //------------------------------------------------------------------------------------------------
-CSphereMeshIlluminated::CSphereMeshIlluminated(ID3D11Device *pd3dDevice, float fRadius, int nSlices, int nStacks) : CMeshIlluminated(pd3dDevice)
+CSphereMeshIlluminated::CSphereMeshIlluminated(ID3D11Device* pd3dDevice, float fRadius, int nSlices, int nStacks) : CMeshIlluminated(pd3dDevice)
 {
 	m_d3dPrimitiveTopology = D3D11_PRIMITIVE_TOPOLOGY_TRIANGLELIST;
 
@@ -1206,7 +1206,7 @@ CSphereMeshIlluminated::~CSphereMeshIlluminated()
 
 
 //------------------------------------------------------------------------------------------------
-CCubeMeshTextured::CCubeMeshTextured(ID3D11Device *pd3dDevice, float fWidth, float fHeight, float fDepth) : CMeshTextured(pd3dDevice)
+CCubeMeshTextured::CCubeMeshTextured(ID3D11Device* pd3dDevice, float fWidth, float fHeight, float fDepth) : CMeshTextured(pd3dDevice)
 {
 	m_nVertices = 36;
 	m_d3dPrimitiveTopology = D3D11_PRIMITIVE_TOPOLOGY_TRIANGLELIST;
@@ -1333,7 +1333,7 @@ CCubeMeshTextured::~CCubeMeshTextured()
 }
 
 //------------------------------------------------------------------------------------------------
-CSphereMeshTextured::CSphereMeshTextured(ID3D11Device *pd3dDevice, float fRadius, int nSlices, int nStacks) : CMeshTextured(pd3dDevice)
+CSphereMeshTextured::CSphereMeshTextured(ID3D11Device* pd3dDevice, float fRadius, int nSlices, int nStacks) : CMeshTextured(pd3dDevice)
 {
 	m_nVertices = (nSlices * nStacks) * 3 * 2;
 	m_d3dPrimitiveTopology = D3D11_PRIMITIVE_TOPOLOGY_TRIANGLELIST;
@@ -1393,7 +1393,7 @@ CSphereMeshTextured::~CSphereMeshTextured()
 }
 
 //------------------------------------------------------------------------------------------------
-CCubeMeshTexturedIlluminated::CCubeMeshTexturedIlluminated(ID3D11Device *pd3dDevice, float fWidth, float fHeight, float fDepth) : CMeshTexturedIlluminated(pd3dDevice)
+CCubeMeshTexturedIlluminated::CCubeMeshTexturedIlluminated(ID3D11Device* pd3dDevice, float fWidth, float fHeight, float fDepth) : CMeshTexturedIlluminated(pd3dDevice)
 {
 	m_nVertices = 36;
 	m_d3dPrimitiveTopology = D3D11_PRIMITIVE_TOPOLOGY_TRIANGLELIST;
@@ -1529,7 +1529,7 @@ CCubeMeshTexturedIlluminated::~CCubeMeshTexturedIlluminated()
 }
 
 //------------------------------------------------------------------------------------------------
-CSphereMeshTexturedIlluminated::CSphereMeshTexturedIlluminated(ID3D11Device *pd3dDevice, float fRadius, int nSlices, int nStacks) : CMeshTexturedIlluminated(pd3dDevice)
+CSphereMeshTexturedIlluminated::CSphereMeshTexturedIlluminated(ID3D11Device* pd3dDevice, float fRadius, int nSlices, int nStacks) : CMeshTexturedIlluminated(pd3dDevice)
 {
 	m_nVertices = (nSlices * nStacks) * 3 * 2;
 	m_d3dPrimitiveTopology = D3D11_PRIMITIVE_TOPOLOGY_TRIANGLELIST;
@@ -1600,7 +1600,7 @@ CSphereMeshTexturedIlluminated::~CSphereMeshTexturedIlluminated()
 }
 
 //------------------------------------------------------------------------------------------------
-CHeightMapGridMesh::CHeightMapGridMesh(ID3D11Device *pd3dDevice, int xStart, int zStart, int nWidth, int nLength, XMVECTOR d3dxvScale, void *pContext, D3D11_USAGE d3dUsage) : CMeshDetailTexturedIlluminated(pd3dDevice)
+CHeightMapGridMesh::CHeightMapGridMesh(ID3D11Device* pd3dDevice, int xStart, int zStart, int nWidth, int nLength, XMVECTOR d3dxvScale, void *pContext, D3D11_USAGE d3dUsage) : CMeshDetailTexturedIlluminated(pd3dDevice)
 {
 	m_nVertices = nWidth * nLength;
 	m_d3dPrimitiveTopology = D3D11_PRIMITIVE_TOPOLOGY_TRIANGLESTRIP;
@@ -1714,7 +1714,7 @@ float CHeightMapGridMesh::OnGetHeight(int x, int z, void *pContext)
 }
 
 //------------------------------------------------------------------------------------------------
-CSkyBoxMesh::CSkyBoxMesh(ID3D11Device *pd3dDevice, float fWidth, float fHeight, float fDepth) : CMeshTextured(pd3dDevice)
+CSkyBoxMesh::CSkyBoxMesh(ID3D11Device* pd3dDevice, float fWidth, float fHeight, float fDepth) : CMeshTextured(pd3dDevice)
 {
 	m_nVertices = 24;
 	m_d3dPrimitiveTopology = D3D11_PRIMITIVE_TOPOLOGY_TRIANGLESTRIP;
@@ -1791,7 +1791,7 @@ CSkyBoxMesh::~CSkyBoxMesh()
 }
 
 //------------------------------------------------------------------------------------------------
-CWaterGridMesh::CWaterGridMesh(ID3D11Device *pd3dDevice, int xStart, int zStart, int nWidth, int nLength, XMVECTOR d3dxvScale, void *pContext, D3D11_USAGE d3dUsage) : CHeightMapGridMesh(pd3dDevice, xStart, zStart, nWidth, nLength, d3dxvScale, pContext, d3dUsage)
+CWaterGridMesh::CWaterGridMesh(ID3D11Device* pd3dDevice, int xStart, int zStart, int nWidth, int nLength, XMVECTOR d3dxvScale, void *pContext, D3D11_USAGE d3dUsage) : CHeightMapGridMesh(pd3dDevice, xStart, zStart, nWidth, nLength, d3dxvScale, pContext, d3dUsage)
 {
 	m_xStart = xStart;
 	m_zStart = zStart;
@@ -1927,7 +1927,7 @@ void CWaterGridMesh::Animate(ID3D11DeviceContext *pd3dDeviceContext, float fTime
 }
 
 //------------------------------------------------------------------------------------------------
-CTextureToScreenRectMesh::CTextureToScreenRectMesh(ID3D11Device *pd3dDevice, float fWidth, float fHeight) : CMeshTextured(pd3dDevice)
+CTextureToScreenRectMesh::CTextureToScreenRectMesh(ID3D11Device* pd3dDevice, float fWidth, float fHeight) : CMeshTextured(pd3dDevice)
 {
 	m_nVertices = 6;
 	m_d3dPrimitiveTopology = D3D11_PRIMITIVE_TOPOLOGY_TRIANGLELIST;
@@ -1970,7 +1970,7 @@ CTextureToScreenRectMesh::~CTextureToScreenRectMesh()
 }
 
 //------------------------------------------------------------------------------------------------
-CTexturedRectMesh::CTexturedRectMesh(ID3D11Device *pd3dDevice, float fWidth, float fHeight, float fLength) : CMeshTextured(pd3dDevice)
+CTexturedRectMesh::CTexturedRectMesh(ID3D11Device* pd3dDevice, float fWidth, float fHeight, float fLength) : CMeshTextured(pd3dDevice)
 {
 	m_nVertices = 6;
 	m_d3dPrimitiveTopology = D3D11_PRIMITIVE_TOPOLOGY_TRIANGLELIST;
@@ -2037,7 +2037,7 @@ CTexturedRectMesh::~CTexturedRectMesh()
 //KYT '16.01.26 plus 
 /*FrustumMesh Mesh*/
 //------------------------------------------------------------------------------------------------
-C3DFrustumMeshDiffused::C3DFrustumMeshDiffused(ID3D11Device *pd3dDevice, float fFar, float fFov) : CMeshTextured(pd3dDevice)
+C3DFrustumMeshDiffused::C3DFrustumMeshDiffused(ID3D11Device* pd3dDevice, float fFar, float fFov) : CMeshTextured(pd3dDevice)
 {
 	m_nVertices = 3;
 	m_d3dPrimitiveTopology = D3D11_PRIMITIVE_TOPOLOGY_LINELIST;

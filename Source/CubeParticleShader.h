@@ -82,8 +82,8 @@ public:
 	virtual ~CCubeParticleShader();
 	virtual void ReleaseShader();
 
-	virtual void Initialize(ID3D11Device *pd3dDevice, TCHAR *pszFileName, XMFLOAT3 d3dxvPosition, UINT nMaxParticles);
-	virtual void CreateParticle(ID3D11Device *pd3dDevice, XMFLOAT3 &pd3dxvPosition, XMFLOAT3 &pd3dxvDirection, XMFLOAT3 &pd3dxvAccelerator);
+	virtual void Initialize(ID3D11Device* pd3dDevice, TCHAR *pszFileName, XMFLOAT3 d3dxvPosition, UINT nMaxParticles);
+	virtual void CreateParticle(ID3D11Device* pd3dDevice, XMFLOAT3 &pd3dxvPosition, XMFLOAT3 &pd3dxvDirection, XMFLOAT3 &pd3dxvAccelerator);
 
 	virtual void SetParitlceData(float fSpeed, float fSize, float fAge, float fEmitCount = 1, XMFLOAT3 fRandPosition = XMFLOAT3(0.0f, 0.0f, 0.0f))
 	{
@@ -111,11 +111,11 @@ public:
 	virtual void ParticleStop() { m_bInitializeParticle = false; }
 
 	// 이하는 쉐이더 설정과 관련된 함수들이다.
-	virtual void CreateConstBuffer(ID3D11Device *pd3dDevice);
+	virtual void CreateConstBuffer(ID3D11Device* pd3dDevice);
 	virtual void UpdateConstBuffer(ID3D11DeviceContext *pd3dDeviceContext);
 
-	virtual void CreateShader(ID3D11Device *pd3dDevice);
-	virtual void CreateSOGeometryShaderFromFile(ID3D11Device *pd3dDevice, WCHAR *pszFileName, LPCSTR pszShaderName, LPCSTR pszShaderModel, ID3D11GeometryShader **ppd3dSOGeometryShader);
-	virtual void CreateSOGeoMoetryShaderFromCompiledFile(ID3D11Device * pd3dDevice, WCHAR * pszFileName, ID3D11GeometryShader** ppd3dGeomeotryShader);
+	virtual void CreateShader(ID3D11Device* pd3dDevice);
+	virtual void CreateSOGeometryShaderFromFile(ID3D11Device* pd3dDevice, WCHAR *pszFileName, LPCSTR pszShaderName, LPCSTR pszShaderModel, ID3D11GeometryShader **ppd3dSOGeometryShader);
+	virtual void CreateSOGeoMoetryShaderFromCompiledFile(ID3D11Device*  pd3dDevice, WCHAR * pszFileName, ID3D11GeometryShader** ppd3dGeomeotryShader);
 
 };

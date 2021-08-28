@@ -29,7 +29,7 @@ void CUIShader::ReleseInstance()
 	m_uUIPosition.gameObject->Release();
 }
 
-void CUIShader::CreateShader(ID3D11Device *pd3dDevice)
+void CUIShader::CreateShader(ID3D11Device* pd3dDevice)
 {
 	UINT nSlot = 0;
 
@@ -56,7 +56,7 @@ void CUIShader::CreateShader(ID3D11Device *pd3dDevice)
 	//#endif
 }
 
-void CUIShader::CreateAfterShader(ID3D11Device * pd3dDevice, bool isGaugeBar)
+void CUIShader::CreateAfterShader(ID3D11Device*  pd3dDevice, bool isGaugeBar)
 {
 	if (m_pd3dPixelShader)m_pd3dPixelShader->Release();
 	m_pd3dPixelShader = nullptr;

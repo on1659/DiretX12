@@ -12,14 +12,9 @@
 #include "TwBarManager.h"
 
 #ifdef _MULIT_RENDER_TARGET_
-
 class CScreenShader;
-
-#endif
-
-#ifdef _MULIT_THREAD_RENDER_
 class CRenderingThreadInfo;
-#endif
+#endif // _MULIT_THREAD_RENDER_
 
 class CPostProcessingRenderContainer;
 
@@ -71,9 +66,8 @@ private:
 	RECT									m_rcClient;
 
 	ID3D11Device							*m_pd3dDevice;
-	IDXGISwapChain							*m_pDXGISwapChain;
 	ID3D11DeviceContext						*m_pd3dDeviceContext;
-
+	IDXGISwapChain							*m_pDXGISwapChain;
 	UINT									m_n4xMSAAQualities;
 
 	CScene*									m_pScene;
@@ -89,12 +83,10 @@ private:
 	ID3D11DepthStencilView					*m_pd3dDepthStencilView;
 
 	bool bControlCV;
-
 public:
 	ID3D11RenderTargetView					*m_pd3dRenderTargetView;
 	ID3D11ShaderResourceView				*m_pd3dMainShaderResourceView;
 	ID3D11Texture2D							*m_pd3dMainBackBufferTextrue;
-
 
 private:
 	//KYT '16.01.25 plus
@@ -251,7 +243,7 @@ private:
 
 #ifdef DX12_MIGRATION
 private:
-	IDXGISwapChain3*				m_pDXGISwapChain3;
+	IDXGISwapChain3* m_pDXGISwapChain3;
 
 #ifdef _DEBUG
 	ID3D12Debug* m_pd3dDebugController;
@@ -278,5 +270,6 @@ private:
 	WARP_RESULT_ENUM				CreateCommandComplete();
 	WARP_RESULT_ENUM				CreateSwapChain();
 #endif //DX12_MIGRATION
+
 };
 

@@ -2,7 +2,7 @@
 class CTerrainWater : public CGameObject
 {
 public:
-	CTerrainWater(ID3D11Device *pd3dDevice, int nWidth, int nLength, int nBlockWidth, int nBlockLength, XMVECTOR d3dxvScale);
+	CTerrainWater(ID3D11Device* pd3dDevice, int nWidth, int nLength, int nBlockWidth, int nBlockLength, XMVECTOR d3dxvScale);
 	virtual ~CTerrainWater();
 
 private:

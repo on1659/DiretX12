@@ -2,19 +2,18 @@
 
 #include "stdafx.h"
 #include <string.h>
+#include <iostream>
 
 #ifdef _UNICODE
 	using tstring = std::wstring;
 	#define tcout  wcout
-	//#define ComPtr  Microsoft::WRL::ComPtr
-#else
+#else // _UNICODE
 	using tstring = std::string;
 	#define tcout  cout
-#endif
+#endif // _UNICODE
 
-// using
-using Microsoft::WRL::ComPtr;
-
+#ifdef DX12_MIGRATION
+#define _XTT TEXT
 class CGlobalvariable : public CSingleTonBase<CGlobalvariable>
 {
 protected:
@@ -30,14 +29,14 @@ protected:
 
 public:
 
-	CGlobalvariable(const tstring& name = _XTT("CGlobalvariable")) : CSingleTonBase()
+	CGlobalvariable() : CSingleTonBase()
 	{
 		Initialize();
 	}
 
 	~CGlobalvariable()
 	{
-		// Release();
+		ReleseInstance();
 	}
 
 	void ReleseInstance()
@@ -51,6 +50,7 @@ public:
 		Release();
 		return  WARP_RESULT_ENUM::OK;
 	}
+
 	void SetDevice(ID3D12Device* pID3D12Device){ m_pID3D12Device = pID3D12Device; }
 	ID3D12Device*	GetDevice() { return m_pID3D12Device.Get(); }
 
@@ -68,3 +68,4 @@ public:
 	unsigned int				GetCBSrvDescriptorIncrementSize() const { return m_nCbvSrvDescriptorIncrementSize;}
 
 };	
+#endif //DX12_MIGRATION

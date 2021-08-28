@@ -226,7 +226,6 @@
 #define RANDOM_COLOR	XMFLOAT4( ((rand() * 0xFFFFFF) / RAND_MAX),((rand() * 0xFFFFFF) / RAND_MAX),((rand() * 0xFFFFFF) / RAND_MAX), 1.0f)
 
 #define RANDOM_DIRCTION	XMFLOAT3( (rand() % 200 - 100) * 0.01f, (rand() % 200 - 100) * 0.01f, (rand() % 200 - 100) * 0.01f )
-#define _XTT(X)  TEXT(X)
 
 
 #define _WITH_TERRAIN_PARTITION
@@ -312,10 +311,12 @@
 
 //#define DEBUG_MODE_UI
 #define NON_SERVER_CLIENT_NUMBER 4
+#define _SELECT_GPU_DRIVE_170904	// 21-08-21 김영태 : GPU 드라이버 선택기능
 
-#define _SELECT_GPU_DRIVE_170904	// 21-08-22 김영태 : GPU 드라이버 세팅
 
 #ifdef DX12_MIGRATION
+
+using Microsoft::WRL::ComPtr;
 
 #define	SWAP_CHAIN_BUFFER_COUNT				2
 #define	RENTER_TARGET_BUFFER_COUNT			2

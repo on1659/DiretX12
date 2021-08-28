@@ -59,7 +59,7 @@ void CInstancedObjectsShader::SetMesh(std::unique_ptr<CMesh> pMesh)
 
 //KYT '16.01.20 plus
 /*가상함수로 모든 쉐이더마다 써줄지, 경배처럼 Type으로 하나의 Create에서 해줄지 결정*/
-void CInstancedObjectsShader::CreateShader(ID3D11Device *pd3dDevice)
+void CInstancedObjectsShader::CreateShader(ID3D11Device* pd3dDevice)
 {
 	if (m_pd3dVertexLayout)m_pd3dVertexLayout->Release();
 	m_pd3dVertexLayout = nullptr;
@@ -104,7 +104,7 @@ void CInstancedObjectsShader::CreateShader(ID3D11Device *pd3dDevice)
 	/*if (m_pMesh) CreateShader(pd3dDevice, m_pMesh->GetType());*/
 }
 
-void CInstancedObjectsShader::CreateBlendShader(ID3D11Device * pd3dDevice)
+void CInstancedObjectsShader::CreateBlendShader(ID3D11Device*  pd3dDevice)
 {
 	UINT nSlot = 0;
 	D3D11_INPUT_ELEMENT_DESC d3dInputElements[] =
@@ -132,12 +132,12 @@ void CInstancedObjectsShader::CreateBlendShader(ID3D11Device * pd3dDevice)
 
 //KYT '16.01.18 minus
 /*앞으로 사용하지 않을꺼임 Cuz. 쉐이더 검색은 수동으로 할꺼임 */
-//void CInstancedObjectsShader::CreateShader(ID3D11Device *pd3dDevice, UINT nType)
+//void CInstancedObjectsShader::CreateShader(ID3D11Device* pd3dDevice, UINT nType)
 //{
 //	CObjectsShader::CreateShader(pd3dDevice, nType);
 //}
 
-void CInstancedObjectsShader::BuildObjects(ID3D11Device *pd3dDevice, void *pContext)
+void CInstancedObjectsShader::BuildObjects(ID3D11Device* pd3dDevice, void *pContext)
 {
 	CObjectsShader::BuildObjects(pd3dDevice, pContext);
 

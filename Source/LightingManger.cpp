@@ -769,7 +769,7 @@ void CLightingManger::Load(ID3D11Device* pd3dDevice)
 	CLightingManger::CreateConstBuffers(pd3dDevice);
 }
 
-void CLightingManger::CreateConstBuffers(ID3D11Device *pd3dDevice)
+void CLightingManger::CreateConstBuffers(ID3D11Device* pd3dDevice)
 {
 	D3D11_BUFFER_DESC d3dBufferDesc;
 	ZeroMemory(&d3dBufferDesc, sizeof(d3dBufferDesc));

@@ -55,7 +55,7 @@ public:
 		SetBumpScale(fScale.x, fScale.y, fScale.z);
 	}
 
-	void CreateShader(ID3D11Device *pd3dDevice) override;
+	void CreateShader(ID3D11Device* pd3dDevice) override;
 
 	void CreateConstBuffer(ID3D11DeviceContext *pd3dDeviceContext);
 

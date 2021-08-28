@@ -78,7 +78,7 @@ void CContentManager::ReleseInstance()
 
 }
 
-void CContentManager::Load(ID3D11Device *pd3dDevice)
+void CContentManager::Load(ID3D11Device* pd3dDevice)
 {
 	m_pd3dDevice = pd3dDevice;
 
@@ -193,7 +193,7 @@ void CContentManager::Load(ID3D11Device *pd3dDevice)
 
 }
 
-void CContentManager::FinalLoad(ID3D11Device *pd3dDevice)
+void CContentManager::FinalLoad(ID3D11Device* pd3dDevice)
 {
 	//KYT '16.01.18 plus 
 
@@ -223,12 +223,12 @@ void CContentManager::FinalLoad(ID3D11Device *pd3dDevice)
 	//for (auto &pShader : m_vUIShdaer) pShader->BuildObjects(pd3dDevice);
 }
 
-void CContentManager::UILoad(ID3D11Device *pd3dDevice)
+void CContentManager::UILoad(ID3D11Device* pd3dDevice)
 {
 	for (auto &pShader : m_vUIShdaer) pShader->BuildObjects(pd3dDevice);
 }
 
-void CContentManager::ReSetShader(ID3D11Device * pd3dDevice, ID3D11DeviceContext * pd3dDeviceContext)
+void CContentManager::ReSetShader(ID3D11Device*  pd3dDevice, ID3D11DeviceContext * pd3dDeviceContext)
 {
 	for (auto& pShader : m_vDynamicShader)
 		pShader->CreateShader(pd3dDevice);
@@ -249,7 +249,7 @@ std::unique_ptr<CMesh> CContentManager::GetGetDefaultShaderMesh(float fSize)
 	return move(std::make_unique<CCubeMeshTexturedIlluminated>(m_pd3dDevice, m_fDefaultMeshSize, m_fDefaultMeshSize, m_fDefaultMeshSize));
 }
 
-std::unique_ptr<CMesh> CContentManager::GetGetDefaultShaderMesh(ID3D11Device *pd3dDevice, float fSize)
+std::unique_ptr<CMesh> CContentManager::GetGetDefaultShaderMesh(ID3D11Device* pd3dDevice, float fSize)
 {
 	return move(std::make_unique<CCubeMeshTexturedIlluminated>(pd3dDevice, fSize, fSize, fSize));
 }
@@ -328,7 +328,7 @@ CContentManager::GetMaterial(ID3D11Device* pd3dDevice, std::vector<std::string> 
 
 }
 
-std::shared_ptr<CMaterial> CContentManager::GetUIMaterial(ID3D11Device * pd3dDevice, std::string path, int nStartSampler, int nCountSampler, YT_SAMPLER eSampler)
+std::shared_ptr<CMaterial> CContentManager::GetUIMaterial(ID3D11Device*  pd3dDevice, std::string path, int nStartSampler, int nCountSampler, YT_SAMPLER eSampler)
 {
 	std::string name = path;
 
@@ -467,7 +467,7 @@ std::shared_ptr<CMaterial> CContentManager::MakeMaterial(ID3D11Device* pd3dDevic
 	return m_vMaterial.back();
 }
 
-std::shared_ptr<CMaterial> CContentManager::MakeUIMaterial(ID3D11Device * pd3dDevice, std::string name, std::string sPath, int nStartSampler, int nCountSampler, YT_SAMPLER eSampler)
+std::shared_ptr<CMaterial> CContentManager::MakeUIMaterial(ID3D11Device*  pd3dDevice, std::string name, std::string sPath, int nStartSampler, int nCountSampler, YT_SAMPLER eSampler)
 {
 	HRESULT hResult;
 

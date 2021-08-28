@@ -2,7 +2,7 @@
 #include "SkyBox.h"
 #include "InstancedObjectsShader.h"
 
-CSkyBox::CSkyBox(ID3D11Device *pd3dDevice) : CGameObject(1)
+CSkyBox::CSkyBox(ID3D11Device* pd3dDevice) : CGameObject(1)
 {
 	D3D11_DEPTH_STENCIL_DESC d3dDepthStencilDesc;
 	ZeroMemory(&d3dDepthStencilDesc, sizeof(D3D11_DEPTH_STENCIL_DESC));

@@ -67,13 +67,13 @@ protected:
 
 public:
 
-	virtual void CreateBlendState(ID3D11Device *pd3dDevice);
+	virtual void CreateBlendState(ID3D11Device* pd3dDevice);
 
-	void CreateBlendState(ID3D11Device *pd3dDevice, D3D11_BLEND_DESC desc);
+	void CreateBlendState(ID3D11Device* pd3dDevice, D3D11_BLEND_DESC desc);
 
-	virtual void CreateDepthStencilState(ID3D11Device *pd3dDevice);
+	virtual void CreateDepthStencilState(ID3D11Device* pd3dDevice);
 
-	virtual void CreateRasterizerState(ID3D11Device *pd3dDevice, D3D11_CULL_MODE cullMode = D3D11_CULL_NONE, D3D11_FILL_MODE fillMode = D3D11_FILL_SOLID);
+	virtual void CreateRasterizerState(ID3D11Device* pd3dDevice, D3D11_CULL_MODE cullMode = D3D11_CULL_NONE, D3D11_FILL_MODE fillMode = D3D11_FILL_SOLID);
 
 	virtual void SetBlendState(ID3D11BlendState *pd3dBlendState);
 

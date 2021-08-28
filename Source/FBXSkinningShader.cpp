@@ -56,7 +56,7 @@ CFBXSkinnedShader::~CFBXSkinnedShader()
 }
 
 
-void CFBXSkinnedShader::CreateShader(ID3D11Device *pd3dDevice)
+void CFBXSkinnedShader::CreateShader(ID3D11Device* pd3dDevice)
 {
 	//뼈대 변환행렬들의 상수버퍼 생성
 	bBoneTransformSetting = true;
@@ -151,7 +151,7 @@ void CFBXSkinnedShader::UpdateConstBuffer(ID3D11DeviceContext *pd3dDeviceContext
 	pd3dDeviceContext->VSSetConstantBuffers(VS_CB_SLOT_BONE_TRANSFORM, 1, &m_pcbBoneTransform);
 }
 
-void CFBXSkinnedShader::BuildObjects(ID3D11Device *pd3dDevice, void *pContext)
+void CFBXSkinnedShader::BuildObjects(ID3D11Device* pd3dDevice, void *pContext)
 {
 	CObjectsShader::BuildObjects(pd3dDevice, pContext);
 
@@ -275,7 +275,9 @@ void CFBXSkinnedShader::Render(ID3D11DeviceContext *pd3dDeviceContext, std::shar
 
 	//KYT '16.02.05 
 	/*아직 삭제하기에는 이름*/
+#ifdef _SPACEPARTITIONING
 	m_vRenderObject.clear();
+#endif
 }
 
 void CFBXSkinnedShader::AnimateObjects(float fTimeElapsed)

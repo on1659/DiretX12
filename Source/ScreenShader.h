@@ -72,12 +72,12 @@ public:
 	CScreenShader(int nTextures, int nSamplers, int nTextureStartSlot, int nSamplerStartSlot);
 	virtual ~CScreenShader();
 	virtual void ReleaseObject();
-	virtual void CreateShader(ID3D11Device *pd3dDevice);
-	virtual void CreateComputeShader(ID3D11Device *pd3dDevice);
-	virtual void BuildObjects(ID3D11Device *pd3dDevice, void *pContext = nullptr);
+	virtual void CreateShader(ID3D11Device* pd3dDevice);
+	virtual void CreateComputeShader(ID3D11Device* pd3dDevice);
+	virtual void BuildObjects(ID3D11Device* pd3dDevice, void *pContext = nullptr);
 	virtual void UpdateConstBuffer(ID3D11DeviceContext *pd3dDeviceContext);
-	void ComputeLoad(ID3D11Device *pd3dDevice);
-	void ReSetShader(ID3D11Device *pd3dDevice);
+	void ComputeLoad(ID3D11Device* pd3dDevice);
+	void ReSetShader(ID3D11Device* pd3dDevice);
 
 
 	virtual void Render(ID3D11DeviceContext *pd3dDeviceContext, std::shared_ptr<CCamera> pCamera = nullptr);

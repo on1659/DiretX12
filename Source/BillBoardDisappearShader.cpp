@@ -22,7 +22,7 @@ CBillBoardDisappearShader::~CBillBoardDisappearShader()
 }
 
 
-void CBillBoardDisappearShader::CreateConstBuffer(ID3D11Device * pd3dDevice)
+void CBillBoardDisappearShader::CreateConstBuffer(ID3D11Device*  pd3dDevice)
 {
 
 	m_fAlpha = 1.0f;
@@ -67,7 +67,7 @@ void CBillBoardDisappearShader::UpdateConstBuffer(ID3D11DeviceContext *pd3dDevic
 }
 
 
-void CBillBoardDisappearShader::CreateShader(ID3D11Device *pd3dDevice)
+void CBillBoardDisappearShader::CreateShader(ID3D11Device* pd3dDevice)
 {
 	UINT nSlot = 0;
 	D3D11_INPUT_ELEMENT_DESC d3dInputElements[] =

@@ -8,7 +8,7 @@ protected:
 	struct SpriteAnimation
 	{
 		float fSpriteAnimation_FPS;
-		int  fSpriteAnimation_Count;
+		float fSpriteAnimation_Count;
 		float fSpriteAnimation_Width;
 		float fSpriteAnimation_Left;
 	};
@@ -45,11 +45,11 @@ public:
 		m_pd3dsrvRandomTexture = texture1D;
 	}
 
-	virtual void Initialize(ID3D11Device *pd3dDevice, TCHAR *pszFileName, XMFLOAT3 d3dxvPosition, UINT nMaxParticles, float frameFPS, int frameCount);
+	virtual void Initialize(ID3D11Device* pd3dDevice, TCHAR *pszFileName, XMFLOAT3 d3dxvPosition, UINT nMaxParticles, float frameFPS, float frameCount);
 
-	virtual void AfterCreateShader(ID3D11Device *pd3dDevice);
+	virtual void AfterCreateShader(ID3D11Device* pd3dDevice);
 
-	virtual void AfterAuraCreateShader(ID3D11Device *pd3dDevice);
+	virtual void AfterAuraCreateShader(ID3D11Device* pd3dDevice);
 
 	virtual void PauseTime(const float& fPause) { m_fMaxPauseTime = fPause; }
 

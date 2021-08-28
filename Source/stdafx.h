@@ -52,6 +52,7 @@
 #include "../Assets/import/DirectX/DX12/d3dx12.h"
 #include "../Assets/import/DirectX/DX12/DDSTextureLoader12.h"
 #endif //DX12_MIGRATION
+
 #include <d3d11.h>
 #include <d3dx11.h>
 #include <D3DX10Math.h>
@@ -102,7 +103,7 @@ using namespace DirectX::PackedVector;
 /* User include */
 #include "Define.h"
 #include "MyStruct.h"
-#include "MyEnum.h"
+
 
 
 //RSH '16.05.01
@@ -148,7 +149,11 @@ using namespace DirectX::PackedVector;
 #include "SoundManager.h"
 #include "ParticleManager.h"
 #include "TwBarManager.h"
+
+#ifdef DX12_MIGRATION
+#include "MyEnum.h"
 #include "Globalvariable.h"
+#endif // DX12_MIGRATION
 //#include "../Assets/import/AntTweakBar/include/AntTweakBar.h"
 
 //#include "GraphicObject.h"

@@ -23,7 +23,7 @@ CTerrainCubeShader::~CTerrainCubeShader()
 
 }
 
-void CTerrainCubeShader::CreateShader(ID3D11Device *pd3dDevice)
+void CTerrainCubeShader::CreateShader(ID3D11Device* pd3dDevice)
 {
 	int nSlot = 0;
 	D3D11_INPUT_ELEMENT_DESC d3dInputElements[] =

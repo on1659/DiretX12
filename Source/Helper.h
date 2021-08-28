@@ -102,7 +102,7 @@ public:
 
 	//랜덤 텍스쳐 만들기
 
-	static ID3D11ShaderResourceView* CreateTexture2DArraySRV(ID3D11Device *pd3dDevice, std::vector<_TCHAR*> ppstrFilePaths)
+	static ID3D11ShaderResourceView* CreateTexture2DArraySRV(ID3D11Device* pd3dDevice, std::vector<_TCHAR*> ppstrFilePaths)
 	{
 		int nTextures = ppstrFilePaths.size();
 
@@ -204,7 +204,7 @@ public:
 		return(pd3dsrvTextureArray);
 	}
 
-	static ID3D11ShaderResourceView* CreateTexture2DArraySRV(ID3D11Device *pd3dDevice, std::wstring ppstrFilePaths)
+	static ID3D11ShaderResourceView* CreateTexture2DArraySRV(ID3D11Device* pd3dDevice, std::wstring ppstrFilePaths)
 	{
 		int nTextures = 1;
 
@@ -310,7 +310,7 @@ public:
 		return(pd3dsrvTextureArray);
 	}
 
-	static ID3D11ShaderResourceView* CreateRandomTexture1DSRV(ID3D11Device *pd3dDevice)
+	static ID3D11ShaderResourceView* CreateRandomTexture1DSRV(ID3D11Device* pd3dDevice)
 	{
 		XMFLOAT4 RV[1024];
 		for (int i = 0; i < 1024; i++)
@@ -336,7 +336,7 @@ public:
 		return(pd3dsrvTexture);
 	}
 
-	static ID3D11ShaderResourceView* CrseateRandomTexture1DSRV_WaterFall(ID3D11Device *pd3dDevice)
+	static ID3D11ShaderResourceView* CrseateRandomTexture1DSRV_WaterFall(ID3D11Device* pd3dDevice)
 	{
 		XMFLOAT4 RV[1024];
 		for (int i = 0; i < 1024; i++)
@@ -362,7 +362,7 @@ public:
 		return(pd3dsrvTexture);
 	}
 
-	static ID3D11ShaderResourceView* CrseateRandomTexture1DSRV_WaterFall_Bottom(ID3D11Device *pd3dDevice)
+	static ID3D11ShaderResourceView* CrseateRandomTexture1DSRV_WaterFall_Bottom(ID3D11Device* pd3dDevice)
 	{
 		XMFLOAT4 RV[1024];
 		for (int i = 0; i < 1024; i++)
@@ -917,7 +917,7 @@ public:
 	};
 
 
-	static ID3D11ShaderResourceView* MapTexture(ID3D11Device *pd3dDevice, ID3D11DeviceContext *pd3dDeviceContext, std::string path = "../Assets/01_MapData/CSV/", std::string filename = "CubeTerrainHeight")
+	static ID3D11ShaderResourceView* MapTexture(ID3D11Device* pd3dDevice, ID3D11DeviceContext *pd3dDeviceContext, std::string path = "../Assets/01_MapData/CSV/", std::string filename = "CubeTerrainHeight")
 	{
 		path.append(filename.c_str());
 		path.append(".csv");

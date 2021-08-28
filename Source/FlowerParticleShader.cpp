@@ -13,7 +13,7 @@ CFlowerParticleShader::~CFlowerParticleShader()
 {
 }
 
-void CFlowerParticleShader::Initialize(ID3D11Device *pd3dDevice, TCHAR *pszFileName, XMFLOAT3 d3dxvPosition, UINT nMaxParticles)
+void CFlowerParticleShader::Initialize(ID3D11Device* pd3dDevice, TCHAR *pszFileName, XMFLOAT3 d3dxvPosition, UINT nMaxParticles)
 {
 	//m_pd3dsrvTextureArray = pd3dsrvTexArray;
 	D3DX11CreateShaderResourceViewFromFile(pd3dDevice, pszFileName, NULL, NULL, &m_pd3dsrvTextureArray, NULL);

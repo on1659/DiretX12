@@ -66,18 +66,18 @@ Object::Object(std::string name, UINT tag)
 		m_pd3dRasterizerState = nullptr;
 	}
 
-void Object::CreateBlendState(ID3D11Device *pd3dDevice)
+void Object::CreateBlendState(ID3D11Device* pd3dDevice)
 {
 	Object::SetBlendState("Default");
 }
 
-void Object::CreateBlendState(ID3D11Device *pd3dDevice, D3D11_BLEND_DESC desc)
+void Object::CreateBlendState(ID3D11Device* pd3dDevice, D3D11_BLEND_DESC desc)
 {
 	m_pd3dBlendState = nullptr;
 	if (pd3dDevice) pd3dDevice->CreateBlendState(&desc, &m_pd3dBlendState);
 }
 
-void Object::CreateRasterizerState(ID3D11Device *pd3dDevice, D3D11_CULL_MODE cullMode, D3D11_FILL_MODE fillMode)
+void Object::CreateRasterizerState(ID3D11Device* pd3dDevice, D3D11_CULL_MODE cullMode, D3D11_FILL_MODE fillMode)
 {
 	D3D11_RASTERIZER_DESC d3dRasterizerDesc;
 	ZeroMemory(&d3dRasterizerDesc, sizeof(D3D11_RASTERIZER_DESC));
@@ -102,6 +102,6 @@ void Object::SetBlendState(std::string name)
 	m_strBlendstate = name;
 }
 
-void Object::CreateDepthStencilState(ID3D11Device *pd3dDevice)
+void Object::CreateDepthStencilState(ID3D11Device* pd3dDevice)
 {
 }

@@ -30,7 +30,7 @@ public:
 
 	virtual ~CAABBRenderShader();
 
-	virtual void CreateShader(ID3D11Device *pd3dDevice);
+	virtual void CreateShader(ID3D11Device* pd3dDevice);
 
 	void UpdateConstBuffer(ID3D11DeviceContext *pd3dDeviceContext, XMFLOAT3 fSize);
 

@@ -3,7 +3,7 @@
 #include "Warp3DModelManager.h"
  
 
-CWARP3DMesh::CWARP3DMesh(ID3D11Device *pd3dDevice, std::string path)
+CWARP3DMesh::CWARP3DMesh(ID3D11Device* pd3dDevice, std::string path)
 	: CMeshTexturedIlluminated(pd3dDevice)
 {
 	name = path;

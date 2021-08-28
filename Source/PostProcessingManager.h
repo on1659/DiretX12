@@ -8,7 +8,7 @@ public:
 
 	~CPostProcessingManager();
 
-	bool Load(ID3D11Device *pd3dDevice, const int& width, const int& height);
+	bool Load(ID3D11Device* pd3dDevice, const int& width, const int& height);
 
 	void ReleaseShaderVariables() override;
 
@@ -20,7 +20,7 @@ public:
 		, ID3D11RenderTargetView*	pd3dRenderTargetView
 	);
 
-	void Read_CSO_Shader(ID3D11Device *pd3dDevice);
+	void Read_CSO_Shader(ID3D11Device* pd3dDevice);
 
 	void SetParameters(const float& fMiddleGrey, const float& fWhite, const float& fAdaptation, const float& fBloomThreshold, const float& fBloomScale) { m_fMiddleGrey = fMiddleGrey; m_fWhite = fWhite; m_fAdaptation = fAdaptation; m_fBloomThreshold = fBloomThreshold; m_fBloomScale = fBloomScale; }
 

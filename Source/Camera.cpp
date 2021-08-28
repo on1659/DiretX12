@@ -160,7 +160,7 @@ void CCamera::RegenerateViewMatrix()
 	CalculateFrustumPlanes();
 }
 
-void CCamera::CreateConstBuffers(ID3D11Device *pd3dDevice)
+void CCamera::CreateConstBuffers(ID3D11Device* pd3dDevice)
 {
 	D3D11_BUFFER_DESC bd;
 	ZeroMemory(&bd, sizeof(bd));
@@ -329,9 +329,9 @@ bool CCamera::IsInFrustum(XMFLOAT3& d3dxvMinimum, XMFLOAT3& d3dxvMaximum)
 		XMFLOAT4 plane;//	palne.y = 0.0f;
 		XMVECTOR dot = XMPlaneDotCoord(XMLoadFloat4(&m_pd3dxFrustumPlanes[i]), XMLoadFloat3(&d3dxvNearPoint));
 		XMStoreFloat4(&plane, dot);
-		if (plane.x > 0.0f) return false;
+		if (plane.x > 0.0f) return(false);
 	}
-	return true;
+	return(true);
 }
 
 bool CCamera::IsInFrustum(AABB *pAABB)
@@ -411,9 +411,9 @@ bool CCamera::IsInFrustumQuad(XMFLOAT3& d3dxvMinimum, XMFLOAT3& d3dxvMaximum)
 		XMFLOAT4 plane = m_pd3dxFrustumPlanes[i];
 		XMVECTOR dot = XMPlaneDotCoord(XMLoadFloat4(&plane), XMLoadFloat3(&d3dxvNearPoint));
 		XMStoreFloat4(&plane, dot);
-		if (plane.x > 0.0f) return false;
+		if (plane.x > 0.0f) return(false);
 	}
-	return true;
+	return(true);
 }
 
 #else
@@ -482,9 +482,9 @@ bool CCamera::IsInFrustum(XMVECTOR& xCenter, XMVECTOR& xExtern)
 		}
 		//KYT '16.02.07 memo
 		/*XMVectorGetX 극혐*/
-		if (XMVectorGetX(XMPlaneDotCoord(XMLoadFloat4(&m_pd3dxFrustumPlanes[i]), XMLoadFloat3(&xmVectorNearPoint))) > 0.0f) return false;
+		if (XMVectorGetX(XMPlaneDotCoord(XMLoadFloat4(&m_pd3dxFrustumPlanes[i]), XMLoadFloat3(&xmVectorNearPoint))) > 0.0f) return(false);
 	}
-	return true;
+	return(true);
 }
 
 bool CCamera::IsInFrustum(BoundingBox *boundingbox)
@@ -494,7 +494,7 @@ bool CCamera::IsInFrustum(BoundingBox *boundingbox)
 #endif
 
 //--------------------------------------직교투영 JJY
-void CCamera::OrthoCameraLoad(ID3D11Device *pd3dDevice, ID3D11DeviceContext *pd3dDeviceContext)
+void CCamera::OrthoCameraLoad(ID3D11Device* pd3dDevice, ID3D11DeviceContext *pd3dDeviceContext)
 {
 	XMStoreFloat4x4(&m_d3dxmtxOrthoView, XMMatrixIdentity());
 	XMStoreFloat4x4(&m_d3dxmtxOrtho, XMMatrixIdentity());
@@ -513,7 +513,7 @@ void CCamera::OrthoCameraLoad(ID3D11Device *pd3dDevice, ID3D11DeviceContext *pd3
 	}
 }
 
-void CCamera::OrthoCreateConstBuffer(ID3D11Device *pd3dDevice)
+void CCamera::OrthoCreateConstBuffer(ID3D11Device* pd3dDevice)
 {
 	D3D11_BUFFER_DESC bd;
 	ZeroMemory(&bd, sizeof(bd));

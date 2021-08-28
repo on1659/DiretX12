@@ -150,20 +150,20 @@ public:
 
 	void ReleseInstance();
 
-	void Load(ID3D11Device *pd3dDevice);
+	void Load(ID3D11Device* pd3dDevice);
 
-	void FinalLoad(ID3D11Device *pd3dDevice);
+	void FinalLoad(ID3D11Device* pd3dDevice);
 
-	void UILoad(ID3D11Device *pd3dDevice);
+	void UILoad(ID3D11Device* pd3dDevice);
 
-	void ReSetShader(ID3D11Device *pd3dDevice, ID3D11DeviceContext* pd3dDeviceContext);
+	void ReSetShader(ID3D11Device* pd3dDevice, ID3D11DeviceContext* pd3dDeviceContext);
 
 	//Get Default
 
 	//-------------------------------------------------------------------------------
 	std::unique_ptr<CMesh> GetGetDefaultShaderMesh(float fSize = 1);
 
-	std::unique_ptr<CMesh> GetGetDefaultShaderMesh(ID3D11Device *pd3dDevice, float fSize = 0);
+	std::unique_ptr<CMesh> GetGetDefaultShaderMesh(ID3D11Device* pd3dDevice, float fSize = 0);
 
 	std::shared_ptr<CMaterialColors> GetColor();
 
@@ -242,7 +242,7 @@ public:
 		GetMaterial(ID3D11Device* pd3dDevice, std::vector<std::string> vPath, int nStartSampler = PS_SLOT_SAMPLER, int nCountSampler = 1, YT_SAMPLER eSampler = SAMPLESTATE_DEFAULT);
 
 	std::shared_ptr<CMaterial> 
-		GetUIMaterial(ID3D11Device * pd3dDevice, std::string path, int nStartSampler = PS_SLOT_SAMPLER, int nCountSampler = 1, YT_SAMPLER eSampler = SAMPLESTATE_DEFAULT);
+		GetUIMaterial(ID3D11Device*  pd3dDevice, std::string path, int nStartSampler = PS_SLOT_SAMPLER, int nCountSampler = 1, YT_SAMPLER eSampler = SAMPLESTATE_DEFAULT);
 
 	//이건 이 클래스 내에서만 사용하는 private 함수
 private:

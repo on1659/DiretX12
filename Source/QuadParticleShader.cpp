@@ -11,7 +11,7 @@ CQuadParticleShader::~CQuadParticleShader()
 {
 }
 
-void CQuadParticleShader::CreateShader(ID3D11Device *pd3dDevice)
+void CQuadParticleShader::CreateShader(ID3D11Device* pd3dDevice)
 {
 	D3D11_INPUT_ELEMENT_DESC d3dInputLayout[] =
 	{
@@ -34,7 +34,7 @@ void CQuadParticleShader::CreateShader(ID3D11Device *pd3dDevice)
 }
 
 
-void CQuadParticleShader::CreateConstBuffer(ID3D11Device *pd3dDevice)
+void CQuadParticleShader::CreateConstBuffer(ID3D11Device* pd3dDevice)
 {
 	CCubeParticleShader::CreateConstBuffer(pd3dDevice);
 }

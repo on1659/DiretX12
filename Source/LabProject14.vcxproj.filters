@@ -649,8 +649,8 @@
     <Filter Include="Warp3D">
       <UniqueIdentifier>{fc2e9306-8047-4a29-bb71-3e4f322d8123}</UniqueIdentifier>
     </Filter>
-    <Filter Include="B_3D_Client\14.DX12">
-      <UniqueIdentifier>{941476c4-7396-4fdf-a40a-c0b9a02d2feb}</UniqueIdentifier>
+    <Filter Include="H.DX12">
+      <UniqueIdentifier>{89685722-bdd5-484f-a7ca-39dd913c5372}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -1234,10 +1234,10 @@
       <Filter>Warp3D</Filter>
     </ClInclude>
     <ClInclude Include="Globalvariable.h">
-      <Filter>B_3D_Client\14.DX12</Filter>
+      <Filter>H.DX12</Filter>
     </ClInclude>
     <ClInclude Include="MyEnum.h">
-      <Filter>B_3D_Client\14.DX12</Filter>
+      <Filter>H.DX12</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

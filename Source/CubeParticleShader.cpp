@@ -88,7 +88,7 @@ void CCubeParticleShader::ReleaseShader()
 	if (m_pd3dsrvTextureArray) m_pd3dsrvTextureArray->Release();
 }
 
-void CCubeParticleShader::Initialize(ID3D11Device *pd3dDevice, TCHAR *pszFileName, XMFLOAT3 d3dxvPosition, UINT nMaxParticles)
+void CCubeParticleShader::Initialize(ID3D11Device* pd3dDevice, TCHAR *pszFileName, XMFLOAT3 d3dxvPosition, UINT nMaxParticles)
 {
 	//m_pd3dsrvTextureArray = pd3dsrvTexArray;
 	D3DX11CreateShaderResourceViewFromFile(pd3dDevice, pszFileName, NULL, NULL, &m_pd3dsrvTextureArray, NULL);
@@ -149,7 +149,7 @@ void CCubeParticleShader::Initialize(ID3D11Device *pd3dDevice, TCHAR *pszFileNam
 	CreateParticle(pd3dDevice, d3dxvPosition, XMFLOAT3(0, 1, 0), XMFLOAT3(0, 1, 0));
 }
 
-void CCubeParticleShader::CreateParticle(ID3D11Device *pd3dDevice, XMFLOAT3& Position, XMFLOAT3& Direction, XMFLOAT3& Accelerater)
+void CCubeParticleShader::CreateParticle(ID3D11Device* pd3dDevice, XMFLOAT3& Position, XMFLOAT3& Direction, XMFLOAT3& Accelerater)
 {
 	m_d3dxvEmitPosition = Position;
 	m_d3dxvEmitDirection = Direction;
@@ -160,7 +160,7 @@ void CCubeParticleShader::CreateParticle(ID3D11Device *pd3dDevice, XMFLOAT3& Pos
 	CreateConstBuffer(pd3dDevice);
 }
 
-void CCubeParticleShader::CreateShader(ID3D11Device *pd3dDevice)
+void CCubeParticleShader::CreateShader(ID3D11Device* pd3dDevice)
 {
 	D3D11_INPUT_ELEMENT_DESC d3dInputLayout[] =
 	{
@@ -264,7 +264,7 @@ void CCubeParticleShader::Render(ID3D11DeviceContext* pd3dDeviceContext)
 
 }
 
-void CCubeParticleShader::CreateConstBuffer(ID3D11Device *pd3dDevice)
+void CCubeParticleShader::CreateConstBuffer(ID3D11Device* pd3dDevice)
 {
 
 	// 래스터라이즈 설정
@@ -342,7 +342,7 @@ void CCubeParticleShader::UpdateConstBuffer(ID3D11DeviceContext* pd3dDeviceConte
 	pd3dDeviceContext->GSSetConstantBuffers(GS_CB_SLOT_PARTICLE_INFO, 1, &m_pd3dcbParticleInfo);
 }
 
-void CCubeParticleShader::CreateSOGeometryShaderFromFile(ID3D11Device *pd3dDevice, WCHAR *pszFileName, LPCSTR pszShaderName, LPCSTR pszShaderModel, ID3D11GeometryShader **ppd3dGeometryShader)
+void CCubeParticleShader::CreateSOGeometryShaderFromFile(ID3D11Device* pd3dDevice, WCHAR *pszFileName, LPCSTR pszShaderName, LPCSTR pszShaderModel, ID3D11GeometryShader **ppd3dGeometryShader)
 {
 	HRESULT hResult;
 	D3D11_SO_DECLARATION_ENTRY pSODecls[] = {
@@ -386,7 +386,7 @@ void CCubeParticleShader::CreateSOGeometryShaderFromFile(ID3D11Device *pd3dDevic
 	}
 }
 
-void CCubeParticleShader::CreateSOGeoMoetryShaderFromCompiledFile(ID3D11Device * pd3dDevice, WCHAR * pszFileName, ID3D11GeometryShader** ppd3dGeomeotryShader)
+void CCubeParticleShader::CreateSOGeoMoetryShaderFromCompiledFile(ID3D11Device*  pd3dDevice, WCHAR * pszFileName, ID3D11GeometryShader** ppd3dGeomeotryShader)
 {
 
 	D3D11_SO_DECLARATION_ENTRY pSODecls[] = {

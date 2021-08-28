@@ -121,13 +121,13 @@ public:
 	virtual void OnCameraUpdated(float fTimeElapsed);
 	virtual void SetCameraUpdatedContext(LPVOID pContext) { m_pCameraUpdatedContext = pContext; }
 
-	virtual void CreateConstBuffers(ID3D11Device *pd3dDevice);
+	virtual void CreateConstBuffers(ID3D11Device* pd3dDevice);
 
 
 	virtual void UpdateConstBuffers(ID3D11DeviceContext *pd3dDeviceContext);
 	virtual void CreateHeadUpCube(ID3D11Device* pd3dDebice);
 
-	virtual void ChangeCamera(ID3D11Device *pd3dDevice, DWORD nNewCameraMode, float fTimeElapsed);
+	virtual void ChangeCamera(ID3D11Device* pd3dDevice, DWORD nNewCameraMode, float fTimeElapsed);
 	virtual void Render(ID3D11DeviceContext* pd3dDeviceContext, std::shared_ptr<CCamera> pCamera);
 	virtual void Animate(float fTimeElapsed, XMMATRIX *pd3dxmtxParent);
 	virtual void Animate(float fTimeElapsed);

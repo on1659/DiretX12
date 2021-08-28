@@ -31,14 +31,14 @@ public:
 	
 	//KYT '16.01.20 plus
 	/*가상함수로 모든 쉐이더마다 써줄지, 경배처럼 Type으로 하나의 Create에서 해줄지 결정*/
-	virtual void CreateShader(ID3D11Device *pd3dDevice);
-	virtual void CreateBlendShader(ID3D11Device *pd3dDevice);
+	virtual void CreateShader(ID3D11Device* pd3dDevice);
+	virtual void CreateBlendShader(ID3D11Device* pd3dDevice);
 
 	//KYT '16.01.18 minus
 	/*앞으로 사용하지 않을꺼임 Cuz. 쉐이더 검색은 수동으로 할꺼임 */
-	//virtual void CreateShader(ID3D11Device *pd3dDevice, UINT nType);
+	//virtual void CreateShader(ID3D11Device* pd3dDevice, UINT nType);
 
-	virtual void BuildObjects(ID3D11Device *pd3dDevice, void *pContext = nullptr);
+	virtual void BuildObjects(ID3D11Device* pd3dDevice, void *pContext = nullptr);
 	virtual void ReleaseObjects();
 	virtual void Render(ID3D11DeviceContext *pd3dDeviceContext, std::shared_ptr<CCamera> pCamera);
 	virtual void RenderNoClear(ID3D11DeviceContext *pd3dDeviceContext, std::shared_ptr<CCamera> pCamera);

@@ -11,7 +11,7 @@ CWaterShader::~CWaterShader()
 {
 }
 
-void CWaterShader::CreateShader(ID3D11Device *pd3dDevice)
+void CWaterShader::CreateShader(ID3D11Device* pd3dDevice)
 {
 	D3D11_INPUT_ELEMENT_DESC d3dInputElements[] =
 	{
