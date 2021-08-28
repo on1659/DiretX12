@@ -1,3 +1,12 @@
+<<<<<<< HEAD
+﻿################################################################################
+# 이 .gitignore 파일은 Microsoft(R) Visual Studio에서 자동으로 만들어졌습니다.
+################################################################################
+
+/.vs/Componet_Ver21/v16
+/Source/x64/Debug
+/x64/Debug
+=======
 
 *.FBX
 Assets/Voxel/vertexData.warp3d
@@ -934,4 +943,6 @@ Assets/01_MapData/CSV/02_Rubyringcandy_1x1.csv
 Assets/01_MapData/CSV/01_Cupcake02_1x1_0814이전버전.csv
 Assets/01_MapData/CSV/01_Cupcake02_1x1_0812이전버전.csv
 Assets/01_MapData/CSV/01_Cupcake02_1x1.csv
-/.vs
+>>>>>>> 9913398b1e0e441ba10e27937baa780704cb2861
+/Assets/02_ModelData/06_Character_Query01
+/실행파일
