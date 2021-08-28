@@ -54,7 +54,7 @@ VS_INSTANCED_TEXTURED_LIGHTING_OUTPUT VSInstanced(VS_INSTANCED_TEXTURED_LIGHTING
 	output.positionW = mul(float4(input.position, 1.0f), input.mtxTransform).xyz;
 	output.position = mul(float4(output.positionW, 1.0f), gmtxViewProjection);
     output.texCoord = input.texCoord;
-	return(output);
+	return (output);
 }
 
 float4 PSInstanced(VS_INSTANCED_TEXTURED_LIGHTING_OUTPUT input) : SV_Target
@@ -63,7 +63,7 @@ float4 PSInstanced(VS_INSTANCED_TEXTURED_LIGHTING_OUTPUT input) : SV_Target
 	float4 cIllumination = Lighting(input.positionW, input.normalW);
 	float4 cColor = gtxtDefault.Sample(gssDefault, input.texCoord) * cIllumination;
 	cColor = Fog(cColor, input.positionW);
-	return(cColor);
+	return (cColor);
 }
 
 GBUFFER PSInstanced_GBUFFER(VS_INSTANCED_TEXTURED_LIGHTING_OUTPUT input) : SV_Target

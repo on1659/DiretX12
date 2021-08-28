@@ -130,7 +130,7 @@ VS_TEXTURED_LIGHTING_OUTPUT VSTexturedLightingColor(VS_TEXTURED_LIGHTING_INPUT i
 	//output.position = mul(float4(input.position, 1.0f), mul(mul(gmtxWorld, gmtxView), gmtxProjection));
 
 	output.texCoord = input.texCoord;
-	return(output);
+	return (output);
 }	
 
 float4 PSTexturedLightingColor(VS_TEXTURED_LIGHTING_OUTPUT input) : SV_Target
@@ -159,7 +159,7 @@ VS_DETAIL_TEXTURED_OUTPUT VSDetailTexturedColor(VS_DETAIL_TEXTURED_INPUT input)
 	output.texCoordBase = input.texCoordBase;
 	output.texCoordDetail = input.texCoordDetail;
 
-	return(output);
+	return (output);
 }
 
 float4 PSDetailTexturedColor(VS_DETAIL_TEXTURED_OUTPUT input) : SV_Target
@@ -169,7 +169,7 @@ float4 PSDetailTexturedColor(VS_DETAIL_TEXTURED_OUTPUT input) : SV_Target
 	float4 cColor = saturate((cBaseTexColor * 0.5f) + (cDetailTexColor * 0.5f));
 	//    float4 cAlphaTexColor = gtxtTerrainAlphaTexture.Sample(gTerrainSamplerState, input.texcoord0);
 	//    float4 cColor = cIllumination * lerp(cBaseTexColor, cDetailTexColor, cAlphaTexColor.r);
-	return(cColor);
+	return (cColor);
 }
 
 GBUFFER PSDetailTexturedColor_GBUFFER(VS_DETAIL_TEXTURED_OUTPUT input) : SV_Target
@@ -196,7 +196,7 @@ VS_DETAIL_TEXTURED_LIGHTING_OUTPUT VSDetailTexturedLightingColor(VS_DETAIL_TEXTU
 	output.texCoordBase = input.texCoordBase;
 	output.texCoordDetail = input.texCoordDetail;
 
-	return(output);
+	return (output);
 }
 
 VS_DETAIL_TEXTURED_LIGHTING_OUTPUT VSWater(VS_DETAIL_TEXTURED_LIGHTING_INPUT input)
@@ -213,7 +213,7 @@ VS_DETAIL_TEXTURED_LIGHTING_OUTPUT VSWater(VS_DETAIL_TEXTURED_LIGHTING_INPUT inp
 	output.texCoordBase = input.texCoordBase;
 	output.texCoordDetail = mul(float4(input.texCoordDetail, 0.0f, 1.0f), gmtxTexture).xy;
 
-	return(output);
+	return (output);
 }
 
 float4 PSWater(VS_DETAIL_TEXTURED_LIGHTING_OUTPUT input) : SV_Target
@@ -252,7 +252,7 @@ VS_TERRAIN_DETAIL_TEXTURED_LIGHTING_OUTPUT VSTerrainDetailTexturedLightingColor(
 	output.texCoordBase = input.texCoordBase;
 	output.texCoordDetail = input.texCoordDetail;
 
-	return(output);
+	return (output);
 }
 
 #ifdef _WITH_TERRAIN_TEXTURE_ARRAY
@@ -298,7 +298,7 @@ float4 PSTerrainDetailTexturedLightingColor(VS_DETAIL_TEXTURED_LIGHTING_OUTPUT i
 	}
 	//*/
 	float4 cColor = saturate((cIllumination * cBaseTexColor * 0.7f) + (cDetailTexColor * 0.3f));
-	return(cColor);
+	return (cColor);
 }
 #else
 float4 PSTerrainDetailTexturedLightingColor(VS_TERRAIN_DETAIL_TEXTURED_LIGHTING_OUTPUT input) : SV_Target
@@ -309,7 +309,7 @@ float4 PSTerrainDetailTexturedLightingColor(VS_TERRAIN_DETAIL_TEXTURED_LIGHTING_
 	float4 cDetailTexColor = gtxtTerrainDetail.Sample(gssTerrainDetail, input.texCoordDetail);
 	float4 cColor = saturate((cBaseTexColor * 0.5f) + (cDetailTexColor * 0.5f)) * cIllumination;
 	cColor = Fog(cColor, input.positionW);
-	return(cColor);
+	return (cColor);
 }
 
 GBUFFER PSTerrainDetailTexturedLightingColor_GBUFFER(VS_TERRAIN_DETAIL_TEXTURED_LIGHTING_OUTPUT input) : SV_Target
@@ -322,7 +322,7 @@ GBUFFER PSTerrainDetailTexturedLightingColor_GBUFFER(VS_TERRAIN_DETAIL_TEXTURED_
 	output.normal = float4(normalize(input.normalW), 0.0f);
 	output.positionW = float4(input.positionW, 1.0f);
 	output.diffuse = cColor;
-	return(output);
+	return (output);
 }
 #endif
 
@@ -334,14 +334,14 @@ VS_SKYBOX_CUBEMAP_OUTPUT VSSkyBoxTexturedColor(VS_SKYBOX_CUBEMAP_INPUT input)
 	output.position = mul(mul(float4(input.position, 1.0f), gmtxWorld), gmtxViewProjection);
 	output.positionL = input.position;
 
-	return(output);
+	return (output);
 }
 
 float4 PSSkyBoxTexturedColor(VS_SKYBOX_CUBEMAP_OUTPUT input) : SV_Target
 {
 	float4 cColor = gtxtSkyBox.Sample(gssSkyBox, input.positionL);
 	cColor = FogSpace(cColor, 0.5f);
-	return(cColor);
+	return (cColor);
 }
 
 GBUFFER PSSkyBoxTexturedColor_GBUFFER(VS_SKYBOX_CUBEMAP_OUTPUT input) : SV_Target

@@ -66,7 +66,7 @@ class Helper
 public:
 	static float RANDOMCOLOR(float a, float b)
 	{
-		return(a + (float)(rand() / (float)RAND_MAX) * (b - a));
+		return (a + (float)(rand() / (float)RAND_MAX) * (b - a));
 	}
 
 	static int GMessageBox(std::string _title, std::string _message)
@@ -96,7 +96,7 @@ public:
 
 	static float R(float a, float b)
 	{
-		return(a + (float)(rand() / (float)RAND_MAX) * (b - a));
+		return (a + (float)(rand() / (float)RAND_MAX) * (b - a));
 	}
 
 
@@ -201,7 +201,7 @@ public:
 
 		if (pd3dDeviceContext) pd3dDeviceContext->Release();
 
-		return(pd3dsrvTextureArray);
+		return (pd3dsrvTextureArray);
 	}
 
 	static ID3D11ShaderResourceView* CreateTexture2DArraySRV(ID3D11Device* pd3dDevice, std::wstring ppstrFilePaths)
@@ -307,7 +307,7 @@ public:
 
 		if (pd3dDeviceContext) pd3dDeviceContext->Release();
 
-		return(pd3dsrvTextureArray);
+		return (pd3dsrvTextureArray);
 	}
 
 	static ID3D11ShaderResourceView* CreateRandomTexture1DSRV(ID3D11Device* pd3dDevice)
@@ -333,7 +333,7 @@ public:
 		ID3D11ShaderResourceView *pd3dsrvTexture;
 		pd3dDevice->CreateShaderResourceView(pd3dTexture, NULL, &pd3dsrvTexture);
 		pd3dTexture->Release();
-		return(pd3dsrvTexture);
+		return (pd3dsrvTexture);
 	}
 
 	static ID3D11ShaderResourceView* CrseateRandomTexture1DSRV_WaterFall(ID3D11Device* pd3dDevice)
@@ -359,7 +359,7 @@ public:
 		ID3D11ShaderResourceView *pd3dsrvTexture;
 		pd3dDevice->CreateShaderResourceView(pd3dTexture, NULL, &pd3dsrvTexture);
 		pd3dTexture->Release();
-		return(pd3dsrvTexture);
+		return (pd3dsrvTexture);
 	}
 
 	static ID3D11ShaderResourceView* CrseateRandomTexture1DSRV_WaterFall_Bottom(ID3D11Device* pd3dDevice)
@@ -385,7 +385,7 @@ public:
 		ID3D11ShaderResourceView *pd3dsrvTexture;
 		pd3dDevice->CreateShaderResourceView(pd3dTexture, NULL, &pd3dsrvTexture);
 		pd3dTexture->Release();
-		return(pd3dsrvTexture);
+		return (pd3dsrvTexture);
 	}
 
 
@@ -1038,7 +1038,7 @@ public:
 			pd3dTexture->Release();
 		}
 
-		return(pd3dsrvTexture);
+		return (pd3dsrvTexture);
 	}
 
 	//'16.04.03 KYT
@@ -1431,7 +1431,7 @@ public:
 		::rewind(pFile);
 		*pnReadBytes = ::fread(pByteCode, sizeof(BYTE), nFileSize, pFile);
 		::fclose(pFile);
-		return(pByteCode);
+		return (pByteCode);
 	}
 
 	static float Round(float f, int range)

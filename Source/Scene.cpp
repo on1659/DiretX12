@@ -149,7 +149,7 @@ bool CScene::OnProcessingMouseMessage(HWND hWnd, UINT nMessageID, WPARAM wParam,
 	default:
 		break;
 	}
-	return(false);
+	return false;
 }
 
 bool CScene::OnProcessingKeyboardMessage(HWND hWnd, UINT nMessageID, WPARAM wParam, LPARAM lParam)
@@ -188,12 +188,12 @@ bool CScene::OnProcessingKeyboardMessage(HWND hWnd, UINT nMessageID, WPARAM wPar
 
 	}
 
-	return (false);
+	return false;
 }
 
 bool CScene::ProcessInput(POINT ptOldCursorPos)
 {
-	return(false);
+	return false;
 }
 
 //Create
@@ -1280,7 +1280,7 @@ void CScene::Render(ID3D11DeviceContext	*pd3dDeviceContext)
 CGameObject *CScene::PickObjectPointedByCursor(int xClient, int yClient)
 {
 
-	if (!m_pCamera) return(nullptr);
+	if (!m_pCamera) return (nullptr);
 
 	XMMATRIX d3dxmtxView = m_pCamera->GetViewMatrix();
 	XMMATRIX d3dxmtxProjection = m_pCamera->GetProjectionMatrix();
@@ -1313,7 +1313,7 @@ CGameObject *CScene::PickObjectPointedByCursor(int xClient, int yClient)
 		}
 	}
 
-	return(pNearestObject);
+	return (pNearestObject);
 }
 
 //SykBox

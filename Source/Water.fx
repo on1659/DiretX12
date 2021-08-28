@@ -45,7 +45,7 @@ VS_WATER_OUTPUT VSWaterColor(VS_WATER_INPUT input)
 	output.texCoordBase = input.texCoordBase;
 	output.texCoordDetail = mul(float4(input.texCoordDetail, 0.0f, 1.0f), gmtxTexture).xy;
 
-	return(output);
+	return (output);
 }
 SamplerState gssDefault : register(s0);
 SamplerState gssDefaultDetail : register(s1);

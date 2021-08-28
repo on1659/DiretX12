@@ -421,7 +421,7 @@ bool CGameObject::IsVisible(std::shared_ptr<CCamera> pCamera)
 		//if (m_pChild) m_bIsVisible |= m_pChild->IsVisible(pCamera);
 	}
 #endif
-	return(m_bIsVisible);
+	return (m_bIsVisible);
 }
 
 bool CGameObject::IsVisible(std::shared_ptr<CCamera> pCamera, XMVECTOR camPosition)
@@ -453,7 +453,7 @@ bool CGameObject::IsVisible(std::shared_ptr<CCamera> pCamera, XMVECTOR camPositi
 		//if (m_pChild) m_bIsVisible |= m_pChild->IsVisible(pCamera);
 	}
 #endif
-	return(m_bIsVisible);
+	return (m_bIsVisible);
 }
 
 void CGameObject::Visible()
@@ -503,7 +503,7 @@ int CGameObject::PickObjectByRayIntersection(XMVECTOR *pd3dxvPickPosition, XMMAT
 			if (nIntersected > 0) break;
 		}
 	}
-	return(nIntersected);
+	return (nIntersected);
 	//XMVECTOR d3dxvPickRayPosition, d3dxvPickRayDirection;
 	//int nIntersected = 0;
 	//if (m_bActive && m_bIsVisible && m_ppMeshes)
@@ -515,7 +515,7 @@ int CGameObject::PickObjectByRayIntersection(XMVECTOR *pd3dxvPickPosition, XMMAT
 	//		if (nIntersected > 0) break;
 	//	}
 	//}
-	//return(nIntersected);
+	//return (nIntersected);
 }
 
 
@@ -1072,21 +1072,21 @@ XMVECTOR& CGameObject::GetRight(bool bIsLocal)
 {
 	m_xmVector = XMVectorSet(m_d3dxmtxWorld._11, m_d3dxmtxWorld._12, m_d3dxmtxWorld._13, 0.0f);
 	m_xmVector = XMVector3Normalize(m_xmVector);
-	return(m_xmVector);
+	return (m_xmVector);
 }
 
 XMVECTOR& CGameObject::GetUp(bool bIsLocal)
 {
 	m_xmVector = XMVectorSet(m_d3dxmtxWorld._21, m_d3dxmtxWorld._22, m_d3dxmtxWorld._23, 0.0f);
 	m_xmVector = XMVector3Normalize(m_xmVector);
-	return(m_xmVector);
+	return (m_xmVector);
 }
 
 XMVECTOR& CGameObject::GetLook(bool bIsLocal)
 {
 	m_xmVector = XMVectorSet(m_d3dxmtxWorld._31, m_d3dxmtxWorld._32, m_d3dxmtxWorld._33, 0.0f);
 	m_xmVector = XMVector3Normalize(m_xmVector);
-	return(m_xmVector);
+	return (m_xmVector);
 }
 
 

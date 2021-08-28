@@ -506,7 +506,7 @@ ID3D11Buffer *CShader::CreateBuffer(ID3D11Device* pd3dDevice, UINT nStride, int 
 
 	ID3D11Buffer *pd3dInstanceBuffer = nullptr;
 	pd3dDevice->CreateBuffer(&d3dBufferDesc, (pBufferData) ? &d3dBufferData : nullptr, &pd3dInstanceBuffer);
-	return(pd3dInstanceBuffer);
+	return (pd3dInstanceBuffer);
 }
 
 //SpacePartitionRender
@@ -753,7 +753,7 @@ CGameObject *CObjectsShader::PickObjectByRayIntersection(XMVECTOR *pd3dxvPickPos
 	//		if (pd3dxIntersectInfo) *pd3dxIntersectInfo = d3dxIntersectInfo;
 	//	}
 	//}
-	//return(pSelectedObject);
+	//return (pSelectedObject);
 	return nullptr;
 }
 

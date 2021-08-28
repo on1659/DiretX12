@@ -37,7 +37,7 @@ VS_UI_OUTPUT VSInstancedTexturedColorUI(VS_UI_INPUT input)
 	output.positionW = mul(float4(input.position, 1.0f), input.mtxTransform).xyz;
 	output.position = mul(float4(output.positionW, 1.0f), gmtxOrthoViewProjection);// , gmtxOrtho);
 	output.texCoord = input.texCoord;
-	return(output);
+	return (output);
 }
 
 float4 PSInstancedTexturedColorUI(VS_UI_OUTPUT input) : SV_Target

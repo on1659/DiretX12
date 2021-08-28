@@ -102,7 +102,7 @@ input.normalW = normalize(input.normalW);
 float4 cIllumination = Lighting(input.positionW, input.normalW);
 float4 cColor = gtxtDefault.Sample(gssDefault, input.texCoord) * cIllumination;
 cColor = Fog(cColor, input.positionW);
-return(cColor);
+return (cColor);
 }
 
 GBUFFER PSSkinnedInstanced_GBUFFER(VS_SKINNED_INSTANCED_OUTPUT input) : SV_Target

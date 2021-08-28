@@ -71,16 +71,16 @@ public:
 	XMVECTOR& GetPosition()
 	{
 		m_xmVector = XMLoadFloat3(&m_d3dxvPosition);
-		return(m_xmVector);
+		return (m_xmVector);
 	}
 	XMVECTOR& GetLookVector() { m_xmVector = (XMLoadFloat3(&m_d3dxvLook)); return m_xmVector; }
 	XMVECTOR& GetUpVector() { m_xmVector = (XMLoadFloat3(&m_d3dxvUp)); return m_xmVector; }
 	XMVECTOR& GetRightVector() { m_xmVector = (XMLoadFloat3(&m_d3dxvRight)); return m_xmVector; }
 
-	XMFLOAT3& GetPositionXMFLOAT3() { return(m_d3dxvPosition); }
-	XMFLOAT3& GetLookVectorXMFLOAT3() { return((m_d3dxvLook)); }
-	XMFLOAT3& GetUpVectorXMFLOAT3() { return((m_d3dxvUp)); }
-	XMFLOAT3& GetRightVectorXMFLOAT3() { return((m_d3dxvRight)); }
+	XMFLOAT3& GetPositionXMFLOAT3() { return (m_d3dxvPosition); }
+	XMFLOAT3& GetLookVectorXMFLOAT3() { return ((m_d3dxvLook)); }
+	XMFLOAT3& GetUpVectorXMFLOAT3() { return ((m_d3dxvUp)); }
+	XMFLOAT3& GetRightVectorXMFLOAT3() { return ((m_d3dxvRight)); }
 
 	void SetFriction(float fFriction) { m_fFriction = fFriction; }
 	void SetGravity(const XMVECTOR& d3dxvGravity) { XMStoreFloat3(&m_d3dxvGravity, d3dxvGravity); }
@@ -91,11 +91,11 @@ public:
 	void SetVelocity(const XMFLOAT3& d3dxvVelocity) { m_d3dxvVelocity = d3dxvVelocity; }
 
 	const XMVECTOR& GetVelocity() { m_xmVector = (XMLoadFloat3(&m_d3dxvVelocity)); return m_xmVector; }
-	const XMFLOAT3& GetVelocityXMFLOAT3() const { return(m_d3dxvVelocity); }
+	const XMFLOAT3& GetVelocityXMFLOAT3() const { return (m_d3dxvVelocity); }
 
-	float GetYaw() const { return(m_fYaw); }
-	float GetPitch() const { return(m_fPitch); }
-	float GetRoll() const { return(m_fRoll); }
+	float GetYaw() const { return (m_fYaw); }
+	float GetPitch() const { return (m_fPitch); }
+	float GetRoll() const { return (m_fRoll); }
 
 	//--------------------------------------------------- ---------------
 

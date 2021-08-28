@@ -341,5 +341,5 @@ LRESULT CALLBACK CGameFrameWork_2D::OnProcessingWindowMessage(HWND hWnd, UINT nM
 		OnProcessingKeyboardMessage(hWnd, nMessageID, wParam, lParam);
 		break;
 	}
-	return(0);
+	return (0);
 }

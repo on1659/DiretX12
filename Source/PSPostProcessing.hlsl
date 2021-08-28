@@ -29,5 +29,5 @@ float4 main(VS_TEXTURED_OUTPUT input) : SV_Target
 {
     float3 cColor = HDRDownScaleTex.Sample(gssSamplerState, input.texCoord.xy).xyz;
 	cColor += BloomScale * BloomTexture.Sample(gssSamplerState, input.texCoord.xy).xyz;
-	return(float4(ToneMapping(cColor), 1.0));
+	return (float4(ToneMapping(cColor), 1.0));
 }

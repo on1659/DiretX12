@@ -14,7 +14,7 @@ public:
 	virtual void OnCameraUpdated(float fTimeElapsed);
 
 
-	std::shared_ptr<CCamera> GetCamera() { return(m_pCamera); }
+	std::shared_ptr<CCamera> GetCamera() { return (m_pCamera); }
 	virtual void SetCamera(std::shared_ptr<CCamera> pCamera) { m_pCamera = pCamera; }
 
 	virtual void UpdateConstBuffers(ID3D11DeviceContext *pd3dDeviceContext);

@@ -105,7 +105,7 @@ LIGHTEDCOLOR DirectionalLight(int i, float3 vNormal, float3 vToCamera)
 
 	// 앰비넌트 라이트 계산.
 	output.m_cAmbient = gMaterial.m_cAmbient * gLights[i].m_cAmbient;
-	return(output);
+	return (output);
 }
 
 //점 조명의 효과를 계산하는 함수이다.
@@ -139,7 +139,7 @@ LIGHTEDCOLOR PointLight(int i, float3 vPosition, float3 vNormal, float3 vToCamer
 		output.m_cSpecular *= fAttenuationFactor;
 
 	}
-	return(output);
+	return (output);
 }
 
 LIGHTEDCOLOR SpotLight(int i, float3 vPosition, float3 vNormal, float3 vToCamera)
@@ -173,7 +173,7 @@ LIGHTEDCOLOR SpotLight(int i, float3 vPosition, float3 vNormal, float3 vToCamera
 		output.m_cDiffuse *= fAttenuationFactor * fSpotFactor;
 		output.m_cSpecular *= fAttenuationFactor * fSpotFactor;
 	}
-	return(output);
+	return (output);
 }
 
 float4 Lighting(float3 vPosition, float3 vNormal)
@@ -240,7 +240,7 @@ LIGHTEDCOLOR DynmaicDirectionalLight(int i, float3 vNormal, float3 vToCamera)
 
 	// 앰비넌트 라이트 계산.
 	output.m_cAmbient = gMaterial.m_cAmbient * gDynmaicLights[i].m_cAmbient;
-	return(output);
+	return (output);
 }
 
 //점 조명의 효과를 계산하는 함수이다.
@@ -274,7 +274,7 @@ LIGHTEDCOLOR DynmaicPointLight(int i, float3 vPosition, float3 vNormal, float3 v
 		output.m_cSpecular *= fAttenuationFactor;
 
 	}
-	return(output);
+	return (output);
 }
 
 LIGHTEDCOLOR DynmaicSpotLight(int i, float3 vPosition, float3 vNormal, float3 vToCamera)
@@ -308,7 +308,7 @@ LIGHTEDCOLOR DynmaicSpotLight(int i, float3 vPosition, float3 vNormal, float3 vT
 		output.m_cDiffuse *= fAttenuationFactor * fSpotFactor;
 		output.m_cSpecular *= fAttenuationFactor * fSpotFactor;
 	}
-	return(output);
+	return (output);
 }
 
 float4 DynmaicLighting(float3 vPosition, float3 vNormal)
@@ -354,7 +354,7 @@ float4 NoLighting(float3 vPosition, float3 vNormal)
 	float4 cColor = float4(0.0f, 0.0f, 0.0f, 0.0f);
 	cColor += gMaterial.m_cAmbient;
 	cColor.a = gMaterial.m_cDiffuse.a;
-	return(cColor);
+	return (cColor);
 }
 
 
@@ -390,7 +390,7 @@ LIGHTEDCOLOR Defferred_DirectionalLight(int i, float3 vNormal, float3 vToCamera,
 		output.m_cDiffuse = /*gMaterial.m_cDiffuse * */(gLights[i].m_cDiffuse * fDiffuseFactor);
 	}
 	output.m_cAmbient = dMaterial.m_cAmbient * gLights[i].m_cAmbient;
-	return(output);
+	return (output);
 }
 
 LIGHTEDCOLOR Defferred_PointLight(int i, float3 vPosition, float3 vNormal, float3 vToCamera, DEFFERRED_MATERIAL dMaterial)
@@ -426,7 +426,7 @@ LIGHTEDCOLOR Defferred_PointLight(int i, float3 vPosition, float3 vNormal, float
 		output.m_cDiffuse *= fAttenuationFactor;
 		output.m_cSpecular *= fAttenuationFactor;
 	}
-	return(output);
+	return (output);
 }
 
 LIGHTEDCOLOR Defferred_SpotLight(int i, float3 vPosition, float3 vNormal, float3 vToCamera, DEFFERRED_MATERIAL dMaterial)
@@ -468,7 +468,7 @@ LIGHTEDCOLOR Defferred_SpotLight(int i, float3 vPosition, float3 vNormal, float3
 		output.m_cDiffuse *= fAttenuationFactor * fSpotFactor;
 		output.m_cSpecular *= fAttenuationFactor * fSpotFactor;
 	}
-	return(output);
+	return (output);
 }
 
 
@@ -505,7 +505,7 @@ float4 Defferred_Lighting(float3 vPosition, float3 vNormal, DEFFERRED_MATERIAL d
 	cColor += (gcLightGlobalAmbient * dMaterial.m_cAmbient);
 	//cColor.a = gMaterial.m_cDiffuse.a;
 	cColor.a = 1.0f;
-	return(cColor);
+	return (cColor);
 }
 
 //-----------------------------------------------------------------------Static Lighting-----------------------------------------------/
@@ -521,7 +521,7 @@ LIGHTEDCOLOR Defferred_DirectionalLight_Dynamic(int i, float3 vNormal, float3 vT
 	float fDiffuseFactor = dot(vToLight, vNormal);
 	output.m_cAmbient = gDynmaicLights[i].m_cAmbient;
 	output.m_cDiffuse = gDynmaicLights[i].m_cDiffuse * fDiffuseFactor;
-	return(output);
+	return (output);
 }
 
 LIGHTEDCOLOR Defferred_PointLight_Dynamic(int i, float3 vPosition, float3 vNormal, float3 vToCamera)
@@ -539,7 +539,7 @@ LIGHTEDCOLOR Defferred_PointLight_Dynamic(int i, float3 vPosition, float3 vNorma
 		output.m_cDiffuse *= fAttenuationFactor;
 		output.m_cSpecular *= fAttenuationFactor;
 	}
-	return(output);
+	return (output);
 }
 
 LIGHTEDCOLOR Defferred_SpotLight_Dynamic(int i, float3 vPosition, float3 vNormal, float3 vToCamera)
@@ -558,7 +558,7 @@ LIGHTEDCOLOR Defferred_SpotLight_Dynamic(int i, float3 vPosition, float3 vNormal
 		output.m_cDiffuse *= fAttenuationFactor * fSpotFactor;
 		output.m_cSpecular *= fAttenuationFactor * fSpotFactor;
 	}
-	return(output);
+	return (output);
 }
 
 bool IsShadow(int i, float3 vPosition)
@@ -603,7 +603,7 @@ float4 Defferred_Lighting_Dynamic(float3 vPosition, float3 vNormal)
 		}
 	}
 	cColor.a = 1.0f;
-	return(cColor);
+	return (cColor);
 }
 
 //-----------------------------------------------------------------------Dynamic Lighting-----------------------------------------------/

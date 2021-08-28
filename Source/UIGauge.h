@@ -33,7 +33,7 @@ public:
 
 	void Start() { m_fPercent = 1.0f; }
 
-	bool IsEnd() const { return(m_fPercent < 0.0f); }
+	bool IsEnd() const { return (m_fPercent < 0.0f); }
 
 	int GetPercent() const { return m_fPercent * 100; }
 	int SetPercent(int percent){ m_fPercent = percent * 0.01f; }

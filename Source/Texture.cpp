@@ -219,5 +219,5 @@ ID3D11ShaderResourceView *CTexture::CreateTexture2DArraySRV(ID3D11Device* pd3dDe
 
 	if (pd3dDeviceContext) pd3dDeviceContext->Release();
 
-	return(pd3dsrvTextureArray);
+	return (pd3dsrvTextureArray);
 }

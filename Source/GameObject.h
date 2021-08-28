@@ -66,23 +66,23 @@ public:
 
 	void SetMesh(CMesh* pMesh);
 
-	CMesh *GetMesh(int nIndex = 0) const { return(m_vsMeshes[nIndex].get()); }
-	UINT GetMeshType() const { return((m_vsMeshes.size() > 0) ? m_vsMeshes[0]->GetType() : 0x00); }
+	CMesh *GetMesh(int nIndex = 0) const { return (m_vsMeshes[nIndex].get()); }
+	UINT GetMeshType() const { return ((m_vsMeshes.size() > 0) ? m_vsMeshes[0]->GetType() : 0x00); }
 
 	void SetShader(std::shared_ptr<CShader> sShader, bool boundingbox = true);
-	std::shared_ptr<CShader> GetShader() const { return(m_sShader ? m_sShader : nullptr); }
+	std::shared_ptr<CShader> GetShader() const { return (m_sShader ? m_sShader : nullptr); }
 
 	void SetShadowMatrix(XMMATRIX& pd3dxmtxShadow) { XMStoreFloat4x4(&m_d3dxmtxShadow, pd3dxmtxShadow); }
 	void SetShadowMatrix(XMVECTOR d3dxvLight, XMVECTOR d3dxPlane);
 
 	void CGameObject::SetMaterial(std::shared_ptr<CMaterial> sMaterial);
-	std::shared_ptr<CMaterial> GetMaterial() { return(m_sMaterial); }
+	std::shared_ptr<CMaterial> GetMaterial() { return (m_sMaterial); }
 
 	void SetChild(std::shared_ptr<CGameObject> pChild);
 	void SetChild(CGameObject* pChild);
 	void SetParent(CGameObject* m_pParent);
 
-	CGameObject* GetParent() { return(m_pParent); }
+	CGameObject* GetParent() { return (m_pParent); }
 
 	bool IsVisible(std::shared_ptr<CCamera> pCamera);
 	bool IsVisible(std::shared_ptr<CCamera> pCamera, XMVECTOR camPosition);

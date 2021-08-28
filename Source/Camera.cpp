@@ -329,19 +329,19 @@ bool CCamera::IsInFrustum(XMFLOAT3& d3dxvMinimum, XMFLOAT3& d3dxvMaximum)
 		XMFLOAT4 plane;//	palne.y = 0.0f;
 		XMVECTOR dot = XMPlaneDotCoord(XMLoadFloat4(&m_pd3dxFrustumPlanes[i]), XMLoadFloat3(&d3dxvNearPoint));
 		XMStoreFloat4(&plane, dot);
-		if (plane.x > 0.0f) return(false);
+		if (plane.x > 0.0f) return false;
 	}
-	return(true);
+	return true;
 }
 
 bool CCamera::IsInFrustum(AABB *pAABB)
 {
-	return(IsInFrustum(pAABB->m_d3dxvMinimum, pAABB->m_d3dxvMaximum));
+	return (IsInFrustum(pAABB->m_d3dxvMinimum, pAABB->m_d3dxvMaximum));
 }
 
 bool CCamera::IsInFrustumQuad(AABB *pAABB)
 {
-	return(IsInFrustumQuad(pAABB->m_d3dxvMinimum, pAABB->m_d3dxvMaximum));
+	return (IsInFrustumQuad(pAABB->m_d3dxvMinimum, pAABB->m_d3dxvMaximum));
 }
 
 bool CCamera::IsInFrustum2D(XMFLOAT3 fCenter)
@@ -411,9 +411,9 @@ bool CCamera::IsInFrustumQuad(XMFLOAT3& d3dxvMinimum, XMFLOAT3& d3dxvMaximum)
 		XMFLOAT4 plane = m_pd3dxFrustumPlanes[i];
 		XMVECTOR dot = XMPlaneDotCoord(XMLoadFloat4(&plane), XMLoadFloat3(&d3dxvNearPoint));
 		XMStoreFloat4(&plane, dot);
-		if (plane.x > 0.0f) return(false);
+		if (plane.x > 0.0f) return false;
 	}
-	return(true);
+	return true;
 }
 
 #else
@@ -482,14 +482,14 @@ bool CCamera::IsInFrustum(XMVECTOR& xCenter, XMVECTOR& xExtern)
 		}
 		//KYT '16.02.07 memo
 		/*XMVectorGetX 극혐*/
-		if (XMVectorGetX(XMPlaneDotCoord(XMLoadFloat4(&m_pd3dxFrustumPlanes[i]), XMLoadFloat3(&xmVectorNearPoint))) > 0.0f) return(false);
+		if (XMVectorGetX(XMPlaneDotCoord(XMLoadFloat4(&m_pd3dxFrustumPlanes[i]), XMLoadFloat3(&xmVectorNearPoint))) > 0.0f) return false;
 	}
-	return(true);
+	return true;
 }
 
 bool CCamera::IsInFrustum(BoundingBox *boundingbox)
 {
-	return(IsInFrustum(XMLoadFloat3(&boundingbox->Center), XMLoadFloat3(&boundingbox->Extents)));
+	return (IsInFrustum(XMLoadFloat3(&boundingbox->Center), XMLoadFloat3(&boundingbox->Extents)));
 }
 #endif
 

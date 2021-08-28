@@ -102,5 +102,5 @@ unsigned long CGameTimer::GetFrameRate(LPTSTR lpszString, int nCharacters) const
 		wcscat_s(lpszString, nCharacters, _T(" FPS)"));
 	}
 
-	return(m_nCurrentFrameRate);
+	return (m_nCurrentFrameRate);
 }

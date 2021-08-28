@@ -183,7 +183,7 @@ ID3D11Buffer *CMesh::CreateBuffer(ID3D11Device* pd3dDevice, UINT nStride, int nE
 
 	ID3D11Buffer *pd3dBuffer = nullptr;
 	pd3dDevice->CreateBuffer(&d3dBufferDesc, &d3dBufferData, &pd3dBuffer);
-	return(pd3dBuffer);
+	return (pd3dBuffer);
 }
 
 void CMesh::AssembleToVertexBuffer(int nBuffers, ID3D11Buffer **ppd3dBuffers, UINT *pnBufferStrides, UINT *pnBufferOffsets)
@@ -274,16 +274,16 @@ bool RayIntersectTriangle(XMVECTOR *pd3dxvOrigin, XMVECTOR *pd3dxvDirection, XMV
 	D3DXVECTOR3 v3xvP = XMLoadD3DXVECTOR3(d3dxvP);
 	float a = D3DXVec3Dot(&v3Edge1, &v3xvP);
 	//float a = XMVectorGetX(XMVector3Dot(d3dxvEdge1, d3dxvP));
-	if (::IsZero(a)) return(false);
+	if (::IsZero(a)) return false;
 	float f = 1.0f / a;
 	XMVECTOR d3dxvP0ToOrigin = *pd3dxvOrigin - *pd3dxvP0;
 	*pfU = f * XMVectorGetX(XMVector3Dot(d3dxvP0ToOrigin, d3dxvP));
-	if ((*pfU < 0.0f) || (*pfU > 1.0f)) return(false);
+	if ((*pfU < 0.0f) || (*pfU > 1.0f)) return false;
 	d3dxvQ = XMVector3Cross(d3dxvP0ToOrigin, d3dxvEdge1);
 	*pfV = f * XMVectorGetX(XMVector3Dot(*pd3dxvDirection, d3dxvQ));
-	if ((*pfV < 0.0f) || ((*pfU + *pfV) > 1.0f)) return(false);
+	if ((*pfV < 0.0f) || ((*pfU + *pfV) > 1.0f)) return false;
 	*pfRayToTriangle = f * XMVectorGetX(XMVector3Dot(d3dxvEdge2, d3dxvQ));
-	return(*pfRayToTriangle >= 0.0f);
+	return (*pfRayToTriangle >= 0.0f);
 }
 
 #define _WITH_D3DX_LIBRARY
@@ -326,7 +326,7 @@ int CMesh::CheckRayIntersection(XMVECTOR* pd3dxvRayPosition, XMVECTOR* pd3dxvRay
 			nIntersections++;
 		}
 	}
-	return(nIntersections);
+	return (nIntersections);
 }
 #ifdef _AABB_
 void CMesh::CalculateBoundingCube()
@@ -479,7 +479,7 @@ XMVECTOR CNormalMesh::CalculateTriAngleTangent(XMFLOAT2* pd3dxvTexCoords, UINT n
 
 	m_xmVector = XMLoadFloat3(&d3dxvTangent);
 
-	return(m_xmVector);
+	return (m_xmVector);
 }
 XMVECTOR CNormalMesh::CalculateTriAngleTangent(UINT nIndex0, UINT nIndex1, UINT nIndex2)
 {
@@ -507,7 +507,7 @@ XMVECTOR CNormalMesh::CalculateTriAngleTangent(UINT nIndex0, UINT nIndex1, UINT 
 	vTangent.y = (tuVector.x * vector2.y - tvVector.x * vector1.y) * den;
 	vTangent.z = (tuVector.x * vector2.z - tvVector.x * vector1.z) * den;
 
-	return(XMVector3Normalize(XMLoadFloat3(&vTangent)));
+	return (XMVector3Normalize(XMLoadFloat3(&vTangent)));
 }
 void CNormalMesh::SetAverageVertexTangent(XMVECTOR *pd3dxvTangents, int nPrimitives, int nOffset, bool bStrip)
 {
@@ -591,7 +591,7 @@ XMVECTOR& CMeshIlluminated::CalculateTriAngleNormal(UINT nIndex0, UINT nIndex1, 
 	XMVECTOR d3dxvEdge2 = d3dxvP2 - d3dxvP0;
 	m_xmVector = XMVector3Cross(d3dxvEdge1, d3dxvEdge2);
 	m_xmVector = XMVector3Normalize(m_xmVector);
-	return(m_xmVector);
+	return (m_xmVector);
 }
 
 void CMeshIlluminated::SetTriAngleListVertexNormal(XMVECTOR *pd3dxvNormals)
@@ -1710,7 +1710,7 @@ float CHeightMapGridMesh::OnGetHeight(int x, int z, void *pContext)
 		int nWidth = pHeightMap->GetHeightMapWidth();
 		fHeight = pHeightMapImage[x + (z*nWidth)] * (d3dxvScale).y;
 	}
-	return(fHeight);
+	return (fHeight);
 }
 
 //------------------------------------------------------------------------------------------------
@@ -1865,7 +1865,7 @@ void CWaterGridMesh::SetDisturbingForce(int i, int j, float fMagnitude)
 
 float CWaterGridMesh::OnGetHeight(int x, int z, void *pContext)
 {
-	return(0.0f);
+	return (0.0f);
 }
 
 void CWaterGridMesh::Render(ID3D11DeviceContext *pd3dDeviceContext)

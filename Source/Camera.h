@@ -102,7 +102,7 @@ public:
 	virtual ~CCamera();
 
 	void SetMode(DWORD nMode) { m_nMode = nMode; }
-	DWORD GetMode() { return(m_nMode); }
+	DWORD GetMode() { return (m_nMode); }
 
 	void GenerateViewMatrix();
 	void RegenerateViewMatrix();
@@ -117,41 +117,41 @@ public:
 
 
 	void SetPlayer(CPlayer *pPlayer) { m_pPlayer = pPlayer; }
-	CPlayer *GetPlayer() { return(m_pPlayer); }
+	CPlayer *GetPlayer() { return (m_pPlayer); }
 
 	void SetViewport(ID3D11DeviceContext *pd3dDeviceContext, DWORD xStart, DWORD yStart, DWORD nWidth, DWORD nHeight, float fMinZ = 0.0f, float fMaxZ = 1.0f);
 	void SetViewport(ID3D11DeviceContext *pd3dDeviceContext);
-	D3D11_VIEWPORT GetViewport() { return(m_d3dViewport); }
+	D3D11_VIEWPORT GetViewport() { return (m_d3dViewport); }
 
 
 
-	XMMATRIX& GetViewMatrix() { return(XMLoadFloat4x4(&m_d3dxmtxView)); }
-	XMMATRIX& GetProjectionMatrix() { return(XMLoadFloat4x4(&m_d3dxmtxProjection)); }
+	XMMATRIX& GetViewMatrix() { return (XMLoadFloat4x4(&m_d3dxmtxView)); }
+	XMMATRIX& GetProjectionMatrix() { return (XMLoadFloat4x4(&m_d3dxmtxProjection)); }
 
-	XMFLOAT4X4& GetViewMatrixXMFLOAT4X4() { return((m_d3dxmtxView)); }
-	XMFLOAT4X4& GetProjectionMatrixXMFLOAT4X4() { return((m_d3dxmtxProjection)); }
+	XMFLOAT4X4& GetViewMatrixXMFLOAT4X4() { return ((m_d3dxmtxView)); }
+	XMFLOAT4X4& GetProjectionMatrixXMFLOAT4X4() { return ((m_d3dxmtxProjection)); }
 
-	XMFLOAT4X4& GetShadowViewMatrixXMFLOAT4X4() { return((m_d3dxmtxShadowView)); }
-//	XMFLOAT4X4& GetShadowProjectionMatrixXMFLOAT4X4() { return((m_d3dxmtxShadowProjection)); }
+	XMFLOAT4X4& GetShadowViewMatrixXMFLOAT4X4() { return ((m_d3dxmtxShadowView)); }
+//	XMFLOAT4X4& GetShadowProjectionMatrixXMFLOAT4X4() { return ((m_d3dxmtxShadowProjection)); }
 
-	ID3D11Buffer *GetCameraConstantBuffer() { return(m_pd3dcbCamera); }
+	ID3D11Buffer *GetCameraConstantBuffer() { return (m_pd3dcbCamera); }
 
 
 	void SetPosition(const XMFLOAT3& d3dxvPosition) { m_d3dxvPosition = d3dxvPosition; }
 	XMVECTOR& GetPosition() { m_xmVector = (XMLoadFloat3(&m_d3dxvPosition)); return m_xmVector; }
-	XMFLOAT3& GetPositionXMFLOAT3() { return(m_d3dxvPosition); }
+	XMFLOAT3& GetPositionXMFLOAT3() { return (m_d3dxvPosition); }
 
 	XMVECTOR& GetRightVector() { m_xmVector = (XMLoadFloat3(&m_d3dxvRight)); return m_xmVector; }
 	XMVECTOR& GetUpVector() { m_xmVector = (XMLoadFloat3(&m_d3dxvUp)); return m_xmVector; }
 	XMVECTOR& GetLookVector() { m_xmVector = (XMLoadFloat3(&m_d3dxvLook)); return m_xmVector; }
 
-	XMFLOAT3& GetRightVectorXMFLOAT3() { return((m_d3dxvRight)); }
-	XMFLOAT3& GetUpVectorXMFLOAT3() { return((m_d3dxvUp)); }
-	XMFLOAT3& GetLookVectorXMFLOAT3() { return((m_d3dxvLook)); }
+	XMFLOAT3& GetRightVectorXMFLOAT3() { return ((m_d3dxvRight)); }
+	XMFLOAT3& GetUpVectorXMFLOAT3() { return ((m_d3dxvUp)); }
+	XMFLOAT3& GetLookVectorXMFLOAT3() { return ((m_d3dxvLook)); }
 
-	float& GetPitch() { return(m_fPitch); }
-	float& GetRoll() { return(m_fRoll); }
-	float& GetYaw() { return(m_fYaw); }
+	float& GetPitch() { return (m_fPitch); }
+	float& GetRoll() { return (m_fRoll); }
+	float& GetYaw() { return (m_fYaw); }
 
 	void SetOffset(XMVECTOR d3dxvOffset)
 	{
@@ -160,13 +160,13 @@ public:
 		v += d3dxvOffset;
 		XMStoreFloat3(&m_d3dxvPosition, v);
 	}
-	XMVECTOR& GetOffset() { return(XMLoadFloat3(&m_d3dxvOffset)); }
-	XMFLOAT3& GetOffsetXMFLOAT3() { return((m_d3dxvOffset)); }
+	XMVECTOR& GetOffset() { return (XMLoadFloat3(&m_d3dxvOffset)); }
+	XMFLOAT3& GetOffsetXMFLOAT3() { return ((m_d3dxvOffset)); }
 
 
 
 	void SetTimeLag(float fTimeLag) { m_fTimeLag = fTimeLag; }
-	float GetTimeLag() { return(m_fTimeLag); }
+	float GetTimeLag() { return (m_fTimeLag); }
 
 	virtual void Move(const XMVECTOR& d3dxvShift)
 	{

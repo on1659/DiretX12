@@ -31,8 +31,8 @@ struct MESHINTERSECTINFO {
 //------------------------------------------------------------------------------------------------
 #define EPSILON				1.0e-10f
 
-inline bool IsZero(float fValue) { return((fabsf(fValue) < EPSILON)); }
-inline bool IsEqual(float fA, float fB) { return(::IsZero(fA - fB)); }
+inline bool IsZero(float fValue) { return ((fabsf(fValue) < EPSILON)); }
+inline bool IsEqual(float fA, float fB) { return (::IsZero(fA - fB)); }
 inline float InverseSqrt(float fValue) { return 1.0f / sqrtf(fValue); }
 inline void Swap(float *pfS, float *pfT) { float fTemp = *pfS; *pfS = *pfT; *pfT = fTemp; }
 
@@ -137,11 +137,11 @@ protected:
 	//------------------------------------------------------
 
 public:
-	UINT GetType() { return(m_nType); }
+	UINT GetType() { return (m_nType); }
 
-	AABB GetBoundingCube() { return(m_bcBoundingCube); }
+	AABB GetBoundingCube() { return (m_bcBoundingCube); }
 
-	BoundingBox GetBoundingBox() { return(m_bcBoundingbox); }
+	BoundingBox GetBoundingBox() { return (m_bcBoundingbox); }
 
 	XMFLOAT3 GetSize() const { return m_fSize; }
 
@@ -349,9 +349,9 @@ public:
 	CHeightMapGridMesh(ID3D11Device* pd3dDevice, int xStart, int zStart, int nWidth, int nLength, XMVECTOR d3dxvScale = XMVectorSet(1.0f, 1.0f, 1.0f, 0.0f), void *pContext = nullptr, D3D11_USAGE d3dUsage = D3D11_USAGE_DEFAULT);
 	virtual ~CHeightMapGridMesh();
 
-	XMVECTOR& GetScale() { return(XMLoadFloat3(&m_d3dxvScale)); }
-	int GetWidth() { return(m_nWidth); }
-	int GetLength() { return(m_nLength); }
+	XMVECTOR& GetScale() { return (XMLoadFloat3(&m_d3dxvScale)); }
+	int GetWidth() { return (m_nWidth); }
+	int GetLength() { return (m_nLength); }
 
 	virtual float OnGetHeight(int x, int z, void *pContext);
 };

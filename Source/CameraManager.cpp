@@ -146,7 +146,7 @@ std::shared_ptr<CCamera> CCameraManager::CreateCamera
 		if (d3dxvLook.x < 0.0f) fYaw = -fYaw;
 	}
 
-	return(pNewCamera);
+	return (pNewCamera);
 }
 
 

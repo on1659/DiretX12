@@ -414,5 +414,5 @@ std::shared_ptr<CCamera> CTerrainPlayer::OnChangeCamera(ID3D11Device* pd3dDevice
 	//if (nNewCameraMode == FREE_CAMERA) mode = false;
 	//if (state)state->SetFreeCamera(mode);
 
-	return(pNewCamera);
+	return (pNewCamera);
 }

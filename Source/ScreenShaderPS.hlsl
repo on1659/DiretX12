@@ -243,7 +243,7 @@ float4 main(VS_TEXTURED_OUTPUT input) : SV_Target{
     }
 
     cColor.a = 0.1f;
-	return(cColor);
+	return (cColor);
 }
 
 /*

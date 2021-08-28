@@ -6,7 +6,7 @@
 #define PARTICLES			  500	
 
 float R(float a, float b) {
-	return(a + (float)(rand() / (float)RAND_MAX) * (b - a));
+	return (a + (float)(rand() / (float)RAND_MAX) * (b - a));
 }
 
 CCubeParticleShader::CCubeParticleShader()

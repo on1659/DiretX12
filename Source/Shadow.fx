@@ -37,7 +37,7 @@ VS_OUTPUT VSShadowMap(VS_INPUT input)
 	matrix lightWVP = mul(mtxTransform, gmtxViewProjection);
 	output.position = mul(float4(input.position, 1.0f), lightWVP);
 	output.tex2dcoord = input.tex2dcoord;
-	return(output);
+	return (output);
 }
 
 // --------------------------------------------------------------------------------------

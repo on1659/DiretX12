@@ -54,12 +54,12 @@ XMFLOAT3& CHeightMap::GetHeightMapNormalXMFLOAT3(int x, int z)
 	vNormal = XMVector3Cross(vEdge1, vEdge2);
 	vNormal = XMVector3Normalize(vNormal);
 	XMStoreFloat3(&m_xmFloat3, vNormal);
-	return(m_xmFloat3);
+	return (m_xmFloat3);
 }
 
 XMVECTOR& CHeightMap::GetHeightMapNormal(int x, int z)
 {
-	if ((x < 0.0f) || (z < 0.0f) || (x >= m_nWidth) || (z >= m_nLength)) return(XMVectorSet(0.0f, 1.0f, 0.0f, 0.0f));
+	if ((x < 0.0f) || (z < 0.0f) || (x >= m_nWidth) || (z >= m_nLength)) return (XMVectorSet(0.0f, 1.0f, 0.0f, 0.0f));
 
 	int nHeightMapIndex = x + (z * m_nWidth);
 	int xHeightMapAdd, zHeightMapAdd;
@@ -73,14 +73,14 @@ XMVECTOR& CHeightMap::GetHeightMapNormal(int x, int z)
 	XMVECTOR vNormal;
 	vNormal = XMVector3Cross(vEdge1, vEdge2);
 	vNormal = XMVector3Normalize(vNormal);
-	return(vNormal);
+	return (vNormal);
 }
 
 float CHeightMap::GetHeight(float fx, float fz, bool bReverseQuad)
 {
 	fx = fx / m_d3dxvScale.x;
 	fz = fz / m_d3dxvScale.z;
-	if ((fx < 0.0f) || (fz < 0.0f) || (fx >= m_nWidth) || (fz >= m_nLength)) return(0.0f);
+	if ((fx < 0.0f) || (fz < 0.0f) || (fx >= m_nWidth) || (fz >= m_nLength)) return (0.0f);
 
 	int x = (int)fx;
 	int z = (int)fz;
@@ -111,5 +111,5 @@ float CHeightMap::GetHeight(float fx, float fz, bool bReverseQuad)
 	float fBottomHeight = fBottomLeft * (1 - fxPercent) + fBottomRight * fxPercent;
 	float fHeight = fBottomHeight * (1 - fzPercent) + fTopHeight * fzPercent;
 
-	return(fHeight);
+	return (fHeight);
 }

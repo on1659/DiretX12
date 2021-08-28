@@ -105,7 +105,7 @@ bool CGameFramework::OnCreate(HINSTANCE hInstance, HWND hMainWnd)
 	m_hWnd = hMainWnd;
 
 	if (!CreateDirect3DDisplay()) 
-		return(false);
+		return false;
 
 	//2. 타이머
 	TIMEMGR;
@@ -261,7 +261,7 @@ bool CGameFramework::OnCreate(HINSTANCE hInstance, HWND hMainWnd)
 	hr = m_pd3dDevice->CreateBuffer(&blurbd, &d3dFogBufferData, &m_pd3dOutLineBuffer);
 	m_pd3dDeviceContext->PSSetConstantBuffers(PS_CB_SLOT_OUTLINE, 1, &m_pd3dOutLineBuffer);
 
-	return(true);
+	return true;
 }
 
 bool CGameFramework::OnCreate()
@@ -353,7 +353,7 @@ bool CGameFramework::OnCreate()
 #endif
 
 	timeTick = false;
-	return(true);
+	return true;
 }
 
 void CGameFramework::ThreadCreate()
@@ -512,11 +512,11 @@ bool CGameFramework::CreateDirect3DDisplay()
 
 		Radar::DXUT_SetDebugName(m_pd3dDevice, ("FrameWork Device"));
 
-		if (FAILED(hResult = m_pd3dDevice->CheckMultisampleQualityLevels(DXGI_FORMAT_R8G8B8A8_UNORM, 4, &m_n4xMSAAQualities))) return(false);
+		if (FAILED(hResult = m_pd3dDevice->CheckMultisampleQualityLevels(DXGI_FORMAT_R8G8B8A8_UNORM, 4, &m_n4xMSAAQualities))) return false;
 
 
-		if (FAILED(hResult = m_pd3dDevice->QueryInterface(__uuidof(IDXGIDevice), (void **)&pdxgiDevice))) return(false);
-		if (FAILED(hResult = pdxgiFactory->CreateSwapChain(pdxgiDevice, &dxgiSwapChainDesc, &m_pDXGISwapChain))) return(false);
+		if (FAILED(hResult = m_pd3dDevice->QueryInterface(__uuidof(IDXGIDevice), (void **)&pdxgiDevice))) return false;
+		if (FAILED(hResult = pdxgiFactory->CreateSwapChain(pdxgiDevice, &dxgiSwapChainDesc, &m_pDXGISwapChain))) return false;
 		if (pdxgiDevice) pdxgiDevice->Release();
 		if (pdxgiFactory) pdxgiFactory->Release();
 		if (pAdapter) pAdapter->Release();
@@ -525,7 +525,7 @@ bool CGameFramework::CreateDirect3DDisplay()
 	if (!CreateRenderTargetDepthStencilView())
 		return false;
 
-	return(true);
+	return true;
 }
 
 bool CGameFramework::CreateRenderTargetDepthStencilView()
@@ -534,10 +534,10 @@ bool CGameFramework::CreateRenderTargetDepthStencilView()
 
 	//ID3D11Texture2D *pd3dBackBuffer;
 	//벡버퍼 얻음
-	if (FAILED(hResult = m_pDXGISwapChain->GetBuffer(0, __uuidof(ID3D11Texture2D), (LPVOID *)&m_pd3dMainBackBufferTextrue))) return(false);
+	if (FAILED(hResult = m_pDXGISwapChain->GetBuffer(0, __uuidof(ID3D11Texture2D), (LPVOID *)&m_pd3dMainBackBufferTextrue))) return false;
 
 	//랜더타겟뷰를 생성함
-	if (FAILED(hResult = m_pd3dDevice->CreateRenderTargetView(m_pd3dMainBackBufferTextrue, nullptr, &m_pd3dRenderTargetView))) return(false);
+	if (FAILED(hResult = m_pd3dDevice->CreateRenderTargetView(m_pd3dMainBackBufferTextrue, nullptr, &m_pd3dRenderTargetView))) return false;
 	Radar::DXUT_SetDebugName(m_pd3dRenderTargetView, ("FrameWork Device m_pd3dRenderTargetView"));
 
 	m_pd3dDevice->CreateShaderResourceView(m_pd3dMainBackBufferTextrue, nullptr, &m_pd3dMainShaderResourceView);
@@ -545,7 +545,7 @@ bool CGameFramework::CreateRenderTargetDepthStencilView()
 
 	//KYT '16.01.25 plus
 	/* 스크린샷기능 추가*/
-	//if (FAILED(hResult = m_pd3dDevice->CreateShaderResourceView(m_pd3dMainBackBufferTextrue, nullptr, &m_pd3dScreenCaptureResourceView)))return (false);
+	//if (FAILED(hResult = m_pd3dDevice->CreateShaderResourceView(m_pd3dMainBackBufferTextrue, nullptr, &m_pd3dScreenCaptureResourceView)))return false;
 	//Radar::DXUT_SetDebugName(m_pd3dScreenCaptureResourceView, ("FrameWork Device m_pd3dScreenCaptureResourceView"));
 
 	//if (pd3dBackBuffer) pd3dBackBuffer->Release();
@@ -569,7 +569,7 @@ bool CGameFramework::CreateRenderTargetDepthStencilView()
 	d3dDepthStencilBufferDesc.BindFlags = D3D11_BIND_DEPTH_STENCIL;
 	d3dDepthStencilBufferDesc.CPUAccessFlags = 0;
 	d3dDepthStencilBufferDesc.MiscFlags = 0;
-	if (FAILED(hResult = m_pd3dDevice->CreateTexture2D(&d3dDepthStencilBufferDesc, nullptr, &m_pd3dDepthStencilBuffer))) return(false);
+	if (FAILED(hResult = m_pd3dDevice->CreateTexture2D(&d3dDepthStencilBufferDesc, nullptr, &m_pd3dDepthStencilBuffer))) return false;
 
 	// Create the depth stencil view
 	D3D11_DEPTH_STENCIL_VIEW_DESC d3dDepthStencilViewDesc;
@@ -581,12 +581,12 @@ bool CGameFramework::CreateRenderTargetDepthStencilView()
 	d3dDepthStencilViewDesc.ViewDimension = D3D11_DSV_DIMENSION_TEXTURE2D;
 #endif
 	d3dDepthStencilViewDesc.Texture2D.MipSlice = 0;
-	if (FAILED(hResult = m_pd3dDevice->CreateDepthStencilView(m_pd3dDepthStencilBuffer, &d3dDepthStencilViewDesc, &m_pd3dDepthStencilView))) return(false);
+	if (FAILED(hResult = m_pd3dDevice->CreateDepthStencilView(m_pd3dDepthStencilBuffer, &d3dDepthStencilViewDesc, &m_pd3dDepthStencilView))) return false;
 
 	//렌더 타겟을 설정 나중에 바꿔야 할 듯 5개 set 해야함
 
 
-	return(true);
+	return true;
 }
 
 #ifdef _MULIT_RENDER_TARGET_
