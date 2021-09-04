@@ -243,7 +243,6 @@ private:
 
 #ifdef DX12_MIGRATION
 private:
-	IDXGISwapChain3* m_pDXGISwapChain3;
 
 #ifdef _DEBUG
 	ID3D12Debug* m_pd3dDebugController;
@@ -255,13 +254,20 @@ private:
 	ComPtr<ID3D12Fence>				m_pd3dFence;
 	UINT64							m_nFenceValues[SWAP_CHAIN_BUFFER_COUNT];
 	HANDLE							m_hFenceEvent;
-	UINT							m_nRtvDescriptorIncrementSize;
 	ComPtr<IDXGIFactory4>			m_pdxgiFactory;
 
+	IDXGISwapChain3*				m_pDXGISwapChain3;
 	UINT							m_nSwapChainBufferIndex;
+	static const UINT				m_nSwapChainBuffers = 2;
 
+	ComPtr<ID3D12Resource>			m_ppd3dSwapChainBackBuffers[SWAP_CHAIN_BUFFER_COUNT];
 	ComPtr<ID3D12DescriptorHeap>	m_pd3dRtvDescriptorHeap;
+	UINT							m_nRtvDescriptorIncrementSize;
+	D3D12_CPU_DESCRIPTOR_HANDLE		m_pd3dRtvSwapChainBackBufferCPUHandles[SWAP_CHAIN_BUFFER_COUNT];
+
+	ComPtr<ID3D12Resource>			m_pd3dx12DepthStencilBuffer;
 	ComPtr<ID3D12DescriptorHeap>	m_pd3dDsvDescriptorHeap;
+	D3D12_CPU_DESCRIPTOR_HANDLE		m_d3dDsvDepthStencilBufferCPUHandle;
 
 
 	WARP_RESULT_ENUM				CreateDeivce();
@@ -269,6 +275,19 @@ private:
 	WARP_RESULT_ENUM				CreateRtvAndDsvDescriptorHeaps();
 	WARP_RESULT_ENUM				CreateCommandComplete();
 	WARP_RESULT_ENUM				CreateSwapChain();
+
+	WARP_RESULT_ENUM				CreateRenderTargetViews();
+	WARP_RESULT_ENUM				CreateDepthStencilView();
+
+	WARP_RESULT_ENUM				WaitForGpuComplete();
+	WARP_RESULT_ENUM				MoveToNextFrame();
+
+
+public:
+	bool							CreatedDevice12(HINSTANCE hInstance, HWND hMainWnd);
+	void							FrameAdvanceDX12();
+
+	WARP_RESULT_ENUM				OnResizeBackBuffers(const WORD width, const WORD height);
 #endif //DX12_MIGRATION
 
 };

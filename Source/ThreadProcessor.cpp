@@ -120,7 +120,8 @@ void WINAPI ReleaseManager(LPVOID lpParam)
 
 void DimensionsChange(YT_GameMode mode, float delay)
 {
-	if (gbGameMode == mode)return; //모드가 같으면 무시함
+	if ((bool)gbGameMode == mode)
+		return; //모드가 같으면 무시함
 
 	gbGameMode = mode;
 

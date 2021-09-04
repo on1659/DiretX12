@@ -522,8 +522,6 @@ void CInputManager::InputDataSending()
 	}
 }
 
-
-
 XINPUT_GAMEPAD CInputManager::GetGamepad()
 {
 	ZeroMemory(&m_xGamepadState, sizeof(XINPUT_STATE));

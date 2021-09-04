@@ -28,7 +28,8 @@ int APIENTRY _tWinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPTSTR lpCm
 	LoadString(hInstance, IDC_LABPROJECT14, szWindowClass, MAX_LOADSTRING);
 	HACCEL hAccelTable = LoadAccelerators(hInstance, MAKEINTRESOURCE(IDC_LABPROJECT14));
 
-	if (!InitInstance(hInstance, nCmdShow)) return false;
+	if (!InitInstance(hInstance, nCmdShow))
+		return false;
 
 	#ifdef _CONNECT_SERVER_
 
@@ -81,7 +82,23 @@ int APIENTRY _tWinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPTSTR lpCm
 
 			if (gbGameMode == GAME_MODE_INGAME)
 			{
+#ifdef DX12_MIGRATION
+				if (INPUT->KeyDown(YK_G))
+				{
+					FRAMEWORK->FrameAdvanceDX12();
+				}
+				else
+				{
+#ifdef DX11_REMOVE_LOADING_
+					FRAMEWORK->FrameAdvanceDX12();
+#else //DX11_REMOVE_LOADING_
+					FRAMEWORK->FrameAdvance();
+#endif //DX11_REMOVE_LOADING_
+
+				}
+#else //DX12_MIGRATION
 				FRAMEWORK->FrameAdvance();
+#endif //DX12_MIGRATION
 			}
 
 			else if (gbGameMode == GAME_MODE_DIALOG)
@@ -139,20 +156,34 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
 	ghInstance = hInstance;
 	if (!hMainWnd) return false;
 
-	ShowWindow(hMainWnd, nCmdShow);
 
 	FRAMEWORK_2D->OnCreate(hInstance, hMainWnd);
 	FRAMEWORK_2D->OnDraw();
-	if (!FRAMEWORK->OnCreate(hInstance, hMainWnd)) return false;
+	
+#ifdef DX11_REMOVE_LOADING_
+#else //DX11_REMOVE_LOADING_
+	if (!FRAMEWORK->OnCreate(hInstance, hMainWnd))
+		return false;
+#endif // DX11_REMOVE_LOADING_
 
+#ifdef DX12_MIGRATION
+	if (FRAMEWORK->CreatedDevice12(hInstance, hMainWnd) == false)
+		return false;
+#endif //DX12_MIGRATION
+
+	ShowWindow(hMainWnd, nCmdShow);
+	UpdateWindow(hMainWnd);
 
 	//KYT '16.04.14 
 	/*
 	  Loading Thread 두 개 돌리는것
 	*/
+#ifdef DX11_REMOVE_LOADING_
+#else //DX11_REMOVE_LOADING_
 	#ifdef _MULIT_THREAD_LOADING_
 		loadingThread = new std::thread{ LoadingThreadLoad , FRAMEWORK->GetDevice() };
 	#endif
+#endif //DX11_REMOVE_LOADING_
 
 	//LoadingThreadLoad(FRAMEWORK->GetDevice());
 	::GTimeRecord();
@@ -168,6 +199,9 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 	switch (message)
 	{
 	case WM_SIZE:
+#ifdef DX12_MIGRATION
+		FRAMEWORK->OnResizeBackBuffers(LOWORD(lParam), HIWORD(lParam));
+#endif //DX12_MIGRATION
 		break;
 
 	case WM_MOUSEWHEEL:

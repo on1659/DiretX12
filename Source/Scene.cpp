@@ -1273,14 +1273,13 @@ void CScene::RenderBlend(ID3D11DeviceContext *pd3dDeviceContext)
 void CScene::Render(ID3D11DeviceContext	*pd3dDeviceContext)
 {
 	RenderAway(pd3dDeviceContext);
-
 }
 
 //Picking
 CGameObject *CScene::PickObjectPointedByCursor(int xClient, int yClient)
 {
-
-	if (!m_pCamera) return (nullptr);
+	if (!m_pCamera) 
+		return nullptr;
 
 	XMMATRIX d3dxmtxView = m_pCamera->GetViewMatrix();
 	XMMATRIX d3dxmtxProjection = m_pCamera->GetProjectionMatrix();

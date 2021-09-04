@@ -39,6 +39,7 @@
 
 
 #define DX12_MIGRATION
+//#define DX11_REMOVE_LOADING_
 #ifdef DX12_MIGRATION
 // D3D12
 #include <d3d12.h>

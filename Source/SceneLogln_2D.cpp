@@ -297,8 +297,12 @@ void CSceneLogin_2D::GameStartFunc()
 	/*
 		쓰레드 로딩 새버전
 	*/
+#ifdef DX11_REMOVE_LOADING_
+	::DimensionsChange(GAME_MODE_INGAME);
+#else //DX11_REMOVE_LOADING_
 	::PrepareManagerLoading(nullptr);
 	::FinalManagerLoading(nullptr);
+#endif //DX11_REMOVE_LOADING_
 	#endif
 }
 
